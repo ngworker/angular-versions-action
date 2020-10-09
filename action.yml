@@ -1,11 +1,13 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: "Match Angular Versions"
+description: "Modifies the package.json with matching dependency versions for a given base Angular version"
+author: "GitHub"
 inputs:
-  milliseconds: # change this
+  angular_version:
+    description: "The base Angular version used to match the dependency versions"
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
 runs:
-  using: 'node12'
-  main: 'dist/index.js'
+  using: "node12"
+  main: "dist/index.js"
+branding:
+  icon: "package"
+  color: "gray-dark"

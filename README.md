@@ -1,103 +1,39 @@
-<p align="center">
-  <a href="https://github.com/actions/typescript-action/actions"><img alt="typescript-action status" src="https://github.com/actions/typescript-action/workflows/build-test/badge.svg"></a>
-</p>
+# GitHub Action - Match Angular Versions
 
-# Create a JavaScript Action using TypeScript
+This GitHub Action (written in JavaScript) modifies the root `package.json` of a project and replaces the version of all **Angular** related dependencies for given base version.
 
-Use this template to bootstrap the creation of a TypeScript action.:rocket:
+[![ngworker](https://img.shields.io/badge/ngworker-%40-red)](https://github.com/ngworker/)
 
-This template includes compilation support, tests, a validation workflow, publishing, and versioning guidance.  
+## Usage
 
-If you are new, there's also a simpler introduction.  See the [Hello World JavaScript Action](https://github.com/actions/hello-world-javascript-action)
+### Pre-requisites
 
-## Create an action from this template
+Create a workflow `.yml` file in your repositories `.github/workflows` directory. An [example workflow](#example-workflow---match-Angular-versions) is available below. For more information, reference the GitHub Help Documentation for [Creating a workflow file](https://help.github.com/en/articles/configuring-a-workflow#creating-a-workflow-file).
 
-Click the `Use this Template` and provide the new repo details for your action
+### Inputs
 
-## Code in Main
+- `angular_version`: The base Angular version used to match the dependency version. Ex: 8.0.0, 10.0.14. To check the full list of supported versions, see [supported versions](###Supported-Angular-versions).
 
-Install the dependencies  
-```bash
-$ npm install
-```
-
-Build the typescript and package it for distribution
-```bash
-$ npm run build && npm run package
-```
-
-Run the tests :heavy_check_mark:  
-```bash
-$ npm test
-
- PASS  ./index.test.js
-  ✓ throws invalid number (3ms)
-  ✓ wait 500 ms (504ms)
-  ✓ test runs (95ms)
-
-...
-```
-
-## Change action.yml
-
-The action.yml contains defines the inputs and output for your action.
-
-Update the action.yml with your name, description, inputs and outputs for your action.
-
-See the [documentation](https://help.github.com/en/articles/metadata-syntax-for-github-actions)
-
-## Change the Code
-
-Most toolkit and CI/CD operations involve async operations so the action is run in an async function.
-
-```javascript
-import * as core from '@actions/core';
-...
-
-async function run() {
-  try { 
-      ...
-  } 
-  catch (error) {
-    core.setFailed(error.message);
-  }
-}
-
-run()
-```
-
-See the [toolkit documentation](https://github.com/actions/toolkit/blob/master/README.md#packages) for the various packages.
-
-## Publish to a distribution branch
-
-Actions are run from GitHub repos so we will checkin the packed dist folder. 
-
-Then run [ncc](https://github.com/zeit/ncc) and push the results:
-```bash
-$ npm run package
-$ git add dist
-$ git commit -a -m "prod dependencies"
-$ git push origin releases/v1
-```
-
-Note: We recommend using the `--license` option for ncc, which will create a license file for all of the production node modules used in your project.
-
-Your action is now published! :rocket: 
-
-See the [versioning documentation](https://github.com/actions/toolkit/blob/master/docs/action-versioning.md)
-
-## Validate
-
-You can now validate the action by referencing `./` in a workflow in your repo (see [test.yml](.github/workflows/test.yml))
+### Example workflow - match Angular versions
 
 ```yaml
-uses: ./
-with:
-  milliseconds: 1000
+todo: 'Complete example later'
 ```
 
-See the [actions tab](https://github.com/actions/typescript-action/actions) for runs of this action! :rocket:
+This will replace the version of several dependencies related to Angular in the package.json. It will use versions compatible with the given Angular version.
 
-## Usage:
+### Supported Angular versions
 
-After testing you can [create a v1 tag](https://github.com/actions/toolkit/blob/master/docs/action-versioning.md) to reference the stable and latest V1 action
+At the moment this actions supports a limited set of Angular versions listed below.
+
+- 8.0.0
+- 9.0.0
+- 10.0.0
+
+## Contributing
+
+We would love you to contribute to `@ngworker/angular-versions-action`, pull requests are welcome! Please see the [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
+
+## License
+
+The scripts and documentation in this project are released under the [MIT License](LICENSE)
