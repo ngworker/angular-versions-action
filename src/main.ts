@@ -8,7 +8,7 @@ async function run(): Promise<void> {
     core.debug(`Finding dependencies for angular version ${angularVersion}`);
 
     const versions = await getAngularVersion(angularVersion);
-    core.debug(`Depedencies found: \nr ${JSON.stringify(versions, null, 2)}`);
+    core.debug(`Depedencies found: \n ${JSON.stringify(versions, null, 2)}`);
 
     const filePath: string = core.getInput('file_path');
     core.debug(`merging found dependencies with file ${filePath}`);
