@@ -6,17 +6,15 @@ export async function overrideAngularVersions(
   angularVersions: PackageJsonVersion,
   path: string
 ): Promise<void> {
-  try {
-    const rawData = fs.readFileSync(path);
-    let packageJson: PackageJsonVersion = JSON.parse(rawData.toString());
-    packageJson = {...packageJson, ...angularVersions};
-    core.debug(
-      `Depedencies merge in package.json: \nr ${JSON.stringify(
-        packageJson,
-        null,
-        2
-      )}`
-    );
-    fs.writeFileSync(path, JSON.stringify(packageJson));
-  } catch (error) {}
+  const rawData = fs.readFileSync(path);
+  let packageJson: PackageJsonVersion = JSON.parse(rawData.toString());
+  packageJson = {...packageJson, ...angularVersions};
+  core.debug(
+    `Depedencies merge in package.json: \n ${JSON.stringify(
+      packageJson,
+      null,
+      2
+    )}`
+  );
+  fs.writeFileSync(path, JSON.stringify(packageJson));
 }
