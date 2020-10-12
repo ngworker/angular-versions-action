@@ -1,5 +1,4 @@
 import * as core from '@actions/core';
-import * as fs from 'fs';
 import {getAngularVersion} from './get-angular-versions';
 import {overrideAngularVersions} from './override-angular-versions';
 

@@ -10,5 +10,19 @@ export interface PackageJsonVersion {
     '@angular/router': string;
     rxjs: string;
     'zone.js': string;
+    tslib: string;
+    [deps: string]: string;
+  };
+
+  devDependencies: {
+    '@angular-devkit/build-angular': string;
+    '@angular/cli': string;
+    '@angular/compiler-cli': string;
+    '@types/node': string;
+    codelyzer: string;
+    'ts-node': string;
+    tslint: string;
+    typescript: string;
+    [deps: string]: string;
   };
 }

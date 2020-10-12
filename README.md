@@ -1,5 +1,7 @@
 # GitHub Action - Match Angular Versions
 
+> DISCLAIMER: THIS ACTION IS HIGHLY EXPERIMENTAL.
+
 This GitHub Action (written in JavaScript) modifies the root `package.json` of a project and replaces the version of all **Angular** related dependencies for given base version.
 
 [![ngworker](https://img.shields.io/badge/ngworker-%40-red)](https://github.com/ngworker/)
