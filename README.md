@@ -19,10 +19,41 @@ Create a workflow `.yml` file in your repositories `.github/workflows` directory
 ### Example workflow - match Angular versions
 
 ```yaml
-todo: 'Complete example later'
+name: Node.js CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x]
+        angular-version: [8.0.0, 9.0.0, 10.0.0]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Change to the right Angular version
+        uses: ngworker/angular-versions-action@v1
+        with:
+          angular-version: ${{ matrix.angular-version }}
+
+      - run: yarn
+      - run: yarn lint
+      - run: yarn build
+      - run: yarn test
 ```
 
-This will replace the version of several dependencies related to Angular in the package.json. It will use versions compatible with the given Angular version.
+This example use the github matrix to build, lint and test your code against different versions of `Angular`. This should be specially useful for library authors.
 
 ### Supported Angular versions
 
