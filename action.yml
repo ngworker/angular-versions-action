@@ -1,13 +1,17 @@
-name: "Match Angular Versions"
-description: "Modifies the package.json with matching dependency versions for a given base Angular version"
-author: "GitHub"
+name: 'Match Angular Versions'
+description: 'Modifies the package.json with matching dependency versions for a given base Angular version'
+author: 'GitHub'
 inputs:
   angular_version:
-    description: "The base Angular version used to match the dependency versions"
+    description: 'The base Angular version used to match the dependency versions'
     required: true
+  file_path:
+    description: 'Path of the package.json file to modify'
+    required: false
+    default: './package.json'
 runs:
-  using: "node12"
-  main: "dist/index.js"
+  using: 'node12'
+  main: 'dist/index.js'
 branding:
-  icon: "package"
-  color: "gray-dark"
+  icon: 'package'
+  color: 'gray-dark'
