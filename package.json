@@ -10,7 +10,7 @@
     "format-check": "prettier --check **/*.ts",
     "lint": "eslint src/**/*.ts",
     "package": "ncc build --source-map --license licenses.txt",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "all": "yarn build && yarn format && yarn lint && yarn package && yarn test",
     "contributors:add": "all-contributors add",
     "hooks:pre-commit": "node hooks/pre-commit.js",
@@ -72,7 +72,7 @@
     "hooks": {
       "commit-msg": "commitlint -e $GIT_PARAMS",
       "pre-commit": "yarn hooks:pre-commit && lint-staged && yarn lint",
-      "pre-push": "yarn test:lib:headless"
+      "pre-push": "yarn test"
     }
   }
 }
