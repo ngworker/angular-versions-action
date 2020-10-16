@@ -40,6 +40,35 @@ exports.versions = new Map([
         }
     ],
     [
+        '8.1.0',
+        {
+            dependencies: {
+                '@angular/animations': '~8.1.0',
+                '@angular/common': '~8.1.0',
+                '@angular/compiler': '~8.1.0',
+                '@angular/core': '~8.1.0',
+                '@angular/forms': '~8.1.0',
+                '@angular/platform-browser': '~8.1.0',
+                '@angular/platform-browser-dynamic': '~8.1.0',
+                '@angular/router': '~8.1.0',
+                rxjs: '~6.4.0',
+                tslib: '^1.9.0',
+                'zone.js': '~0.9.1'
+            },
+            devDependencies: {
+                '@angular-devkit/build-angular': '~0.801.0',
+                '@angular-devkit/build-ng-packagr': '~0.801.0',
+                '@angular/cli': '~8.1.0',
+                '@angular/compiler-cli': '~8.1.0',
+                '@types/node': '~8.9.4',
+                codelyzer: '^5.0.0',
+                'ts-node': '~7.0.0',
+                tslint: '~5.15.0',
+                typescript: '~3.4.3'
+            }
+        }
+    ],
+    [
         '9.0.0',
         {
             dependencies: {
