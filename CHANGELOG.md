@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/ngworker/angular-versions-action/compare/v1.2.0...v2.0.0) (2020-10-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* 🧨 changes variable names EX. from angular_version: 8.0.0 to
+angular_version: 8.0.x
+
+### Features
+
+* 🎸 use free path version syntax for api variable ([95c09aa](https://github.com/ngworker/angular-versions-action/commit/95c09aa587c9be8aacd0a217f7b19f1f50a2290e))
+
 ## [1.2.0](https://github.com/ngworker/angular-versions-action/compare/v1.1.4...v1.2.0) (2020-10-16)
 
 
