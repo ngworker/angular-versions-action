@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/ngworker/angular-versions-action/compare/v1.1.4...v1.2.0) (2020-10-16)
+
+
+### Features
+
+* 🎸 add support for angular 8.1.0 ([1b801b4](https://github.com/ngworker/angular-versions-action/commit/1b801b41442ca476cdb441d6c98f89bbc21531cf))
+
+
+### Bug Fixes
+
+* 🐛 add dist that support 8.1.0 ([ac404aa](https://github.com/ngworker/angular-versions-action/commit/ac404aa531b34e2e8db8343ffd5b665c3fd001e7))
+
 ### [1.1.4](https://github.com/ngworker/angular-versions-action/compare/v1.1.3...v1.1.4) (2020-10-16)
 
 
