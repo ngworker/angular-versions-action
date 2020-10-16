@@ -13,7 +13,15 @@ async function run(): Promise<void> {
     const filePath: string = core.getInput('file_path');
     core.debug(`merging found dependencies with file ${filePath}`);
 
-    await overrideAngularVersions(versions, filePath);
+    const modified = overrideAngularVersions(versions, filePath);
+
+    core.debug(
+      `Depedencies merge in package.json: \n ${JSON.stringify(
+        modified,
+        null,
+        2
+      )}`
+    );
 
     core.debug(new Date().toTimeString());
   } catch (error) {
