@@ -19,6 +19,7 @@ export const versions = new Map<string, PackageJsonVersion>([
       },
       devDependencies: {
         '@angular-devkit/build-angular': '~0.800.6',
+        '@angular-devkit/build-ng-packagr': '~0.800.6',
         '@angular/cli': '~8.0.6',
         '@angular/compiler-cli': '~8.0.3',
         '@types/node': '~8.9.4',
@@ -47,6 +48,7 @@ export const versions = new Map<string, PackageJsonVersion>([
       },
       devDependencies: {
         '@angular-devkit/build-angular': '~0.900.7',
+        '@angular-devkit/build-ng-packagr': '~0.900.7',
         '@angular/cli': '~9.0.7',
         '@angular/compiler-cli': '~9.0.7',
         '@types/node': '^12.11.1',
@@ -75,6 +77,7 @@ export const versions = new Map<string, PackageJsonVersion>([
       },
       devDependencies: {
         '@angular-devkit/build-angular': '~0.1000.8',
+        '@angular-devkit/build-ng-packagr': '~0.1000.8',
         '@angular/cli': '~10.0.8',
         '@angular/compiler-cli': '~10.0.14',
         '@types/node': '^12.11.1',
