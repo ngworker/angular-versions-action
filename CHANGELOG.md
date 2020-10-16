@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.3](https://github.com/ngworker/angular-versions-action/compare/v1.1.2...v1.1.3) (2020-10-16)
+
+
+### Bug Fixes
+
+* 🐛 modify only existing version, not override entire object ([886197a](https://github.com/ngworker/angular-versions-action/commit/886197a9fd445d3302ec334f859547d402e92301))
+
 ### [1.1.2](https://github.com/ngworker/angular-versions-action/compare/v1.1.1...v1.1.2) (2020-10-16)
 
 
