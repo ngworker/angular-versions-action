@@ -28,6 +28,7 @@ exports.versions = new Map([
             },
             devDependencies: {
                 '@angular-devkit/build-angular': '~0.800.6',
+                '@angular-devkit/build-ng-packagr': '~0.800.6',
                 '@angular/cli': '~8.0.6',
                 '@angular/compiler-cli': '~8.0.3',
                 '@types/node': '~8.9.4',
@@ -56,6 +57,7 @@ exports.versions = new Map([
             },
             devDependencies: {
                 '@angular-devkit/build-angular': '~0.900.7',
+                '@angular-devkit/build-ng-packagr': '~0.900.7',
                 '@angular/cli': '~9.0.7',
                 '@angular/compiler-cli': '~9.0.7',
                 '@types/node': '^12.11.1',
@@ -84,6 +86,7 @@ exports.versions = new Map([
             },
             devDependencies: {
                 '@angular-devkit/build-angular': '~0.1000.8',
+                '@angular-devkit/build-ng-packagr': '~0.1000.8',
                 '@angular/cli': '~10.0.8',
                 '@angular/compiler-cli': '~10.0.14',
                 '@types/node': '^12.11.1',
@@ -172,10 +175,11 @@ function run() {
             const angularVersion = core.getInput('angular_version');
             core.debug(`Finding dependencies for angular version ${angularVersion}`);
             const versions = yield get_angular_versions_1.getAngularVersion(angularVersion);
-            core.debug(`Depedencies found: \nr ${JSON.stringify(versions, null, 2)}`);
+            core.debug(`Depedencies found: \n ${JSON.stringify(versions, null, 2)}`);
             const filePath = core.getInput('file_path');
             core.debug(`merging found dependencies with file ${filePath}`);
-            yield override_angular_versions_1.overrideAngularVersions(versions, filePath);
+            const modified = override_angular_versions_1.overrideAngularVersions(versions, filePath);
+            core.debug(`Depedencies merge in package.json: \n ${JSON.stringify(modified, null, 2)}`);
             core.debug(new Date().toTimeString());
         }
         catch (error) {
@@ -211,28 +215,15 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.overrideAngularVersions = void 0;
 const fs = __importStar(__webpack_require__(747));
 function overrideAngularVersions(angularVersions, path) {
-    return __awaiter(this, void 0, void 0, function* () {
-        try {
-            const rawData = fs.readFileSync(path);
-            let packageJson = JSON.parse(rawData.toString());
-            packageJson = Object.assign(Object.assign({}, packageJson), angularVersions);
-            fs.writeFileSync(path, JSON.stringify(packageJson));
-        }
-        catch (error) { }
-    });
+    const rawData = fs.readFileSync(path);
+    let packageJson = JSON.parse(rawData.toString());
+    packageJson = Object.assign(Object.assign({}, packageJson), angularVersions);
+    fs.writeFileSync(path, JSON.stringify(packageJson));
+    return packageJson;
 }
 exports.overrideAngularVersions = overrideAngularVersions;
 
