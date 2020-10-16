@@ -60,6 +60,7 @@ This example use the github matrix to build, lint and test your code against dif
 At the moment this actions supports a limited set of Angular versions listed below.
 
 - 8.0.0
+- 8.1.0
 - 9.0.0
 - 10.0.0
 
