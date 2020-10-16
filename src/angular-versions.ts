@@ -2,7 +2,7 @@ import {PackageJsonVersion} from './types/package-json-version';
 
 export const versions = new Map<string, PackageJsonVersion>([
   [
-    '8.0.0',
+    '8.0.x',
     {
       dependencies: {
         '@angular/animations': '~8.0.3',
@@ -31,7 +31,7 @@ export const versions = new Map<string, PackageJsonVersion>([
     }
   ],
   [
-    '8.1.0',
+    '8.1.x',
     {
       dependencies: {
         '@angular/animations': '~8.1.0',
@@ -60,7 +60,7 @@ export const versions = new Map<string, PackageJsonVersion>([
     }
   ],
   [
-    '9.0.0',
+    '9.0.x',
     {
       dependencies: {
         '@angular/animations': '~9.0.7',
@@ -89,7 +89,7 @@ export const versions = new Map<string, PackageJsonVersion>([
     }
   ],
   [
-    '10.0.0',
+    '10.0.x',
     {
       dependencies: {
         '@angular/animations': '~10.0.14',

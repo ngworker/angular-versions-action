@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.versions = void 0;
 exports.versions = new Map([
     [
-        '8.0.0',
+        '8.0.x',
         {
             dependencies: {
                 '@angular/animations': '~8.0.3',
@@ -40,7 +40,7 @@ exports.versions = new Map([
         }
     ],
     [
-        '8.1.0',
+        '8.1.x',
         {
             dependencies: {
                 '@angular/animations': '~8.1.0',
@@ -69,7 +69,7 @@ exports.versions = new Map([
         }
     ],
     [
-        '9.0.0',
+        '9.0.x',
         {
             dependencies: {
                 '@angular/animations': '~9.0.7',
@@ -98,7 +98,7 @@ exports.versions = new Map([
         }
     ],
     [
-        '10.0.0',
+        '10.0.x',
         {
             dependencies: {
                 '@angular/animations': '~10.0.14',

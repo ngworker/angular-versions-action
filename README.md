@@ -14,7 +14,7 @@ Create a workflow `.yml` file in your repositories `.github/workflows` directory
 
 ### Inputs
 
-- `angular_version`: The base Angular version used to match the dependency version. Ex: 8.0.0, 10.0.14. To check the full list of supported versions, see [supported versions](###Supported-Angular-versions).
+- `angular_version`: The base Angular version used to match the dependency version. Ex: 8.0.x, 10.0.x. To check the full list of supported versions, see [supported versions](###Supported-Angular-versions).
 
 ### Example workflow - match Angular versions
 
@@ -34,7 +34,7 @@ jobs:
     strategy:
       matrix:
         node-version: [10.x, 12.x, 14.x]
-        angular-version: [8.0.0, 9.0.0, 10.0.0]
+        angular-version: [8.0.x, 9.0.x, 10.0.x]
 
     steps:
       - uses: actions/checkout@v2
@@ -59,10 +59,10 @@ This example use the github matrix to build, lint and test your code against dif
 
 At the moment this actions supports a limited set of Angular versions listed below.
 
-- 8.0.0
-- 8.1.0
-- 9.0.0
-- 10.0.0
+- 8.0.x
+- 8.1.x
+- 9.0.x
+- 10.0.x
 
 ## Contributing
 

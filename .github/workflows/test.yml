@@ -21,4 +21,4 @@ jobs:
       - uses: actions/checkout@v2
       - uses: ./
         with:
-          angular_version: 8.0.0
+          angular_version: 8.0.x
