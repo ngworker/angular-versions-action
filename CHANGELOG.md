@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/ngworker/angular-versions-action/compare/v1.0.0...v1.1.0) (2020-10-16)
+
+
+### Features
+
+* 🎸 add @angular-devkit/build-ng-packagr version ([d21747a](https://github.com/ngworker/angular-versions-action/commit/d21747a39c0bb5595e9d428ebbbf16b64dd7eae2))
+
 ## 1.0.0 (2020-10-12)
 
 
