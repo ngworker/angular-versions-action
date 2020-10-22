@@ -60,6 +60,64 @@ export const versions = new Map<string, PackageJsonVersion>([
     }
   ],
   [
+    '8.2.x',
+    {
+      dependencies: {
+        '@angular/animations': '~8.2.0',
+        '@angular/common': '~8.2.0',
+        '@angular/compiler': '~8.2.0',
+        '@angular/core': '~8.2.0',
+        '@angular/forms': '~8.2.0',
+        '@angular/platform-browser': '~8.2.0',
+        '@angular/platform-browser-dynamic': '~8.2.0',
+        '@angular/router': '~8.2.0',
+        rxjs: '~6.4.0',
+        tslib: '^1.10.0',
+        'zone.js': '~0.9.1'
+      },
+      devDependencies: {
+        '@angular-devkit/build-angular': '~0.802.0',
+        '@angular-devkit/build-ng-packagr': '~0.802.0',
+        '@angular/cli': '~8.2.0',
+        '@angular/compiler-cli': '~8.2.0',
+        '@types/node': '~8.9.4',
+        codelyzer: '^5.0.0',
+        'ts-node': '~7.0.0',
+        tslint: '~5.15.0',
+        typescript: '~3.5.3'
+      }
+    }
+  ],
+  [
+    '8.3.x',
+    {
+      dependencies: {
+        '@angular/animations': '~8.3.0',
+        '@angular/common': '~8.3.0',
+        '@angular/compiler': '~8.3.0',
+        '@angular/core': '~8.3.0',
+        '@angular/forms': '~8.3.0',
+        '@angular/platform-browser': '~8.3.0',
+        '@angular/platform-browser-dynamic': '~8.3.0',
+        '@angular/router': '~8.3.0',
+        rxjs: '~6.4.0',
+        tslib: '^1.10.0',
+        'zone.js': '~0.9.1'
+      },
+      devDependencies: {
+        '@angular-devkit/build-angular': '~0.803.0',
+        '@angular-devkit/build-ng-packagr': '~0.803.0',
+        '@angular/cli': '~8.3.0',
+        '@angular/compiler-cli': '~8.2.3',
+        '@types/node': '~8.9.4',
+        codelyzer: '^5.0.0',
+        'ts-node': '~7.0.0',
+        tslint: '~5.15.0',
+        typescript: '~3.5.3'
+      }
+    }
+  ],
+  [
     '9.0.x',
     {
       dependencies: {
@@ -85,6 +143,35 @@ export const versions = new Map<string, PackageJsonVersion>([
         'ts-node': '~8.3.0',
         tslint: '~5.18.0',
         typescript: '~3.7.5'
+      }
+    }
+  ],
+  [
+    '9.1.x',
+    {
+      dependencies: {
+        '@angular/animations': '~9.1.0',
+        '@angular/common': '~9.1.0',
+        '@angular/compiler': '~9.1.0',
+        '@angular/core': '~9.1.0',
+        '@angular/forms': '~9.1.0',
+        '@angular/platform-browser': '~9.1.0',
+        '@angular/platform-browser-dynamic': '~9.1.0',
+        '@angular/router': '~9.1.0',
+        rxjs: '~6.5.4',
+        tslib: '^1.10.0',
+        'zone.js': '~0.10.2'
+      },
+      devDependencies: {
+        '@angular-devkit/build-angular': '~0.901.0',
+        '@angular-devkit/build-ng-packagr': '~0.901.0',
+        '@angular/cli': '~9.1.0',
+        '@angular/compiler-cli': '~9.1.0',
+        '@types/node': '^12.11.1',
+        codelyzer: '^5.1.2',
+        'ts-node': '~8.3.0',
+        tslint: '~6.1.0',
+        typescript: '~3.8.3'
       }
     }
   ],
