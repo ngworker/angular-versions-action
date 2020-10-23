@@ -232,5 +232,34 @@ export const versions = new Map<string, PackageJsonVersion>([
         typescript: '~3.9.7'
       }
     }
+  ],
+  [
+    '10.2.x',
+    {
+      dependencies: {
+        '@angular/animations': '~10.2.0',
+        '@angular/common': '~10.2.0',
+        '@angular/compiler': '~10.2.0',
+        '@angular/core': '~10.2.0',
+        '@angular/forms': '~10.2.0',
+        '@angular/platform-browser': '~10.2.0',
+        '@angular/platform-browser-dynamic': '~10.2.0',
+        '@angular/router': '~10.2.0',
+        rxjs: '~6.6.0',
+        tslib: '^2.0.0',
+        'zone.js': '~0.10.2'
+      },
+      devDependencies: {
+        '@angular-devkit/build-angular': '~0.1002.0',
+        '@angular-devkit/build-ng-packagr': '~0.1002.0',
+        '@angular/cli': '~10.2.0',
+        '@angular/compiler-cli': '~10.2.0',
+        '@types/node': '^12.11.1',
+        codelyzer: '^6.0.0',
+        'ts-node': '~8.3.0',
+        tslint: '~6.1.0',
+        typescript: '~4.0.2'
+      }
+    }
   ]
 ]);
