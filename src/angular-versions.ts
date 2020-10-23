@@ -89,35 +89,6 @@ export const versions = new Map<string, PackageJsonVersion>([
     }
   ],
   [
-    '8.3.x',
-    {
-      dependencies: {
-        '@angular/animations': '~8.3.0',
-        '@angular/common': '~8.3.0',
-        '@angular/compiler': '~8.3.0',
-        '@angular/core': '~8.3.0',
-        '@angular/forms': '~8.3.0',
-        '@angular/platform-browser': '~8.3.0',
-        '@angular/platform-browser-dynamic': '~8.3.0',
-        '@angular/router': '~8.3.0',
-        rxjs: '~6.4.0',
-        tslib: '^1.10.0',
-        'zone.js': '~0.9.1'
-      },
-      devDependencies: {
-        '@angular-devkit/build-angular': '~0.803.0',
-        '@angular-devkit/build-ng-packagr': '~0.803.0',
-        '@angular/cli': '~8.3.0',
-        '@angular/compiler-cli': '~8.2.3',
-        '@types/node': '~8.9.4',
-        codelyzer: '^5.0.0',
-        'ts-node': '~7.0.0',
-        tslint: '~5.15.0',
-        typescript: '~3.5.3'
-      }
-    }
-  ],
-  [
     '9.0.x',
     {
       dependencies: {
