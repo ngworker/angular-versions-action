@@ -76,9 +76,9 @@ export const versions = new Map<string, PackageJsonVersion>([
         'zone.js': '~0.9.1'
       },
       devDependencies: {
-        '@angular-devkit/build-angular': '~0.802.0',
-        '@angular-devkit/build-ng-packagr': '~0.802.0',
-        '@angular/cli': '~8.2.0',
+        '@angular-devkit/build-angular': '~0.803.0',
+        '@angular-devkit/build-ng-packagr': '~0.803.0',
+        '@angular/cli': '~8.3.0',
         '@angular/compiler-cli': '~8.2.0',
         '@types/node': '~8.9.4',
         codelyzer: '^5.0.0',
