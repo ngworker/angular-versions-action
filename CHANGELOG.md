@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/ngworker/angular-versions-action/compare/v2.1.0...v2.2.0) (2020-10-24)
+
+
+### Features
+
+* 🎸 add support for v8.2.x, v9.1.x, v10.2.x ([#2](https://github.com/ngworker/angular-versions-action/issues/2)) ([03ccbbd](https://github.com/ngworker/angular-versions-action/commit/03ccbbd7a4b66064323153e84fa812a1e76e7e38))
+
 ## [2.1.0](https://github.com/ngworker/angular-versions-action/compare/v2.0.0...v2.1.0) (2020-10-18)
 
 
