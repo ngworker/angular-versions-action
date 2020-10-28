@@ -241,6 +241,35 @@ exports.versions = new Map([
                 typescript: '~4.0.2'
             }
         }
+    ],
+    [
+        '11.0.x',
+        {
+            dependencies: {
+                '@angular/animations': '~11.0.0-rc.1',
+                '@angular/common': '~11.0.0-rc.1',
+                '@angular/compiler': '~11.0.0-rc.1',
+                '@angular/core': '~11.0.0-rc.1',
+                '@angular/forms': '~11.0.0-rc.1',
+                '@angular/platform-browser': '~11.0.0-rc.1',
+                '@angular/platform-browser-dynamic': '~11.0.0-rc.1',
+                '@angular/router': '~11.0.0-rc.1',
+                rxjs: '~6.6.0',
+                tslib: '^2.0.0',
+                'zone.js': '~0.10.2'
+            },
+            devDependencies: {
+                '@angular-devkit/build-angular': '~0.1100.0-rc.1',
+                '@angular-devkit/build-ng-packagr': '~0.1100.0-rc.1',
+                '@angular/cli': '~11.0.0-rc.1',
+                '@angular/compiler-cli': '~11.0.0-rc.1',
+                '@types/node': '^12.11.1',
+                codelyzer: '^6.0.0',
+                'ts-node': '~8.3.0',
+                tslint: '~6.1.0',
+                typescript: '~4.0.2'
+            }
+        }
     ]
 ]);
 
