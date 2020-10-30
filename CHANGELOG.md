@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.3.1](https://github.com/ngworker/angular-versions-action/compare/v2.3.0...v2.3.1) (2020-10-30)
+
+
+### Bug Fixes
+
+* 🐛 use correct version for ng-packagr in v11 ([#4](https://github.com/ngworker/angular-versions-action/issues/4)) ([1b38e2c](https://github.com/ngworker/angular-versions-action/commit/1b38e2c3950aed61dce2155b39a5ae02a792e08f))
+
 ## [2.3.0](https://github.com/ngworker/angular-versions-action/compare/v2.2.0...v2.3.0) (2020-10-30)
 
 
