@@ -1,29 +1,41 @@
 import * as core from '@actions/core';
-import {getAngularVersion} from './get-angular-versions';
+import * as fs from 'fs';
+
+import {getAngularVersions} from './get-angular-versions';
 import {overrideAngularVersions} from './override-angular-versions';
+import {PackageJsonVersion} from './types/package-json-version';
 
 async function run(): Promise<void> {
   try {
     const angularVersion: string = core.getInput('angular_version');
-    core.debug(`Finding dependencies for angular version ${angularVersion}`);
+    core.debug(`Finding dependencies for Angular version ${angularVersion}`);
 
-    const versions = await getAngularVersion(angularVersion);
-    core.debug(`Depedencies found: \n ${JSON.stringify(versions, null, 2)}`);
+    const angularVersions = await getAngularVersions(angularVersion);
+    core.debug(
+      `Depedencies found: \n ${JSON.stringify(angularVersions, null, 2)}`
+    );
 
     const filePath: string = core.getInput('file_path');
     core.debug(`merging found dependencies with file ${filePath}`);
 
-    const modified = overrideAngularVersions(versions, filePath);
+    const projectVersions: PackageJsonVersion = JSON.parse(
+      fs.readFileSync(filePath).toString()
+    );
+    const mergedVersions = overrideAngularVersions({
+      angularVersions,
+      projectVersions
+    });
+    fs.writeFileSync(filePath, JSON.stringify(mergedVersions, null, 2));
 
     core.debug(
       `Depedencies merge in package.json: \n ${JSON.stringify(
-        modified,
+        mergedVersions,
         null,
         2
       )}`
     );
 
-    core.debug(new Date().toTimeString());
+    core.debug(new Date().toISOString());
   } catch (error) {
     core.setFailed(error.message);
   }

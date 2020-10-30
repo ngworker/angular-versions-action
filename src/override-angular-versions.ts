@@ -1,26 +1,39 @@
+import {intersection} from 'lodash-es';
+import fromEntries from 'object.fromentries';
+
 import {PackageJsonVersion} from './types/package-json-version';
-import * as fs from 'fs';
 
-export function overrideAngularVersions(
-  angularVersions: PackageJsonVersion,
-  path: string
-): PackageJsonVersion {
-  const rawData = fs.readFileSync(path);
-  const packageJson: PackageJsonVersion = JSON.parse(rawData.toString());
+export function overrideAngularVersions({
+  angularVersions,
+  projectVersions
+}: {
+  angularVersions: PackageJsonVersion;
+  projectVersions: PackageJsonVersion;
+}): PackageJsonVersion {
+  const dependenciesReplacements = fromEntries<string>(
+    intersection(
+      Object.keys(projectVersions.dependencies),
+      Object.keys(angularVersions.dependencies)
+    ).map(dependency => [dependency, angularVersions.dependencies[dependency]])
+  );
+  const devDependenciesReplacements = fromEntries<string>(
+    intersection(
+      Object.keys(projectVersions.devDependencies),
+      Object.keys(angularVersions.devDependencies)
+    ).map(devDependency => [
+      devDependency,
+      angularVersions.devDependencies[devDependency]
+    ])
+  );
 
-  for (const prop in angularVersions.dependencies) {
-    if (packageJson.dependencies.hasOwnProperty(prop)) {
-      packageJson.dependencies[prop] = angularVersions.dependencies[prop];
+  return {
+    dependencies: {
+      ...projectVersions.dependencies,
+      ...dependenciesReplacements
+    },
+    devDependencies: {
+      ...projectVersions.devDependencies,
+      ...devDependenciesReplacements
     }
-  }
-
-  for (const prop in angularVersions.devDependencies) {
-    if (packageJson.devDependencies.hasOwnProperty(prop)) {
-      packageJson.devDependencies[prop] = angularVersions.devDependencies[prop];
-    }
-  }
-
-  fs.writeFileSync(path, JSON.stringify(packageJson));
-
-  return packageJson;
+  };
 }
