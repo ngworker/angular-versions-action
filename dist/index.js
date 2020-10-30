@@ -260,7 +260,7 @@ exports.versions = new Map([
             },
             devDependencies: {
                 '@angular-devkit/build-angular': '~0.1100.0 || >=0.1100.0-rc.1 <0.1100.0',
-                '@angular-devkit/build-ng-packagr': '~0.1100.0 || >=0.1100.0-rc.1 <0.1100.0',
+                '@angular-devkit/build-ng-packagr': '~0.1100.0 || >=0.1100.0-next.5 <0.1100.0',
                 '@angular/cli': '"~11.0.0 || >=11.0.0-rc.1 <11.0.0"',
                 '@angular/compiler-cli': '"~11.0.0 || >=11.0.0-rc.1 <11.0.0"',
                 '@types/node': '^12.11.1',
