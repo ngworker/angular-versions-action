@@ -12,11 +12,11 @@ async function run(): Promise<void> {
 
     const angularVersions = await getAngularVersions(angularVersion);
     core.debug(
-      `Depedencies found: \n ${JSON.stringify(angularVersions, null, 2)}`
+      `Dependencies found: \n ${JSON.stringify(angularVersions, null, 2)}`
     );
 
     const filePath: string = core.getInput('file_path');
-    core.debug(`merging found dependencies with file ${filePath}`);
+    core.debug(`Merging found dependencies with file ${filePath}`);
 
     const projectVersions: PackageJsonVersion = JSON.parse(
       fs.readFileSync(filePath).toString()
@@ -28,7 +28,7 @@ async function run(): Promise<void> {
     fs.writeFileSync(filePath, JSON.stringify(mergedVersions, null, 2));
 
     core.debug(
-      `Depedencies merge in package.json: \n ${JSON.stringify(
+      `Dependencies merged in package.json: \n ${JSON.stringify(
         mergedVersions,
         null,
         2
