@@ -370,10 +370,7 @@ function overrideAngularVersions({ angularVersions, projectVersions }) {
         devDependency,
         angularVersions.devDependencies[devDependency]
     ]));
-    return {
-        dependencies: Object.assign(Object.assign({}, projectVersions.dependencies), dependenciesReplacements),
-        devDependencies: Object.assign(Object.assign({}, projectVersions.devDependencies), devDependenciesReplacements)
-    };
+    return Object.assign(Object.assign({}, projectVersions), { dependencies: Object.assign(Object.assign({}, projectVersions.dependencies), dependenciesReplacements), devDependencies: Object.assign(Object.assign({}, projectVersions.devDependencies), devDependenciesReplacements) });
 }
 exports.overrideAngularVersions = overrideAngularVersions;
 

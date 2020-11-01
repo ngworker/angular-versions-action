@@ -27,6 +27,7 @@ export function overrideAngularVersions({
   );
 
   return {
+    ...projectVersions,
     dependencies: {
       ...projectVersions.dependencies,
       ...dependenciesReplacements
