@@ -1,7 +1,7 @@
 import {versions} from './angular-versions';
 import {PackageJsonVersion} from './types/package-json-version';
 
-export async function getAngularVersion(
+export async function getAngularVersions(
   angularVersion: string
 ): Promise<PackageJsonVersion> {
   if (versions.has(angularVersion)) {
