@@ -284,9 +284,10 @@ exports.versions = new Map([
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getAngularVersions = void 0;
 const angular_versions_1 = __webpack_require__(9267);
+const lodash_es_1 = __webpack_require__(8721);
 async function getAngularVersions(angularVersion) {
     if (angular_versions_1.versions.has(angularVersion)) {
-        return angular_versions_1.versions.get(angularVersion);
+        return lodash_es_1.cloneDeep(angular_versions_1.versions.get(angularVersion));
     }
     else {
         throw new Error(`Angular version ${angularVersion} is not supported`);
