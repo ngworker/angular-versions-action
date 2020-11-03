@@ -7,5 +7,9 @@ module.exports = {
   transform: {
     '^.+\\.ts$': 'ts-jest'
   },
+  moduleNameMapper: {
+    '^lodash-es$': 'lodash'
+  },
+
   verbose: true
-}
+};
