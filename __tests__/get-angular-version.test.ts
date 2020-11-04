@@ -20,9 +20,9 @@ describe(getAngularVersions.name, () => {
 
   test('throws error when the version is not supported', async () => {
     try {
-      await getAngularVersions('12.0.0');
+      await getAngularVersions('3.0.0');
     } catch (error) {
-      expect(error.message).toBe('Angular version 12.0.0 is not supported');
+      expect(error.message).toBe('Angular version 3.0.0 is not supported');
     }
   });
 });
