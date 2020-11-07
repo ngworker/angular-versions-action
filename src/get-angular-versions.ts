@@ -2,9 +2,7 @@ import {versions} from './angular-versions';
 import {cloneDeep} from 'lodash-es';
 import {PackageJsonVersion} from './types/package-json-version';
 
-export async function getAngularVersions(
-  angularVersion: string
-): Promise<PackageJsonVersion> {
+export function getAngularVersions(angularVersion: string): PackageJsonVersion {
   if (versions.has(angularVersion)) {
     return cloneDeep(versions.get(angularVersion)) as PackageJsonVersion;
   } else {

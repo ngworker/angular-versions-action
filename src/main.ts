@@ -5,12 +5,12 @@ import {getAngularVersions} from './get-angular-versions';
 import {overrideAngularVersions} from './override-angular-versions';
 import {PackageJsonVersion} from './types/package-json-version';
 
-async function run(): Promise<void> {
+function run(): void {
   try {
     const angularVersion: string = core.getInput('angular_version');
     core.debug(`Finding dependencies for Angular version ${angularVersion}`);
 
-    const angularVersions = await getAngularVersions(angularVersion);
+    const angularVersions = getAngularVersions(angularVersion);
     core.debug(
       `Dependencies found: \n ${JSON.stringify(angularVersions, null, 2)}`
     );
