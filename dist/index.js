@@ -284,9 +284,10 @@ exports.versions = new Map([
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getAngularVersions = void 0;
 const angular_versions_1 = __webpack_require__(9267);
-async function getAngularVersions(angularVersion) {
+const lodash_es_1 = __webpack_require__(8721);
+function getAngularVersions(angularVersion) {
     if (angular_versions_1.versions.has(angularVersion)) {
-        return angular_versions_1.versions.get(angularVersion);
+        return lodash_es_1.cloneDeep(angular_versions_1.versions.get(angularVersion));
     }
     else {
         throw new Error(`Angular version ${angularVersion} is not supported`);
@@ -326,11 +327,11 @@ const core = __importStar(__webpack_require__(2186));
 const fs = __importStar(__webpack_require__(5747));
 const get_angular_versions_1 = __webpack_require__(7221);
 const override_angular_versions_1 = __webpack_require__(7480);
-async function run() {
+function run() {
     try {
         const angularVersion = core.getInput('angular_version');
         core.debug(`Finding dependencies for Angular version ${angularVersion}`);
-        const angularVersions = await get_angular_versions_1.getAngularVersions(angularVersion);
+        const angularVersions = get_angular_versions_1.getAngularVersions(angularVersion);
         core.debug(`Dependencies found: \n ${JSON.stringify(angularVersions, null, 2)}`);
         const filePath = core.getInput('file_path');
         core.debug(`Merging found dependencies with file ${filePath}`);
