@@ -1,6 +1,6 @@
 {
   "name": "typescript-action",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "private": true,
   "description": "TypeScript template action",
   "main": "lib/main.js",
@@ -16,7 +16,7 @@
     "hooks:pre-commit": "node hooks/pre-commit.js",
     "commit": "git-cz",
     "release:first": "yarn release -- --first-release",
-    "release": "standard-version --infile ./CHANGELOG.md"
+    "release": "yarn build && standard-version --infile ./CHANGELOG.md"
   },
   "repository": {
     "type": "git",

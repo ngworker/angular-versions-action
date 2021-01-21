@@ -272,7 +272,7 @@ exports.versions = new Map([
         }
     ],
     [
-        '11.0.x',
+        '11.1.x',
         {
             dependencies: {
                 '@angular/animations': '~11.1.0',
@@ -288,7 +288,7 @@ exports.versions = new Map([
                 'zone.js': '~0.11.3'
             },
             devDependencies: {
-                '@angular-devkit/build-angular': '~0.1100.0',
+                '@angular-devkit/build-angular': '~0.1101.0',
                 '@angular-devkit/build-ng-packagr': '~0.1002.0',
                 '@angular/cli': '~11.1.0',
                 '@angular/compiler-cli': '~11.1.0',
