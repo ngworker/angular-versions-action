@@ -1,6 +1,6 @@
 {
   "projectName": "angular-versions-action",
-  "projectOwner": "@ngworker",
+  "projectOwner": "ngworker",
   "repoType": "github",
   "repoHost": "https://github.com",
   "files": [
@@ -31,6 +31,26 @@
         "test",
         "tool",
         "userTesting"
+      ]
+    },
+    {
+      "login": "LayZeeDK",
+      "name": "Lars Gyrup Brink Nielsen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6364586?v=4",
+      "profile": "https://dev.to/layzee",
+      "contributions": [
+        "bug",
+        "code",
+        "doc",
+        "example",
+        "ideas",
+        "infra",
+        "maintenance",
+        "mentoring",
+        "platform",
+        "plugin",
+        "review",
+        "test"
       ]
     }
   ],
