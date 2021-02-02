@@ -4,7 +4,10 @@ import {PackageJsonVersion} from './types/package-json-version';
  * Packages that will be added regardless of whether they are currently
  * installed.
  */
-export const forcedReplacements: readonly string[] = ['tsickle'];
+export const forcedReplacements: readonly string[] = [
+  // Required by certain older versions of ng-packagr.
+  'tsickle'
+];
 
 export const versions = new Map<string, PackageJsonVersion>([
   [
