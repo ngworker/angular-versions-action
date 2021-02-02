@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.5.0](https://github.com/ngworker/angular-versions-action/compare/v2.4.1...v2.5.0) (2021-02-02)
+
+
+### Features
+
+* add packages for libraries and schematics ([#11](https://github.com/ngworker/angular-versions-action/issues/11)) ([ae0c2ca](https://github.com/ngworker/angular-versions-action/commit/ae0c2ca17103add113177945b0076ff23128fe5f))
+
 ### [2.4.1](https://github.com/ngworker/angular-versions-action/compare/v2.4.0...v2.4.1) (2021-01-21)
 
 ## [2.4.0](https://github.com/ngworker/angular-versions-action/compare/v2.3.4...v2.4.0) (2021-01-21)

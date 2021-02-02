@@ -13,7 +13,10 @@ exports.versions = exports.forcedReplacements = void 0;
  * Packages that will be added regardless of whether they are currently
  * installed.
  */
-exports.forcedReplacements = ['tsickle'];
+exports.forcedReplacements = [
+    // Required by certain older versions of ng-packagr.
+    'tsickle'
+];
 exports.versions = new Map([
     [
         '8.0.x',
