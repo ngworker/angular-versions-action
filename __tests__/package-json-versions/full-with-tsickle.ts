@@ -1,4 +1,4 @@
-export const packageJsonWithV8DevDependencies = {
+export const fullWithTsickleJson = {
   name: 'lumberjack',
   version: '0.0.0',
   scripts: {
@@ -32,23 +32,24 @@ export const packageJsonWithV8DevDependencies = {
   },
   private: true,
   dependencies: {
-    '@angular/animations': '~10.1.6',
-    '@angular/common': '~10.1.6',
-    '@angular/compiler': '~10.1.6',
-    '@angular/core': '~10.1.6',
-    '@angular/forms': '~10.1.6',
-    '@angular/platform-browser': '~10.1.6',
-    '@angular/platform-browser-dynamic': '~10.1.6',
-    '@angular/router': '~10.1.6',
-    rxjs: '~6.6.3',
-    tslib: '^2.0.0',
-    'zone.js': '~0.10.3'
+    '@angular/animations': '~8.2.0',
+    '@angular/common': '~8.2.0',
+    '@angular/compiler': '~8.2.0',
+    '@angular/core': '~8.2.0',
+    '@angular/forms': '~8.2.0',
+    '@angular/platform-browser': '~8.2.0',
+    '@angular/platform-browser-dynamic': '~8.2.0',
+    '@angular/router': '~8.2.0',
+    rxjs: '~6.4.0',
+    tslib: '^1.10.0',
+    'zone.js': '~0.9.1'
   },
   devDependencies: {
-    '@angular-devkit/build-angular': '~0.800.6',
-    '@angular-devkit/build-ng-packagr': '~0.800.6',
-    '@angular/cli': '~8.0.6',
-    '@angular/compiler-cli': '~8.0.3',
+    '@angular-devkit/build-angular': '~0.803.0',
+    '@angular-devkit/build-ng-packagr': '~0.803.0',
+    '@angular-devkit/schematics-cli': '~0.1001.7',
+    '@angular/cli': '~8.3.0',
+    '@angular/compiler-cli': '~8.2.0',
     '@commitlint/cli': '8.1.0',
     '@commitlint/config-angular': '^8.3.4',
     '@commitlint/config-conventional': '^8.3.4',
@@ -70,15 +71,16 @@ export const packageJsonWithV8DevDependencies = {
     'karma-jasmine': '~3.3.1',
     'karma-jasmine-html-reporter': '^1.5.0',
     'lint-staged': '^9.5.0',
-    'ng-packagr': '^10.0.0',
+    'ng-packagr': '^5.3.0',
     prettier: '^2.0.5',
     protractor: '~7.0.0',
     'standard-version': '^6.0.1',
     'ts-node': '~7.0.0',
+    tsickle: '~0.36.0',
     tslint: '~5.15.0',
     'tslint-config-prettier': '^1.18.0',
     'tslint-plugin-prettier': '^2.3.0',
-    typescript: '~3.4.3'
+    typescript: '~3.5.3'
   },
   config: {
     commitizen: {
