@@ -8,7 +8,12 @@ require('./sourcemap-register.js');module.exports =
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.versions = void 0;
+exports.versions = exports.forcedReplacements = void 0;
+/**
+ * Packages that will be added regardless of whether they are currently
+ * installed.
+ */
+exports.forcedReplacements = ['tsickle'];
 exports.versions = new Map([
     [
         '8.0.x',
@@ -29,11 +34,14 @@ exports.versions = new Map([
             devDependencies: {
                 '@angular-devkit/build-angular': '~0.800.6',
                 '@angular-devkit/build-ng-packagr': '~0.800.6',
+                '@angular-devkit/schematics-cli': '~0.800.6',
                 '@angular/cli': '~8.0.6',
                 '@angular/compiler-cli': '~8.0.3',
                 '@types/node': '~8.9.4',
                 codelyzer: '^5.0.0',
+                'ng-packagr': '^5.1.0',
                 'ts-node': '~7.0.0',
+                tsickle: '~0.35.0',
                 tslint: '~5.15.0',
                 typescript: '~3.4.3'
             }
@@ -58,11 +66,14 @@ exports.versions = new Map([
             devDependencies: {
                 '@angular-devkit/build-angular': '~0.801.0',
                 '@angular-devkit/build-ng-packagr': '~0.801.0',
+                '@angular-devkit/schematics-cli': '~0.801.0',
                 '@angular/cli': '~8.1.0',
                 '@angular/compiler-cli': '~8.1.0',
                 '@types/node': '~8.9.4',
                 codelyzer: '^5.0.0',
+                'ng-packagr': '^5.1.0',
                 'ts-node': '~7.0.0',
+                tsickle: '~0.35.0',
                 tslint: '~5.15.0',
                 typescript: '~3.4.3'
             }
@@ -87,11 +98,14 @@ exports.versions = new Map([
             devDependencies: {
                 '@angular-devkit/build-angular': '~0.803.0',
                 '@angular-devkit/build-ng-packagr': '~0.803.0',
+                '@angular-devkit/schematics-cli': '~0.803.0',
                 '@angular/cli': '~8.3.0',
                 '@angular/compiler-cli': '~8.2.0',
                 '@types/node': '~8.9.4',
                 codelyzer: '^5.0.0',
+                'ng-packagr': '^5.3.0',
                 'ts-node': '~7.0.0',
+                tsickle: '~0.36.0',
                 tslint: '~5.15.0',
                 typescript: '~3.5.3'
             }
@@ -116,10 +130,12 @@ exports.versions = new Map([
             devDependencies: {
                 '@angular-devkit/build-angular': '~0.900.7',
                 '@angular-devkit/build-ng-packagr': '~0.900.7',
+                '@angular-devkit/schematics-cli': '~0.900.7',
                 '@angular/cli': '~9.0.7',
                 '@angular/compiler-cli': '~9.0.7',
                 '@types/node': '^12.11.1',
                 codelyzer: '^5.1.2',
+                'ng-packagr': '^9.0.0',
                 'ts-node': '~8.3.0',
                 tslint: '~5.18.0',
                 typescript: '~3.7.5'
@@ -145,10 +161,12 @@ exports.versions = new Map([
             devDependencies: {
                 '@angular-devkit/build-angular': '~0.901.0',
                 '@angular-devkit/build-ng-packagr': '~0.901.0',
+                '@angular-devkit/schematics-cli': '~0.901.0',
                 '@angular/cli': '~9.1.0',
                 '@angular/compiler-cli': '~9.1.0',
                 '@types/node': '^12.11.1',
                 codelyzer: '^5.1.2',
+                'ng-packagr': '^9.0.0',
                 'ts-node': '~8.3.0',
                 tslint: '~6.1.0',
                 typescript: '~3.8.3'
@@ -174,10 +192,12 @@ exports.versions = new Map([
             devDependencies: {
                 '@angular-devkit/build-angular': '~0.1000.8',
                 '@angular-devkit/build-ng-packagr': '~0.1000.8',
+                '@angular-devkit/schematics-cli': '~0.1000.8',
                 '@angular/cli': '~10.0.8',
                 '@angular/compiler-cli': '~10.0.14',
                 '@types/node': '^12.11.1',
                 codelyzer: '^6.0.0',
+                'ng-packagr': '^10.0.0',
                 'ts-node': '~8.3.0',
                 tslint: '~6.1.0',
                 typescript: '~3.9.5'
@@ -203,10 +223,12 @@ exports.versions = new Map([
             devDependencies: {
                 '@angular-devkit/build-angular': '~0.1001.7',
                 '@angular-devkit/build-ng-packagr': '~0.1001.7',
+                '@angular-devkit/schematics-cli': '~0.1001.7',
                 '@angular/cli': '~10.1.7',
                 '@angular/compiler-cli': '~10.1.6',
                 '@types/node': '^12.12.62',
                 codelyzer: '^6.0.0',
+                'ng-packagr': '^10.1.0',
                 'ts-node': '~8.3.0',
                 tslint: '~6.1.0',
                 typescript: '~3.9.7'
@@ -232,10 +254,12 @@ exports.versions = new Map([
             devDependencies: {
                 '@angular-devkit/build-angular': '~0.1002.0',
                 '@angular-devkit/build-ng-packagr': '~0.1002.0',
+                '@angular-devkit/schematics-cli': '~0.1002.0',
                 '@angular/cli': '~10.2.0',
                 '@angular/compiler-cli': '~10.2.0',
                 '@types/node': '^12.11.1',
                 codelyzer: '^6.0.0',
+                'ng-packagr': '^10.1.0',
                 'ts-node': '~8.3.0',
                 tslint: '~6.1.0',
                 typescript: '~4.0.2'
@@ -260,11 +284,13 @@ exports.versions = new Map([
             },
             devDependencies: {
                 '@angular-devkit/build-angular': '~0.1100.0',
-                '@angular-devkit/build-ng-packagr': '~0.1002.0',
+                '@angular-devkit/build-ng-packagr': '~0.1002.1',
+                '@angular-devkit/schematics-cli': '~0.1100.0',
                 '@angular/cli': '~11.1.0',
                 '@angular/compiler-cli': '~11.1.0',
                 '@types/node': '^12.11.1',
                 codelyzer: '^6.0.0',
+                'ng-packagr': '^11.0.0',
                 'ts-node': '~8.3.0',
                 tslint: '~6.1.0',
                 typescript: '~4.0.2'
@@ -289,11 +315,13 @@ exports.versions = new Map([
             },
             devDependencies: {
                 '@angular-devkit/build-angular': '~0.1101.0',
-                '@angular-devkit/build-ng-packagr': '~0.1002.0',
+                '@angular-devkit/build-ng-packagr': '~0.1002.1',
+                '@angular-devkit/schematics-cli': '~0.1101.0',
                 '@angular/cli': '~11.1.0',
                 '@angular/compiler-cli': '~11.1.0',
                 '@types/node': '^12.11.1',
                 codelyzer: '^6.0.0',
+                'ng-packagr': '^11.1.0',
                 'ts-node': '~8.3.0',
                 tslint: '~6.1.0',
                 typescript: '~4.1.2'
@@ -394,13 +422,29 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.overrideAngularVersions = void 0;
 const lodash_es_1 = __nccwpck_require__(5996);
 const object_fromentries_1 = __importDefault(__nccwpck_require__(7050));
+const angular_versions_1 = __nccwpck_require__(9267);
 function overrideAngularVersions({ angularVersions, projectVersions }) {
-    const dependenciesReplacements = object_fromentries_1.default(lodash_es_1.intersection(Object.keys(projectVersions.dependencies), Object.keys(angularVersions.dependencies)).map(dependency => [dependency, angularVersions.dependencies[dependency]]));
+    const dependenciesReplacements = object_fromentries_1.default(lodash_es_1.intersection(Object.keys(projectVersions.dependencies), Object.keys(angularVersions.dependencies)).map(dependency => [
+        dependency,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        angularVersions.dependencies[dependency]
+    ]));
+    const forcedDependencies = object_fromentries_1.default(lodash_es_1.intersection(angular_versions_1.forcedReplacements, Object.keys(angularVersions.dependencies)).map(dependency => [
+        dependency,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        angularVersions.dependencies[dependency]
+    ]));
     const devDependenciesReplacements = object_fromentries_1.default(lodash_es_1.intersection(Object.keys(projectVersions.devDependencies), Object.keys(angularVersions.devDependencies)).map(devDependency => [
         devDependency,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         angularVersions.devDependencies[devDependency]
     ]));
-    return Object.assign(Object.assign({}, projectVersions), { dependencies: Object.assign(Object.assign({}, projectVersions.dependencies), dependenciesReplacements), devDependencies: Object.assign(Object.assign({}, projectVersions.devDependencies), devDependenciesReplacements) });
+    const forcedDevDependencies = object_fromentries_1.default(lodash_es_1.intersection(angular_versions_1.forcedReplacements, Object.keys(angularVersions.devDependencies)).map(dependency => [
+        dependency,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        angularVersions.devDependencies[dependency]
+    ]));
+    return Object.assign(Object.assign({}, projectVersions), { dependencies: Object.assign(Object.assign(Object.assign({}, projectVersions.dependencies), dependenciesReplacements), forcedDependencies), devDependencies: Object.assign(Object.assign(Object.assign({}, projectVersions.devDependencies), devDependenciesReplacements), forcedDevDependencies) });
 }
 exports.overrideAngularVersions = overrideAngularVersions;
 
