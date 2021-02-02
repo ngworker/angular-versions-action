@@ -1,5 +1,11 @@
 import {PackageJsonVersion} from './types/package-json-version';
 
+/**
+ * Packages that will be added regardless of whether they are currently
+ * installed.
+ */
+export const forcedReplacements: readonly string[] = ['tsickle'];
+
 export const versions = new Map<string, PackageJsonVersion>([
   [
     '8.0.x',
@@ -20,11 +26,14 @@ export const versions = new Map<string, PackageJsonVersion>([
       devDependencies: {
         '@angular-devkit/build-angular': '~0.800.6',
         '@angular-devkit/build-ng-packagr': '~0.800.6',
+        '@angular-devkit/schematics-cli': '~0.800.6',
         '@angular/cli': '~8.0.6',
         '@angular/compiler-cli': '~8.0.3',
         '@types/node': '~8.9.4',
         codelyzer: '^5.0.0',
+        'ng-packagr': '^5.1.0',
         'ts-node': '~7.0.0',
+        tsickle: '~0.35.0',
         tslint: '~5.15.0',
         typescript: '~3.4.3'
       }
@@ -49,11 +58,14 @@ export const versions = new Map<string, PackageJsonVersion>([
       devDependencies: {
         '@angular-devkit/build-angular': '~0.801.0',
         '@angular-devkit/build-ng-packagr': '~0.801.0',
+        '@angular-devkit/schematics-cli': '~0.801.0',
         '@angular/cli': '~8.1.0',
         '@angular/compiler-cli': '~8.1.0',
         '@types/node': '~8.9.4',
         codelyzer: '^5.0.0',
+        'ng-packagr': '^5.1.0',
         'ts-node': '~7.0.0',
+        tsickle: '~0.35.0',
         tslint: '~5.15.0',
         typescript: '~3.4.3'
       }
@@ -78,11 +90,14 @@ export const versions = new Map<string, PackageJsonVersion>([
       devDependencies: {
         '@angular-devkit/build-angular': '~0.803.0',
         '@angular-devkit/build-ng-packagr': '~0.803.0',
+        '@angular-devkit/schematics-cli': '~0.803.0',
         '@angular/cli': '~8.3.0',
         '@angular/compiler-cli': '~8.2.0',
         '@types/node': '~8.9.4',
         codelyzer: '^5.0.0',
+        'ng-packagr': '^5.3.0',
         'ts-node': '~7.0.0',
+        tsickle: '~0.36.0',
         tslint: '~5.15.0',
         typescript: '~3.5.3'
       }
@@ -107,10 +122,12 @@ export const versions = new Map<string, PackageJsonVersion>([
       devDependencies: {
         '@angular-devkit/build-angular': '~0.900.7',
         '@angular-devkit/build-ng-packagr': '~0.900.7',
+        '@angular-devkit/schematics-cli': '~0.900.7',
         '@angular/cli': '~9.0.7',
         '@angular/compiler-cli': '~9.0.7',
         '@types/node': '^12.11.1',
         codelyzer: '^5.1.2',
+        'ng-packagr': '^9.0.0',
         'ts-node': '~8.3.0',
         tslint: '~5.18.0',
         typescript: '~3.7.5'
@@ -136,10 +153,12 @@ export const versions = new Map<string, PackageJsonVersion>([
       devDependencies: {
         '@angular-devkit/build-angular': '~0.901.0',
         '@angular-devkit/build-ng-packagr': '~0.901.0',
+        '@angular-devkit/schematics-cli': '~0.901.0',
         '@angular/cli': '~9.1.0',
         '@angular/compiler-cli': '~9.1.0',
         '@types/node': '^12.11.1',
         codelyzer: '^5.1.2',
+        'ng-packagr': '^9.0.0',
         'ts-node': '~8.3.0',
         tslint: '~6.1.0',
         typescript: '~3.8.3'
@@ -165,10 +184,12 @@ export const versions = new Map<string, PackageJsonVersion>([
       devDependencies: {
         '@angular-devkit/build-angular': '~0.1000.8',
         '@angular-devkit/build-ng-packagr': '~0.1000.8',
+        '@angular-devkit/schematics-cli': '~0.1000.8',
         '@angular/cli': '~10.0.8',
         '@angular/compiler-cli': '~10.0.14',
         '@types/node': '^12.11.1',
         codelyzer: '^6.0.0',
+        'ng-packagr': '^10.0.0',
         'ts-node': '~8.3.0',
         tslint: '~6.1.0',
         typescript: '~3.9.5'
@@ -194,10 +215,12 @@ export const versions = new Map<string, PackageJsonVersion>([
       devDependencies: {
         '@angular-devkit/build-angular': '~0.1001.7',
         '@angular-devkit/build-ng-packagr': '~0.1001.7',
+        '@angular-devkit/schematics-cli': '~0.1001.7',
         '@angular/cli': '~10.1.7',
         '@angular/compiler-cli': '~10.1.6',
         '@types/node': '^12.12.62',
         codelyzer: '^6.0.0',
+        'ng-packagr': '^10.1.0',
         'ts-node': '~8.3.0',
         tslint: '~6.1.0',
         typescript: '~3.9.7'
@@ -223,10 +246,12 @@ export const versions = new Map<string, PackageJsonVersion>([
       devDependencies: {
         '@angular-devkit/build-angular': '~0.1002.0',
         '@angular-devkit/build-ng-packagr': '~0.1002.0',
+        '@angular-devkit/schematics-cli': '~0.1002.0',
         '@angular/cli': '~10.2.0',
         '@angular/compiler-cli': '~10.2.0',
         '@types/node': '^12.11.1',
         codelyzer: '^6.0.0',
+        'ng-packagr': '^10.1.0',
         'ts-node': '~8.3.0',
         tslint: '~6.1.0',
         typescript: '~4.0.2'
@@ -251,11 +276,13 @@ export const versions = new Map<string, PackageJsonVersion>([
       },
       devDependencies: {
         '@angular-devkit/build-angular': '~0.1100.0',
-        '@angular-devkit/build-ng-packagr': '~0.1002.0',
+        '@angular-devkit/build-ng-packagr': '~0.1002.1',
+        '@angular-devkit/schematics-cli': '~0.1100.0',
         '@angular/cli': '~11.1.0',
         '@angular/compiler-cli': '~11.1.0',
         '@types/node': '^12.11.1',
         codelyzer: '^6.0.0',
+        'ng-packagr': '^11.0.0',
         'ts-node': '~8.3.0',
         tslint: '~6.1.0',
         typescript: '~4.0.2'
@@ -280,11 +307,13 @@ export const versions = new Map<string, PackageJsonVersion>([
       },
       devDependencies: {
         '@angular-devkit/build-angular': '~0.1101.0',
-        '@angular-devkit/build-ng-packagr': '~0.1002.0',
+        '@angular-devkit/build-ng-packagr': '~0.1002.1',
+        '@angular-devkit/schematics-cli': '~0.1101.0',
         '@angular/cli': '~11.1.0',
         '@angular/compiler-cli': '~11.1.0',
         '@types/node': '^12.11.1',
         codelyzer: '^6.0.0',
+        'ng-packagr': '^11.1.0',
         'ts-node': '~8.3.0',
         tslint: '~6.1.0',
         typescript: '~4.1.2'
