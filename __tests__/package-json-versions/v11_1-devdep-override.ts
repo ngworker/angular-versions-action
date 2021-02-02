@@ -1,4 +1,4 @@
-export const packageUnmatching = {
+export const packageJsonWithV11_1DevDependencies = {
   name: 'lumberjack',
   version: '0.0.0',
   scripts: {
@@ -32,17 +32,33 @@ export const packageUnmatching = {
   },
   private: true,
   dependencies: {
-    unmatching: 'unmatching'
+    '@angular/animations': '~10.1.6',
+    '@angular/common': '~10.1.6',
+    '@angular/compiler': '~10.1.6',
+    '@angular/core': '~10.1.6',
+    '@angular/forms': '~10.1.6',
+    '@angular/platform-browser': '~10.1.6',
+    '@angular/platform-browser-dynamic': '~10.1.6',
+    '@angular/router': '~10.1.6',
+    rxjs: '~6.6.3',
+    tslib: '^2.0.0',
+    'zone.js': '~0.10.3'
   },
   devDependencies: {
-    'unmatching-dev': 'unmatching-dev',
+    '@angular-devkit/build-angular': '~0.1101.0',
+    '@angular-devkit/build-ng-packagr': '~0.1002.1',
+    '@angular-devkit/schematics-cli': '~0.1101.0',
+    '@angular/cli': '~11.1.0',
+    '@angular/compiler-cli': '~11.1.0',
     '@commitlint/cli': '8.1.0',
     '@commitlint/config-angular': '^8.3.4',
     '@commitlint/config-conventional': '^8.3.4',
     '@ngneat/spectator': '^6.0.0',
     '@types/jasmine': '~3.5.0',
     '@types/jasminewd2': '~2.0.3',
+    '@types/node': '^12.11.1',
     'all-contributors-cli': '^6.8.1',
+    codelyzer: '^6.0.0',
     copy: '~0.3.2',
     'git-cz': '^3.3.0',
     husky: '^3.1.0',
@@ -55,11 +71,15 @@ export const packageUnmatching = {
     'karma-jasmine': '~3.3.1',
     'karma-jasmine-html-reporter': '^1.5.0',
     'lint-staged': '^9.5.0',
+    'ng-packagr': '^11.1.0',
     prettier: '^2.0.5',
     protractor: '~7.0.0',
     'standard-version': '^6.0.1',
+    'ts-node': '~8.3.0',
+    tslint: '~6.1.0',
     'tslint-config-prettier': '^1.18.0',
-    'tslint-plugin-prettier': '^2.3.0'
+    'tslint-plugin-prettier': '^2.3.0',
+    typescript: '~4.1.2'
   },
   config: {
     commitizen: {

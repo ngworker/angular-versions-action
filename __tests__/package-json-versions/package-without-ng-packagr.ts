@@ -46,6 +46,7 @@ export const packageJsonWithoutNgPackagr = {
   },
   devDependencies: {
     '@angular-devkit/build-angular': '~0.1001.7',
+    '@angular-devkit/schematics-cli': '~0.1001.7',
     '@angular/cli': '~10.1.7',
     '@angular/compiler-cli': '~10.1.6',
     '@commitlint/cli': '8.1.0',
@@ -69,7 +70,6 @@ export const packageJsonWithoutNgPackagr = {
     'karma-jasmine': '~3.3.1',
     'karma-jasmine-html-reporter': '^1.5.0',
     'lint-staged': '^9.5.0',
-    'ng-packagr': '^10.0.0',
     prettier: '^2.0.5',
     protractor: '~7.0.0',
     'standard-version': '^6.0.1',

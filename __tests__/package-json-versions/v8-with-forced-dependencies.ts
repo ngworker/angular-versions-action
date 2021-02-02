@@ -1,4 +1,4 @@
-export const packageJsonWithV8Dependencies = {
+export const packageJsonV8WithForceDependencies = {
   name: 'lumberjack',
   version: '0.0.0',
   scripts: {
@@ -45,19 +45,20 @@ export const packageJsonWithV8Dependencies = {
     'zone.js': '~0.9.1'
   },
   devDependencies: {
-    '@angular-devkit/build-angular': '~0.1001.7',
-    '@angular-devkit/build-ng-packagr': '~0.1001.7',
-    '@angular/cli': '~10.1.7',
-    '@angular/compiler-cli': '~10.1.6',
+    '@angular-devkit/build-angular': '~0.800.6',
+    '@angular-devkit/build-ng-packagr': '~0.800.6',
+    '@angular-devkit/schematics-cli': '~0.800.6',
+    '@angular/cli': '~8.0.6',
+    '@angular/compiler-cli': '~8.0.3',
     '@commitlint/cli': '8.1.0',
     '@commitlint/config-angular': '^8.3.4',
     '@commitlint/config-conventional': '^8.3.4',
     '@ngneat/spectator': '^6.0.0',
     '@types/jasmine': '~3.5.0',
     '@types/jasminewd2': '~2.0.3',
-    '@types/node': '^12.12.62',
+    '@types/node': '~8.9.4',
     'all-contributors-cli': '^6.8.1',
-    codelyzer: '^6.0.0',
+    codelyzer: '^5.0.0',
     copy: '~0.3.2',
     'git-cz': '^3.3.0',
     husky: '^3.1.0',
@@ -70,15 +71,16 @@ export const packageJsonWithV8Dependencies = {
     'karma-jasmine': '~3.3.1',
     'karma-jasmine-html-reporter': '^1.5.0',
     'lint-staged': '^9.5.0',
-    'ng-packagr': '^10.0.0',
+    'ng-packagr': '^5.1.0',
     prettier: '^2.0.5',
     protractor: '~7.0.0',
     'standard-version': '^6.0.1',
-    'ts-node': '~8.3.0',
-    tslint: '~6.1.0',
+    'ts-node': '~7.0.0',
+    tsickle: '~0.35.0',
+    tslint: '~5.15.0',
     'tslint-config-prettier': '^1.18.0',
     'tslint-plugin-prettier': '^2.3.0',
-    typescript: '~3.9.7'
+    typescript: '~3.4.3'
   },
   config: {
     commitizen: {

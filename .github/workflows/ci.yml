@@ -1,24 +1,33 @@
-name: 'build-test'
-on: # rebuild any PRs and main branch changes
+name: '@ngworker/angular-versions-action CI'
+
+on:
   pull_request:
   push:
     branches:
       - main
-      - 'releases/*'
 
 jobs:
-  build: # make sure build/ci work properly
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: |
-          yarn
-      - run: |
-          yarn ci
-  test: # make sure the action works on a clean machine without building
+      - run: yarn install
+
+      - run: yarn build
+
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: yarn install
+
+      - run: yarn test
+
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
       - uses: ./
         with:
           angular_version: 8.0.x
