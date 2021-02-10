@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.6.0](https://github.com/ngworker/angular-versions-action/compare/v2.5.0...v2.6.0) (2021-02-10)
+
+
+### Features
+
+* support Angular 11.2.x ([#12](https://github.com/ngworker/angular-versions-action/issues/12)) ([41926f9](https://github.com/ngworker/angular-versions-action/commit/41926f94244e4b6ababe6d2186b4362e802f0d75))
+
 ## [2.5.0](https://github.com/ngworker/angular-versions-action/compare/v2.4.1...v2.5.0) (2021-02-02)
 
 
