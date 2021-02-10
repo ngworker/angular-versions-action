@@ -279,7 +279,7 @@ export const versions = new Map<string, PackageJsonVersion>([
       },
       devDependencies: {
         '@angular-devkit/build-angular': '~0.1100.0',
-        '@angular-devkit/build-ng-packagr': '~0.1002.1',
+        '@angular-devkit/build-ng-packagr': '~0.1002.2',
         '@angular-devkit/schematics-cli': '~0.1100.0',
         '@angular/cli': '~11.1.0',
         '@angular/compiler-cli': '~11.1.0',
@@ -310,10 +310,41 @@ export const versions = new Map<string, PackageJsonVersion>([
       },
       devDependencies: {
         '@angular-devkit/build-angular': '~0.1101.0',
-        '@angular-devkit/build-ng-packagr': '~0.1002.1',
+        '@angular-devkit/build-ng-packagr': '~0.1002.2',
         '@angular-devkit/schematics-cli': '~0.1101.0',
         '@angular/cli': '~11.1.0',
         '@angular/compiler-cli': '~11.1.0',
+        '@types/node': '^12.11.1',
+        codelyzer: '^6.0.0',
+        'ng-packagr': '^11.1.0',
+        'ts-node': '~8.3.0',
+        tslint: '~6.1.0',
+        typescript: '~4.1.2'
+      }
+    }
+  ],
+  [
+    '11.2.x',
+    {
+      dependencies: {
+        '@angular/animations': '~11.2.0 || >=11.2.0-rc.0',
+        '@angular/common': '~11.2.0 || >=11.2.0-rc.0',
+        '@angular/compiler': '~11.2.0 || >=11.2.0-rc.0',
+        '@angular/core': '~11.2.0 || >=11.2.0-rc.0',
+        '@angular/forms': '~11.2.0 || >=11.2.0-rc.0',
+        '@angular/platform-browser': '~11.2.0 || >=11.2.0-rc.0',
+        '@angular/platform-browser-dynamic': '~11.2.0 || >=11.2.0-rc.0',
+        '@angular/router': '~11.2.0 || >=11.2.0-rc.0',
+        rxjs: '~6.6.0',
+        tslib: '^2.0.0',
+        'zone.js': '~0.11.3'
+      },
+      devDependencies: {
+        '@angular-devkit/build-angular': '~0.1102.0 || >=0.1102.0-rc.1',
+        '@angular-devkit/build-ng-packagr': '~0.1002.2',
+        '@angular-devkit/schematics-cli': '~0.1102.0 || >=0.1102.0-rc.1',
+        '@angular/cli': '~11.2.0 || >=11.2.0-rc.1',
+        '@angular/compiler-cli': '~11.2.0 || >=11.2.0-rc.0',
         '@types/node': '^12.11.1',
         codelyzer: '^6.0.0',
         'ng-packagr': '^11.1.0',
