@@ -23,9 +23,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 
 jobs:
   build:
@@ -33,7 +33,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [10.x, 12.x]
         angular-version:
           [
             8.0.x,
@@ -45,7 +45,8 @@ jobs:
             10.1.x,
             10.2.x,
             11.0.x,
-            11.1.x
+            11.1.x,
+            11.2.x
           ]
 
     steps:
@@ -54,12 +55,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Change to the right Angular version
+      - name: Use Angular ${{ matrix.angular-version }}
         uses: ngworker/angular-versions-action@v1
         with:
           angular-version: ${{ matrix.angular-version }}
 
-      - run: yarn
+      - run: yarn install
       - run: yarn lint
       - run: yarn build
       - run: yarn test
@@ -81,6 +82,7 @@ At the moment this actions supports a limited set of Angular versions listed bel
 - 10.2.x
 - 11.0.x
 - 11.1.x
+- 11.2.x
 
 ## Contributing
 
