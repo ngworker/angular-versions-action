@@ -46,7 +46,7 @@ export const packageJsonWithV11_1All = {
   },
   devDependencies: {
     '@angular-devkit/build-angular': '~0.1101.0',
-    '@angular-devkit/build-ng-packagr': '~0.1002.1',
+    '@angular-devkit/build-ng-packagr': '~0.1002.2',
     '@angular-devkit/schematics-cli': '~0.1101.0',
     '@angular/cli': '~11.1.0',
     '@angular/compiler-cli': '~11.1.0',
