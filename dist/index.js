@@ -420,11 +420,11 @@ const get_angular_versions_1 = __nccwpck_require__(7221);
 const override_angular_versions_1 = __nccwpck_require__(7480);
 function run() {
     try {
-        const angularVersion = core.getInput('angular_version');
+        const angularVersion = core.getInput('angular-version');
         core.debug(`Finding dependencies for Angular version ${angularVersion}`);
         const angularVersions = get_angular_versions_1.getAngularVersions(angularVersion);
         core.debug(`Dependencies found: \n ${JSON.stringify(angularVersions, null, 2)}`);
-        const filePath = core.getInput('file_path');
+        const filePath = core.getInput('file-path');
         core.debug(`Merging found dependencies with file ${filePath}`);
         const projectVersions = JSON.parse(fs.readFileSync(filePath).toString());
         const mergedVersions = override_angular_versions_1.overrideAngularVersions({
