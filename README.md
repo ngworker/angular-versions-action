@@ -58,7 +58,7 @@ jobs:
       - name: Use Angular ${{ matrix.angular-version }}
         uses: ngworker/angular-versions-action@v1
         with:
-          angular-version: ${{ matrix.angular-version }}
+          angular_version: ${{ matrix.angular-version }}
 
       - run: yarn install
       - run: yarn lint
