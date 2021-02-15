@@ -14,7 +14,7 @@ Create a workflow `.yml` file in your repositories `.github/workflows` directory
 
 ### Inputs
 
-- `angular_version`: The base Angular version used to match the dependency version. Ex: 8.0.x, 10.0.x. To check the full list of supported versions, see [supported versions](###Supported-Angular-versions).
+- `angular-version`: The base Angular version used to match the dependency version. Ex: 8.0.x, 10.0.x. To check the full list of supported versions, see [supported versions](###Supported-Angular-versions).
 
 ### Example workflow - match Angular versions
 
@@ -58,7 +58,7 @@ jobs:
       - name: Use Angular ${{ matrix.angular-version }}
         uses: ngworker/angular-versions-action@v1
         with:
-          angular_version: ${{ matrix.angular-version }}
+          angular-version: ${{ matrix.angular-version }}
 
       - run: yarn install
       - run: yarn lint
