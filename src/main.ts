@@ -7,7 +7,7 @@ import {PackageJsonVersion} from './types/package-json-version';
 
 function run(): void {
   try {
-    const angularVersion: string = core.getInput('angular_version');
+    const angularVersion: string = core.getInput('angular-version');
     core.debug(`Finding dependencies for Angular version ${angularVersion}`);
 
     const angularVersions = getAngularVersions(angularVersion);
@@ -15,7 +15,7 @@ function run(): void {
       `Dependencies found: \n ${JSON.stringify(angularVersions, null, 2)}`
     );
 
-    const filePath: string = core.getInput('file_path');
+    const filePath: string = core.getInput('file-path');
     core.debug(`Merging found dependencies with file ${filePath}`);
 
     const projectVersions: PackageJsonVersion = JSON.parse(

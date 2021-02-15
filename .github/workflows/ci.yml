@@ -30,4 +30,4 @@ jobs:
 
       - uses: ./
         with:
-          angular_version: 8.0.x
+          angular-version: 8.0.x
