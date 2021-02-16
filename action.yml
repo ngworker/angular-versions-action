@@ -1,6 +1,6 @@
 name: 'Match Angular Versions'
 description: 'Modifies the package.json with matching dependency versions for a given base Angular version'
-author: 'GitHub'
+author: 'ngworker'
 inputs:
   angular-version:
     description: 'The base Angular version used to match the dependency versions'
@@ -9,6 +9,10 @@ inputs:
     description: 'Path of the package.json file to modify'
     required: false
     default: './package.json'
+  workspace-type:
+    description: 'The type of workspace used in the repository (angular/nx)'
+    required: false
+    default: 'angular'
 runs:
   using: 'node12'
   main: 'dist/index.js'

@@ -1,4 +1,4 @@
-import {PackageJsonVersion} from './types/package-json-version';
+import {PackageJsonVersionAngularWorkspace} from './types/package-json-version';
 
 /**
  * Packages that will be added regardless of whether they are currently
@@ -9,7 +9,10 @@ export const forcedReplacements: readonly string[] = [
   'tsickle'
 ];
 
-export const versions = new Map<string, PackageJsonVersion>([
+export const versionsAngularWorkspace = new Map<
+  string,
+  PackageJsonVersionAngularWorkspace
+>([
   [
     '8.0.x',
     {

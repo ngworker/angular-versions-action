@@ -1,5 +1,6 @@
 import * as core from '@actions/core';
 import * as fs from 'fs';
+import {ensureCorrectWorkspaceType} from './ensure-correct-workspace-type';
 
 import {getAngularVersions} from './get-angular-versions';
 import {overrideAngularVersions} from './override-angular-versions';
@@ -8,9 +9,12 @@ import {PackageJsonVersion} from './types/package-json-version';
 function run(): void {
   try {
     const angularVersion: string = core.getInput('angular-version');
-    core.debug(`Finding dependencies for Angular version ${angularVersion}`);
+    const workspaceType = ensureCorrectWorkspaceType();
+    core.debug(
+      `Finding dependencies for Angular version ${angularVersion} in a ${workspaceType} workspace`
+    );
 
-    const angularVersions = getAngularVersions(angularVersion);
+    const angularVersions = getAngularVersions(angularVersion, workspaceType);
     core.debug(
       `Dependencies found: \n ${JSON.stringify(angularVersions, null, 2)}`
     );

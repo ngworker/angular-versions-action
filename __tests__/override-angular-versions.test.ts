@@ -15,7 +15,7 @@ import {getAngularVersions} from '../src/get-angular-versions';
 describe(overrideAngularVersions.name, () => {
   describe('replaces versions existing in both sources', () => {
     test('replace ONLY Angular versions in dependencies', () => {
-      const v11_1 = getAngularVersions('11.1.x');
+      const v11_1 = getAngularVersions('11.1.x', 'angular');
       (v11_1.devDependencies as any) = {};
 
       const actualPackageJson = overrideAngularVersions({
@@ -27,7 +27,7 @@ describe(overrideAngularVersions.name, () => {
     });
 
     test('replace ONLY Angular versions in devDependencies', () => {
-      const v11_1 = getAngularVersions('11.1.x');
+      const v11_1 = getAngularVersions('11.1.x', 'angular');
       (v11_1.dependencies as any) = {};
 
       const actualPackageJson = overrideAngularVersions({
@@ -39,7 +39,7 @@ describe(overrideAngularVersions.name, () => {
     });
 
     test('replace Angular versions in devDependencies and dependencies', () => {
-      const v11_1 = getAngularVersions('11.1.x');
+      const v11_1 = getAngularVersions('11.1.x', 'angular');
 
       const actualPackageJson = overrideAngularVersions({
         projectVersions: fullPackageJson,
@@ -50,7 +50,7 @@ describe(overrideAngularVersions.name, () => {
     });
 
     test('no override package with unmatching versions', () => {
-      const v11_1 = getAngularVersions('11.1.x');
+      const v11_1 = getAngularVersions('11.1.x', 'angular');
 
       const actualPackageJson = overrideAngularVersions({
         projectVersions: packageUnmatching as any,
@@ -61,7 +61,7 @@ describe(overrideAngularVersions.name, () => {
     });
 
     test('no add ng-packagr dependency when it is not present in the package', () => {
-      const v11_1 = getAngularVersions('11.1.x');
+      const v11_1 = getAngularVersions('11.1.x', 'angular');
 
       const actualPackageJson = overrideAngularVersions({
         projectVersions: packageJsonWithoutNgPackagr as any,
@@ -72,7 +72,7 @@ describe(overrideAngularVersions.name, () => {
     });
 
     test('add forced dependencies when not present in the package', () => {
-      const v8 = getAngularVersions('8.0.x');
+      const v8 = getAngularVersions('8.0.x', 'angular');
 
       const actualPackageJson = overrideAngularVersions({
         projectVersions: fullPackageJson as any,
@@ -83,7 +83,7 @@ describe(overrideAngularVersions.name, () => {
     });
 
     test('replace forced dependencies when present in the package', () => {
-      const v8 = getAngularVersions('8.0.x');
+      const v8 = getAngularVersions('8.0.x', 'angular');
 
       const actualPackageJson = overrideAngularVersions({
         projectVersions: fullWithTsickleJson as any,
