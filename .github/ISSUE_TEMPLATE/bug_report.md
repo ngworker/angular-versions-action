@@ -34,8 +34,6 @@ ISSUES MISSING IMPORTANT INFORMATION MAY BE CLOSED WITHOUT INVESTIGATION.
 
 ## Environment
 
-- OS: [for example: iOS version XX]
-- Browser [for example: chrome version XX, safari version XX]
 - angular-versions-action version: X.Y.Z (or vX)
 - Input variable angular-version: M.N.x
 - Input variable file-path: X.Y.Z
