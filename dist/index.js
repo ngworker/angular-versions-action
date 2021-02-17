@@ -8,7 +8,7 @@ require('./sourcemap-register.js');module.exports =
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.versions = exports.forcedReplacements = void 0;
+exports.versionsAngularWorkspace = exports.forcedReplacements = void 0;
 /**
  * Packages that will be added regardless of whether they are currently
  * installed.
@@ -17,7 +17,7 @@ exports.forcedReplacements = [
     // Required by certain older versions of ng-packagr.
     'tsickle'
 ];
-exports.versions = new Map([
+exports.versionsAngularWorkspace = new Map([
     [
         '8.0.x',
         {
@@ -367,24 +367,129 @@ exports.versions = new Map([
 
 /***/ }),
 
+/***/ 4361:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.ensurePackageJsonPath = void 0;
+const path = __importStar(__nccwpck_require__(5622));
+const fs = __importStar(__nccwpck_require__(5747));
+function ensurePackageJsonPath(rootFolderPath) {
+    const packageJsonPath = path.join(rootFolderPath, 'package.json');
+    if (!fs.existsSync(packageJsonPath)) {
+        throw new Error('No package.json was found in the provided root folder');
+    }
+    return packageJsonPath;
+}
+exports.ensurePackageJsonPath = ensurePackageJsonPath;
+
+
+/***/ }),
+
 /***/ 7221:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.getAngularVersions = void 0;
+exports.getAngularVersionsAngularWorkspace = exports.getAngularVersions = void 0;
 const angular_versions_1 = __nccwpck_require__(9267);
 const lodash_es_1 = __nccwpck_require__(5996);
-function getAngularVersions(angularVersion) {
-    if (angular_versions_1.versions.has(angularVersion)) {
-        return lodash_es_1.cloneDeep(angular_versions_1.versions.get(angularVersion));
+const nx_angular_versions_1 = __nccwpck_require__(6203);
+/**
+ * Gets the `package.json` dependencies matching a specific angular version in a specific workspace type.
+ * @param angularVersion The angular version to match (Ex. 8.0.x)
+ * @param workspaceType The workspace type of the repository
+ */
+function getAngularVersions(angularVersion, workspaceType) {
+    if (workspaceType === 'angular') {
+        return getAngularVersionsAngularWorkspace(angularVersion);
     }
     else {
-        throw new Error(`Angular version ${angularVersion} is not supported`);
+        return getAngularVersionsNxWorkspace(angularVersion);
     }
 }
 exports.getAngularVersions = getAngularVersions;
+function getAngularVersionsAngularWorkspace(angularVersion) {
+    if (angular_versions_1.versionsAngularWorkspace.has(angularVersion)) {
+        return lodash_es_1.cloneDeep(angular_versions_1.versionsAngularWorkspace.get(angularVersion));
+    }
+    else {
+        throw new Error(`Angular version ${angularVersion} is not supported in an angular workspace`);
+    }
+}
+exports.getAngularVersionsAngularWorkspace = getAngularVersionsAngularWorkspace;
+function getAngularVersionsNxWorkspace(angularVersion) {
+    if (nx_angular_versions_1.versionsNxWorkspace.has(angularVersion)) {
+        return lodash_es_1.cloneDeep(nx_angular_versions_1.versionsNxWorkspace.get(angularVersion));
+    }
+    else {
+        throw new Error(`Angular version ${angularVersion} is not supported in a nx workspace`);
+    }
+}
+
+
+/***/ }),
+
+/***/ 5392:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.getCorrectWorkspaceType = void 0;
+const fs = __importStar(__nccwpck_require__(5747));
+const path = __importStar(__nccwpck_require__(5622));
+function getCorrectWorkspaceType(rootFolderPath) {
+    const nxJsonPath = path.join(rootFolderPath, 'nx.json');
+    if (fs.existsSync(nxJsonPath)) {
+        return 'nx';
+    }
+    else {
+        return 'angular';
+    }
+}
+exports.getCorrectWorkspaceType = getCorrectWorkspaceType;
 
 
 /***/ }),
@@ -416,15 +521,19 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(2186));
 const fs = __importStar(__nccwpck_require__(5747));
+const get_correct_workspace_type_1 = __nccwpck_require__(5392);
 const get_angular_versions_1 = __nccwpck_require__(7221);
 const override_angular_versions_1 = __nccwpck_require__(7480);
+const ensure_package_json_path_1 = __nccwpck_require__(4361);
 function run() {
     try {
         const angularVersion = core.getInput('angular-version');
-        core.debug(`Finding dependencies for Angular version ${angularVersion}`);
-        const angularVersions = get_angular_versions_1.getAngularVersions(angularVersion);
+        const rootFolderPath = core.getInput('root-folder-path');
+        const workspaceType = get_correct_workspace_type_1.getCorrectWorkspaceType(rootFolderPath);
+        core.debug(`Finding dependencies for Angular version ${angularVersion} in a ${workspaceType} workspace`);
+        const angularVersions = get_angular_versions_1.getAngularVersions(angularVersion, workspaceType);
         core.debug(`Dependencies found: \n ${JSON.stringify(angularVersions, null, 2)}`);
-        const filePath = core.getInput('file-path');
+        const filePath = ensure_package_json_path_1.ensurePackageJsonPath(rootFolderPath);
         core.debug(`Merging found dependencies with file ${filePath}`);
         const projectVersions = JSON.parse(fs.readFileSync(filePath).toString());
         const mergedVersions = override_angular_versions_1.overrideAngularVersions({
@@ -440,6 +549,59 @@ function run() {
     }
 }
 run();
+
+
+/***/ }),
+
+/***/ 6203:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.versionsNxWorkspace = exports.forcedReplacements = void 0;
+/**
+ * Packages that will be added regardless of whether they are currently
+ * installed.
+ */
+exports.forcedReplacements = [
+    // Required by certain older versions of ng-packagr.
+    'tsickle'
+];
+exports.versionsNxWorkspace = new Map([
+    [
+        '8.0.x',
+        {
+            dependencies: {
+                '@angular/animations': '~8.0.3',
+                '@angular/common': '~8.0.3',
+                '@angular/compiler': '~8.0.3',
+                '@angular/core': '~8.0.3',
+                '@angular/forms': '~8.0.3',
+                '@angular/platform-browser': '~8.0.3',
+                '@angular/platform-browser-dynamic': '~8.0.3',
+                '@angular/router': '~8.0.3',
+                rxjs: '~6.4.0',
+                tslib: '^1.9.0',
+                'zone.js': '~0.9.1'
+            },
+            devDependencies: {
+                '@angular-devkit/build-angular': '~0.800.6',
+                '@angular-devkit/build-ng-packagr': '~0.800.6',
+                '@angular-devkit/schematics-cli': '~0.800.6',
+                '@angular/cli': '~8.0.6',
+                '@angular/compiler-cli': '~8.0.3',
+                '@types/node': '~8.9.4',
+                codelyzer: '^5.0.0',
+                'ng-packagr': '^5.1.0',
+                'ts-node': '~7.0.0',
+                tsickle: '~0.35.0',
+                tslint: '~5.15.0',
+                typescript: '~3.4.3'
+            }
+        }
+    ]
+]);
 
 
 /***/ }),

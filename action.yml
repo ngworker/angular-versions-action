@@ -5,14 +5,10 @@ inputs:
   angular-version:
     description: 'The base Angular version used to match the dependency versions'
     required: true
-  file-path:
-    description: 'Path of the package.json file to modify'
+  root-folder-path:
+    description: 'Path of your project folder where your package.json file lives. Relative to your repository root'
     required: false
-    default: './package.json'
-  workspace-type:
-    description: 'The type of workspace used in the repository (angular/nx)'
-    required: false
-    default: 'angular'
+    default: '.'
 runs:
   using: 'node12'
   main: 'dist/index.js'
