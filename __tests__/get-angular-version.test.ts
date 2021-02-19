@@ -1,9 +1,9 @@
 import {getAngularVersions} from '../src/get-angular-versions';
-import {versionsAngularWorkspace} from '../src/angular-versions';
+import {versions} from '../src/angular-versions';
 
 describe(getAngularVersions.name, () => {
   describe('an Angular workspace', () => {
-    versionsAngularWorkspace.forEach((expectedVersion, key) => {
+    versions.forEach((expectedVersion, key) => {
       test('returns the right Angular versions for a given key', () => {
         const actualVersion = getAngularVersions(key, 'angular');
 
