@@ -36,6 +36,7 @@ jobs:
         node-version: [10.x, 12.x]
         angular-version:
           [
+            6.1.x,
             7.0.x,
             7.1.x,
             7.2.x,
@@ -75,6 +76,7 @@ This example use the github matrix to build, lint and test your code against dif
 
 At the moment this actions supports a limited set of Angular versions listed below.
 
+- 6.1.x,
 - 7.0.x
 - 7.1.x
 - 7.2.x
