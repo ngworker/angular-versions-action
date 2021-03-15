@@ -11,6 +11,70 @@ export const forcedReplacements: readonly string[] = [
 
 export const versions = new Map<string, PackageJsonVersion>([
   [
+    '7.0.x',
+    {
+      dependencies: {
+        '@angular/animations': '~7.0.4',
+        '@angular/common': '~7.0.4',
+        '@angular/compiler': '~7.0.4',
+        '@angular/core': '~7.0.4',
+        '@angular/forms': '~7.0.4',
+        '@angular/platform-browser': '~7.0.4',
+        '@angular/platform-browser-dynamic': '~7.0.4',
+        '@angular/router': '~7.0.4',
+        rxjs: '~6.3.3',
+        tslib: '^1.9.0',
+        'zone.js': '~0.8.26'
+      },
+      devDependencies: {
+        '@angular-devkit/build-angular': '~0.10.7',
+        '@angular-devkit/build-ng-packagr': '~0.10.7',
+        '@angular-devkit/schematics-cli': '~0.10.7',
+        '@angular/cli': '~7.0.7',
+        '@angular/compiler-cli': '~7.0.4',
+        '@types/node': '~8.9.4',
+        codelyzer: '~4.5.0',
+        'ng-packagr': '^4.2.0',
+        'ts-node': '~7.0.0',
+        tsickle: '>=0.29.0',
+        tslint: '~5.11.0',
+        typescript: '~3.1.6'
+      }
+    }
+  ],
+  [
+    '7.1.x',
+    {
+      dependencies: {
+        '@angular/animations': '~7.1.4',
+        '@angular/common': '~7.1.4',
+        '@angular/compiler': '~7.1.4',
+        '@angular/core': '~7.1.4',
+        '@angular/forms': '~7.1.4',
+        '@angular/platform-browser': '~7.1.4',
+        '@angular/platform-browser-dynamic': '~7.1.4',
+        '@angular/router': '~7.1.4',
+        rxjs: '~6.3.3',
+        tslib: '^1.9.0',
+        'zone.js': '~0.8.26'
+      },
+      devDependencies: {
+        '@angular-devkit/build-angular': '~0.11.4',
+        '@angular-devkit/build-ng-packagr': '~0.11.4',
+        '@angular-devkit/schematics-cli': '~0.11.4',
+        '@angular/cli': '~7.1.4',
+        '@angular/compiler-cli': '~7.1.4',
+        '@types/node': '~8.9.4',
+        codelyzer: '~4.5.0',
+        'ng-packagr': '^4.2.0',
+        'ts-node': '~7.0.0',
+        tsickle: '>=0.29.0',
+        tslint: '~5.11.0',
+        typescript: '~3.1.6'
+      }
+    }
+  ],
+  [
     '7.2.x',
     {
       dependencies: {
