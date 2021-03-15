@@ -11,6 +11,38 @@ export const forcedReplacements: readonly string[] = [
 
 export const versions = new Map<string, PackageJsonVersion>([
   [
+    '7.2.x',
+    {
+      dependencies: {
+        '@angular/animations': '~7.2.16',
+        '@angular/common': '~7.2.16',
+        '@angular/compiler': '~7.2.16',
+        '@angular/core': '~7.2.16',
+        '@angular/forms': '~7.2.16',
+        '@angular/platform-browser': '~7.2.16',
+        '@angular/platform-browser-dynamic': '~7.2.16',
+        '@angular/router': '~7.2.16',
+        rxjs: '~6.3.3',
+        tslib: '^1.9.0',
+        'zone.js': '~0.8.26'
+      },
+      devDependencies: {
+        '@angular-devkit/build-angular': '~0.13.10',
+        '@angular-devkit/build-ng-packagr': '~0.13.10',
+        '@angular-devkit/schematics-cli': '~0.13.10',
+        '@angular/cli': '~7.3.10',
+        '@angular/compiler-cli': '~7.2.16',
+        '@types/node': '~8.9.4',
+        codelyzer: '~4.5.0',
+        'ng-packagr': '^4.2.0',
+        'ts-node': '~7.0.0',
+        tsickle: '>=0.34.0',
+        tslint: '~5.11.0',
+        typescript: '~3.2.2'
+      }
+    }
+  ],
+  [
     '8.0.x',
     {
       dependencies: {
