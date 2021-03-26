@@ -19,6 +19,166 @@ exports.forcedReplacements = [
 ];
 exports.versions = new Map([
     [
+        '6.0.x',
+        {
+            dependencies: {
+                '@angular/animations': '~6.0.9',
+                '@angular/common': '~6.0.9',
+                '@angular/compiler': '~6.0.9',
+                '@angular/core': '~6.0.9',
+                '@angular/forms': '~6.0.9',
+                '@angular/platform-browser': '~6.0.9',
+                '@angular/platform-browser-dynamic': '~6.0.9',
+                '@angular/router': '~6.0.9',
+                rxjs: '~6.0.0',
+                tslib: '^1.7.1',
+                'zone.js': '~0.8.26'
+            },
+            devDependencies: {
+                '@angular-devkit/build-angular': '~0.6.8',
+                '@angular-devkit/build-ng-packagr': '~0.6.8',
+                '@angular-devkit/schematics-cli': '~0.6.8',
+                '@angular/cli': '~6.0.8',
+                '@angular/compiler-cli': '~6.0.9',
+                '@types/node': '~8.9.4',
+                codelyzer: '~4.2.1',
+                'ng-packagr': '^3.0.0-rc.2',
+                'ts-node': '~5.0.1',
+                tsickle: '>=0.25.5',
+                tslint: '~5.9.1',
+                typescript: '~2.7.2'
+            }
+        }
+    ],
+    [
+        '6.1.x',
+        {
+            dependencies: {
+                '@angular/animations': '~6.1.10',
+                '@angular/common': '~6.1.10',
+                '@angular/compiler': '~6.1.10',
+                '@angular/core': '~6.1.10',
+                '@angular/forms': '~6.1.10',
+                '@angular/platform-browser': '~6.1.10',
+                '@angular/platform-browser-dynamic': '~6.1.10',
+                '@angular/router': '~6.1.10',
+                rxjs: '~6.2.0',
+                tslib: '^1.9.0',
+                'zone.js': '~0.8.26'
+            },
+            devDependencies: {
+                '@angular-devkit/build-angular': '~0.8.9',
+                '@angular-devkit/build-ng-packagr': '~0.8.9',
+                '@angular-devkit/schematics-cli': '~0.8.9',
+                '@angular/cli': '~6.2.9',
+                '@angular/compiler-cli': '~6.1.10',
+                '@types/node': '~8.9.4',
+                codelyzer: '~4.3.0',
+                'ng-packagr': '^4.1.0',
+                'ts-node': '~7.0.0',
+                tsickle: '>=0.29.0',
+                tslint: '~5.11.0',
+                typescript: '~2.9.2'
+            }
+        }
+    ],
+    [
+        '7.0.x',
+        {
+            dependencies: {
+                '@angular/animations': '~7.0.4',
+                '@angular/common': '~7.0.4',
+                '@angular/compiler': '~7.0.4',
+                '@angular/core': '~7.0.4',
+                '@angular/forms': '~7.0.4',
+                '@angular/platform-browser': '~7.0.4',
+                '@angular/platform-browser-dynamic': '~7.0.4',
+                '@angular/router': '~7.0.4',
+                rxjs: '~6.3.3',
+                tslib: '^1.9.0',
+                'zone.js': '~0.8.26'
+            },
+            devDependencies: {
+                '@angular-devkit/build-angular': '~0.10.7',
+                '@angular-devkit/build-ng-packagr': '~0.10.7',
+                '@angular-devkit/schematics-cli': '~0.10.7',
+                '@angular/cli': '~7.0.7',
+                '@angular/compiler-cli': '~7.0.4',
+                '@types/node': '~8.9.4',
+                codelyzer: '~4.5.0',
+                'ng-packagr': '^4.2.0',
+                'ts-node': '~7.0.0',
+                tsickle: '>=0.29.0',
+                tslint: '~5.11.0',
+                typescript: '~3.1.6'
+            }
+        }
+    ],
+    [
+        '7.1.x',
+        {
+            dependencies: {
+                '@angular/animations': '~7.1.4',
+                '@angular/common': '~7.1.4',
+                '@angular/compiler': '~7.1.4',
+                '@angular/core': '~7.1.4',
+                '@angular/forms': '~7.1.4',
+                '@angular/platform-browser': '~7.1.4',
+                '@angular/platform-browser-dynamic': '~7.1.4',
+                '@angular/router': '~7.1.4',
+                rxjs: '~6.3.3',
+                tslib: '^1.9.0',
+                'zone.js': '~0.8.26'
+            },
+            devDependencies: {
+                '@angular-devkit/build-angular': '~0.11.4',
+                '@angular-devkit/build-ng-packagr': '~0.11.4',
+                '@angular-devkit/schematics-cli': '~0.11.4',
+                '@angular/cli': '~7.1.4',
+                '@angular/compiler-cli': '~7.1.4',
+                '@types/node': '~8.9.4',
+                codelyzer: '~4.5.0',
+                'ng-packagr': '^4.2.0',
+                'ts-node': '~7.0.0',
+                tsickle: '>=0.29.0',
+                tslint: '~5.11.0',
+                typescript: '~3.1.6'
+            }
+        }
+    ],
+    [
+        '7.2.x',
+        {
+            dependencies: {
+                '@angular/animations': '~7.2.16',
+                '@angular/common': '~7.2.16',
+                '@angular/compiler': '~7.2.16',
+                '@angular/core': '~7.2.16',
+                '@angular/forms': '~7.2.16',
+                '@angular/platform-browser': '~7.2.16',
+                '@angular/platform-browser-dynamic': '~7.2.16',
+                '@angular/router': '~7.2.16',
+                rxjs: '~6.3.3',
+                tslib: '^1.9.0',
+                'zone.js': '~0.8.26'
+            },
+            devDependencies: {
+                '@angular-devkit/build-angular': '~0.13.10',
+                '@angular-devkit/build-ng-packagr': '~0.13.10',
+                '@angular-devkit/schematics-cli': '~0.13.10',
+                '@angular/cli': '~7.3.10',
+                '@angular/compiler-cli': '~7.2.16',
+                '@types/node': '~8.9.4',
+                codelyzer: '~4.5.0',
+                'ng-packagr': '^4.2.0',
+                'ts-node': '~7.0.0',
+                tsickle: '>=0.34.0',
+                tslint: '~5.11.0',
+                typescript: '~3.2.2'
+            }
+        }
+    ],
+    [
         '8.0.x',
         {
             dependencies: {
