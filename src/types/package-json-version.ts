@@ -4,6 +4,7 @@ export interface PackageJsonVersion {
     '@angular/common': string;
     '@angular/compiler': string;
     '@angular/core': string;
+    '@angular/elements': string;
     '@angular/forms': string;
     '@angular/platform-browser': string;
     '@angular/platform-browser-dynamic': string;
