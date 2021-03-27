@@ -36,6 +36,7 @@ export const packageJsonV8WithForceDependencies = {
     '@angular/common': '~8.0.3',
     '@angular/compiler': '~8.0.3',
     '@angular/core': '~8.0.3',
+    '@angular/elements': '~8.0.3',
     '@angular/forms': '~8.0.3',
     '@angular/platform-browser': '~8.0.3',
     '@angular/platform-browser-dynamic': '~8.0.3',

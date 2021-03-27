@@ -36,6 +36,7 @@ export const packageJsonWithV11_1All = {
     '@angular/common': '~11.1.0',
     '@angular/compiler': '~11.1.0',
     '@angular/core': '~11.1.0',
+    '@angular/elements': '~11.1.0',
     '@angular/forms': '~11.1.0',
     '@angular/platform-browser': '~11.1.0',
     '@angular/platform-browser-dynamic': '~11.1.0',
