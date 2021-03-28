@@ -36,6 +36,7 @@ export const packageJsonWithoutNgPackagr = {
     '@angular/common': '~10.1.6',
     '@angular/compiler': '~10.1.6',
     '@angular/core': '~10.1.6',
+    '@angular/elements': '~10.1.6',
     '@angular/forms': '~10.1.6',
     '@angular/platform-browser': '~10.1.6',
     '@angular/platform-browser-dynamic': '~10.1.6',
