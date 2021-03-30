@@ -56,7 +56,7 @@ git push --follow-tags origin main
 
 This Github action follows the [recommended release workflow](https://github.com/actions/toolkit/blob/master/docs/action-versioning.md#recommendations)
 
-### Releasing minor and bath versions
+### Releasing minor and patch versions
 
 > NOTE: This operation may need multiple attempts. Always verify that the sha of the latest major version tag matches the latest commit in the main branch
 
