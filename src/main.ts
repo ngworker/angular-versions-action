@@ -5,6 +5,7 @@ import path from 'path';
 import {getAngularVersions} from './get-angular-versions';
 import {overrideAngularVersions} from './override-angular-versions';
 import {switchAngularBuilder} from './switch-angular-builder';
+import {AngularJSON} from './types/angular-json';
 import {PackageJsonVersion} from './types/package-json-version';
 
 function run(): void {
@@ -40,7 +41,17 @@ function run(): void {
     );
 
     core.debug('Switching to the correct Angular Builder');
-    switchAngularBuilder(angularVersion, angularJsonPath);
+    const angularJson: AngularJSON = JSON.parse(
+      fs.readFileSync(angularJsonPath).toString()
+    );
+    const modifiedAngularJson = switchAngularBuilder(
+      angularVersion,
+      angularJson
+    );
+    fs.writeFileSync(
+      angularJsonPath,
+      JSON.stringify(modifiedAngularJson, null, 2)
+    );
     core.debug('Correct Angular Builder selected');
 
     core.debug(new Date().toISOString());

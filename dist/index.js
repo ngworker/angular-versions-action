@@ -15,7 +15,8 @@ exports.versions = exports.forcedReplacements = void 0;
  */
 exports.forcedReplacements = [
     // Required by certain older versions of ng-packagr.
-    'tsickle'
+    'tsickle',
+    '@angular-devkit/build-ng-packagr'
 ];
 exports.versions = new Map([
     [
@@ -397,7 +398,6 @@ exports.versions = new Map([
             },
             devDependencies: {
                 '@angular-devkit/build-angular': '~0.1001.7',
-                '@angular-devkit/build-ng-packagr': '~0.1001.7',
                 '@angular-devkit/schematics-cli': '~0.1001.7',
                 '@angular/cli': '~10.1.7',
                 '@angular/compiler-cli': '~10.1.6',
@@ -429,7 +429,6 @@ exports.versions = new Map([
             },
             devDependencies: {
                 '@angular-devkit/build-angular': '~0.1002.0',
-                '@angular-devkit/build-ng-packagr': '~0.1002.0',
                 '@angular-devkit/schematics-cli': '~0.1002.0',
                 '@angular/cli': '~10.2.0',
                 '@angular/compiler-cli': '~10.2.0',
@@ -461,7 +460,6 @@ exports.versions = new Map([
             },
             devDependencies: {
                 '@angular-devkit/build-angular': '~0.1100.0',
-                '@angular-devkit/build-ng-packagr': '~0.1002.2',
                 '@angular-devkit/schematics-cli': '~0.1100.0',
                 '@angular/cli': '~11.0.0',
                 '@angular/compiler-cli': '~11.0.0',
@@ -493,7 +491,6 @@ exports.versions = new Map([
             },
             devDependencies: {
                 '@angular-devkit/build-angular': '~0.1101.0',
-                '@angular-devkit/build-ng-packagr': '~0.1002.2',
                 '@angular-devkit/schematics-cli': '~0.1101.0',
                 '@angular/cli': '~11.1.0',
                 '@angular/compiler-cli': '~11.1.0',
@@ -525,7 +522,6 @@ exports.versions = new Map([
             },
             devDependencies: {
                 '@angular-devkit/build-angular': '~0.1102.0 || >=0.1102.0-rc.1',
-                '@angular-devkit/build-ng-packagr': '~0.1002.2',
                 '@angular-devkit/schematics-cli': '~0.1102.0 || >=0.1102.0-rc.1',
                 '@angular/cli': '~11.2.0 || >=11.2.0-rc.1',
                 '@angular/compiler-cli': '~11.2.0 || >=11.2.0-rc.0',
@@ -619,26 +615,38 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(2186));
 const fs = __importStar(__nccwpck_require__(5747));
+const path_1 = __importDefault(__nccwpck_require__(5622));
 const get_angular_versions_1 = __nccwpck_require__(7221);
 const override_angular_versions_1 = __nccwpck_require__(7480);
+const switch_angular_builder_1 = __nccwpck_require__(1536);
 function run() {
     try {
         const angularVersion = core.getInput('angular-version');
         core.debug(`Finding dependencies for Angular version ${angularVersion}`);
         const angularVersions = get_angular_versions_1.getAngularVersions(angularVersion);
         core.debug(`Dependencies found: \n ${JSON.stringify(angularVersions, null, 2)}`);
-        const filePath = core.getInput('file-path');
-        core.debug(`Merging found dependencies with file ${filePath}`);
-        const projectVersions = JSON.parse(fs.readFileSync(filePath).toString());
+        const rootPath = core.getInput('root-path');
+        const packageJsonPath = path_1.default.join(rootPath, 'package.json');
+        const angularJsonPath = path_1.default.join(rootPath, 'angular.json');
+        core.debug(`Merging found dependencies with file ${packageJsonPath}`);
+        const projectVersions = JSON.parse(fs.readFileSync(packageJsonPath).toString());
         const mergedVersions = override_angular_versions_1.overrideAngularVersions({
             angularVersions,
             projectVersions
         });
-        fs.writeFileSync(filePath, JSON.stringify(mergedVersions, null, 2));
+        fs.writeFileSync(packageJsonPath, JSON.stringify(mergedVersions, null, 2));
         core.debug(`Dependencies merged in package.json: \n ${JSON.stringify(mergedVersions, null, 2)}`);
+        core.debug('Switching to the correct Angular Builder');
+        const angularJson = JSON.parse(fs.readFileSync(angularJsonPath).toString());
+        const modifiedAngularJson = switch_angular_builder_1.switchAngularBuilder(angularVersion, angularJson);
+        fs.writeFileSync(angularJsonPath, JSON.stringify(modifiedAngularJson, null, 2));
+        core.debug('Correct Angular Builder selected');
         core.debug(new Date().toISOString());
     }
     catch (error) {
@@ -687,6 +695,42 @@ function overrideAngularVersions({ angularVersions, projectVersions }) {
     return Object.assign(Object.assign({}, projectVersions), { dependencies: Object.assign(Object.assign(Object.assign({}, projectVersions.dependencies), dependenciesReplacements), forcedDependencies), devDependencies: Object.assign(Object.assign(Object.assign({}, projectVersions.devDependencies), devDependenciesReplacements), forcedDevDependencies) });
 }
 exports.overrideAngularVersions = overrideAngularVersions;
+
+
+/***/ }),
+
+/***/ 1536:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.switchAngularBuilder = void 0;
+const angular_versions_1 = __nccwpck_require__(9267);
+const oldBuilder = '@angular-devkit/build-ng-packagr:build';
+const newBuilder = '@angular-devkit/build-angular:ng-packagr';
+function switchAngularBuilder(angularVersion, angularJson) {
+    const modifiedAngularJson = Object.assign({}, angularJson);
+    for (const key in angularJson.projects) {
+        if (Object.prototype.hasOwnProperty.call(angularJson.projects, key)) {
+            const project = angularJson.projects[key];
+            if (project.projectType === 'library' && !!project.architect.build) {
+                if (usingOldBuilder(angularVersion)) {
+                    project.architect.build.builder = oldBuilder;
+                }
+                else {
+                    project.architect.build.builder = newBuilder;
+                }
+            }
+        }
+    }
+    return modifiedAngularJson;
+}
+exports.switchAngularBuilder = switchAngularBuilder;
+function usingOldBuilder(angularVersion) {
+    var _a;
+    return !!((_a = angular_versions_1.versions.get(angularVersion)) === null || _a === void 0 ? void 0 : _a.devDependencies['@angular-devkit/build-ng-packagr']);
+}
 
 
 /***/ }),
