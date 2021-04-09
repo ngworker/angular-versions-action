@@ -564,11 +564,13 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
     {
       dependencies: {
         '@angular/animations': '~12.0.0',
+        '@angular/cdk': '~12.0.0',
         '@angular/common': '~12.0.0',
         '@angular/compiler': '~12.0.0',
         '@angular/core': '~12.0.0',
         '@angular/elements': '~12.0.0',
         '@angular/forms': '~12.0.0',
+        '@angular/material': '~12.0.0',
         '@angular/platform-browser': '~12.0.0',
         '@angular/platform-browser-dynamic': '~12.0.0',
         '@angular/router': '~12.0.0',
@@ -578,7 +580,6 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
       },
       devDependencies: {
         '@angular-devkit/build-angular': '~12.0.0',
-        '@angular-devkit/build-ng-packagr': '~0.1002.2',
         '@angular-devkit/schematics-cli': '~12.0.0',
         '@angular/cli': '~12.0.0',
         '@angular/compiler-cli': '~12.0.0',
