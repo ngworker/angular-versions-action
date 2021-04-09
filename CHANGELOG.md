@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.2.2](https://github.com/ngworker/angular-versions-action/compare/v3.2.1...v3.2.2) (2021-04-09)
+
+
+### Bug Fixes
+
+* correct Angular 11.0.x versions ([#23](https://github.com/ngworker/angular-versions-action/issues/23)) ([61117e4](https://github.com/ngworker/angular-versions-action/commit/61117e48960a75669fa63e6468855880d63349be))
+
 ### [3.2.1](https://github.com/ngworker/angular-versions-action/compare/v3.2.0...v3.2.1) (2021-04-09)
 
 ## [3.2.0](https://github.com/ngworker/angular-versions-action/compare/v3.1.0...v3.2.0) (2021-03-31)
