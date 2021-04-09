@@ -17,11 +17,13 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
     {
       dependencies: {
         '@angular/animations': '~6.0.9',
+        '@angular/cdk': '~6.0.2',
         '@angular/common': '~6.0.9',
         '@angular/compiler': '~6.0.9',
         '@angular/core': '~6.0.9',
         '@angular/elements': '~6.0.9',
         '@angular/forms': '~6.0.9',
+        '@angular/material': '~6.0.2',
         '@angular/platform-browser': '~6.0.9',
         '@angular/platform-browser-dynamic': '~6.0.9',
         '@angular/router': '~6.0.9',
@@ -50,11 +52,13 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
     {
       dependencies: {
         '@angular/animations': '~6.1.10',
+        '@angular/cdk': '~6.4.7',
         '@angular/common': '~6.1.10',
         '@angular/compiler': '~6.1.10',
         '@angular/core': '~6.1.10',
         '@angular/elements': '~6.1.10',
         '@angular/forms': '~6.1.10',
+        '@angular/material': '~6.4.7',
         '@angular/platform-browser': '~6.1.10',
         '@angular/platform-browser-dynamic': '~6.1.10',
         '@angular/router': '~6.1.10',
@@ -83,11 +87,13 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
     {
       dependencies: {
         '@angular/animations': '~7.0.4',
+        '@angular/cdk': '~7.0.4',
         '@angular/common': '~7.0.4',
         '@angular/compiler': '~7.0.4',
         '@angular/core': '~7.0.4',
         '@angular/elements': '~7.0.4',
         '@angular/forms': '~7.0.4',
+        '@angular/material': '~7.0.4',
         '@angular/platform-browser': '~7.0.4',
         '@angular/platform-browser-dynamic': '~7.0.4',
         '@angular/router': '~7.0.4',
@@ -116,11 +122,13 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
     {
       dependencies: {
         '@angular/animations': '~7.1.4',
+        '@angular/cdk': '~7.1.1',
         '@angular/common': '~7.1.4',
         '@angular/compiler': '~7.1.4',
         '@angular/core': '~7.1.4',
         '@angular/elements': '~7.1.4',
         '@angular/forms': '~7.1.4',
+        '@angular/material': '~7.1.1',
         '@angular/platform-browser': '~7.1.4',
         '@angular/platform-browser-dynamic': '~7.1.4',
         '@angular/router': '~7.1.4',
@@ -149,11 +157,13 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
     {
       dependencies: {
         '@angular/animations': '~7.2.16',
+        '@angular/cdk': '~7.2.2',
         '@angular/common': '~7.2.16',
         '@angular/compiler': '~7.2.16',
         '@angular/core': '~7.2.16',
         '@angular/elements': '~7.2.16',
         '@angular/forms': '~7.2.16',
+        '@angular/material': '~7.2.2',
         '@angular/platform-browser': '~7.2.16',
         '@angular/platform-browser-dynamic': '~7.2.16',
         '@angular/router': '~7.2.16',
@@ -182,11 +192,13 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
     {
       dependencies: {
         '@angular/animations': '~8.0.3',
+        '@angular/cdk': '~8.0.2',
         '@angular/common': '~8.0.3',
         '@angular/compiler': '~8.0.3',
         '@angular/core': '~8.0.3',
         '@angular/elements': '~8.0.3',
         '@angular/forms': '~8.0.3',
+        '@angular/material': '~8.0.2',
         '@angular/platform-browser': '~8.0.3',
         '@angular/platform-browser-dynamic': '~8.0.3',
         '@angular/router': '~8.0.3',
@@ -215,11 +227,13 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
     {
       dependencies: {
         '@angular/animations': '~8.1.0',
+        '@angular/cdk': '~8.0.2',
         '@angular/common': '~8.1.0',
         '@angular/compiler': '~8.1.0',
         '@angular/core': '~8.1.0',
         '@angular/elements': '~8.1.0',
         '@angular/forms': '~8.1.0',
+        '@angular/material': '~8.0.2',
         '@angular/platform-browser': '~8.1.0',
         '@angular/platform-browser-dynamic': '~8.1.0',
         '@angular/router': '~8.1.0',
@@ -248,11 +262,13 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
     {
       dependencies: {
         '@angular/animations': '~8.2.0',
+        '@angular/cdk': '~8.1.4',
         '@angular/common': '~8.2.0',
         '@angular/compiler': '~8.2.0',
         '@angular/core': '~8.2.0',
         '@angular/elements': '~8.2.0',
         '@angular/forms': '~8.2.0',
+        '@angular/material': '~8.1.4',
         '@angular/platform-browser': '~8.2.0',
         '@angular/platform-browser-dynamic': '~8.2.0',
         '@angular/router': '~8.2.0',
@@ -281,11 +297,13 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
     {
       dependencies: {
         '@angular/animations': '~9.0.7',
+        '@angular/cdk': '~9.0.1',
         '@angular/common': '~9.0.7',
         '@angular/compiler': '~9.0.7',
         '@angular/core': '~9.0.7',
         '@angular/elements': '~9.0.7',
         '@angular/forms': '~9.0.7',
+        '@angular/material': '~9.0.1',
         '@angular/platform-browser': '~9.0.7',
         '@angular/platform-browser-dynamic': '~9.0.7',
         '@angular/router': '~9.0.7',
@@ -313,11 +331,13 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
     {
       dependencies: {
         '@angular/animations': '~9.1.0',
+        '@angular/cdk': '~9.1.3',
         '@angular/common': '~9.1.0',
         '@angular/compiler': '~9.1.0',
         '@angular/core': '~9.1.0',
         '@angular/elements': '~9.1.0',
         '@angular/forms': '~9.1.0',
+        '@angular/material': '~9.1.3',
         '@angular/platform-browser': '~9.1.0',
         '@angular/platform-browser-dynamic': '~9.1.0',
         '@angular/router': '~9.1.0',
@@ -345,11 +365,13 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
     {
       dependencies: {
         '@angular/animations': '~10.0.14',
+        '@angular/cdk': '~10.0.2',
         '@angular/common': '~10.0.14',
         '@angular/compiler': '~10.0.14',
         '@angular/core': '~10.0.14',
         '@angular/elements': '~10.0.14',
         '@angular/forms': '~10.0.14',
+        '@angular/material': '~10.0.2',
         '@angular/platform-browser': '~10.0.14',
         '@angular/platform-browser-dynamic': '~10.0.14',
         '@angular/router': '~10.0.14',
@@ -377,11 +399,13 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
     {
       dependencies: {
         '@angular/animations': '~10.1.6',
+        '@angular/cdk': '~10.1.3',
         '@angular/common': '~10.1.6',
         '@angular/compiler': '~10.1.6',
         '@angular/core': '~10.1.6',
         '@angular/elements': '~10.1.6',
         '@angular/forms': '~10.1.6',
+        '@angular/material': '~10.1.3',
         '@angular/platform-browser': '~10.1.6',
         '@angular/platform-browser-dynamic': '~10.1.6',
         '@angular/router': '~10.1.6',
@@ -408,11 +432,13 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
     {
       dependencies: {
         '@angular/animations': '~10.2.0',
+        '@angular/cdk': '~10.2.7',
         '@angular/common': '~10.2.0',
         '@angular/compiler': '~10.2.0',
         '@angular/core': '~10.2.0',
         '@angular/elements': '~10.2.0',
         '@angular/forms': '~10.2.0',
+        '@angular/material': '~10.2.7',
         '@angular/platform-browser': '~10.2.0',
         '@angular/platform-browser-dynamic': '~10.2.0',
         '@angular/router': '~10.2.0',
@@ -439,11 +465,13 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
     {
       dependencies: {
         '@angular/animations': '~11.0.0',
+        '@angular/cdk': '~11.0.0',
         '@angular/common': '~11.0.0',
         '@angular/compiler': '~11.0.0',
         '@angular/core': '~11.0.0',
         '@angular/elements': '~11.0.0',
         '@angular/forms': '~11.0.0',
+        '@angular/material': '~11.0.0',
         '@angular/platform-browser': '~11.0.0',
         '@angular/platform-browser-dynamic': '~11.0.0',
         '@angular/router': '~11.0.0',
@@ -470,11 +498,13 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
     {
       dependencies: {
         '@angular/animations': '~11.1.0',
+        '@angular/cdk': '~11.1.0',
         '@angular/common': '~11.1.0',
         '@angular/compiler': '~11.1.0',
         '@angular/core': '~11.1.0',
         '@angular/elements': '~11.1.0',
         '@angular/forms': '~11.1.0',
+        '@angular/material': '~11.1.0',
         '@angular/platform-browser': '~11.1.0',
         '@angular/platform-browser-dynamic': '~11.1.0',
         '@angular/router': '~11.1.0',
@@ -501,11 +531,13 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
     {
       dependencies: {
         '@angular/animations': '~11.2.0',
+        '@angular/cdk': '~11.2.0',
         '@angular/common': '~11.2.0',
         '@angular/compiler': '~11.2.0',
         '@angular/core': '~11.2.0',
         '@angular/elements': '~11.2.0',
         '@angular/forms': '~11.2.0',
+        '@angular/material': '~11.2.0',
         '@angular/platform-browser': '~11.2.0',
         '@angular/platform-browser-dynamic': '~11.2.0',
         '@angular/router': '~11.2.0',
