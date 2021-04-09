@@ -2,6 +2,23 @@
 
 🙏 We would ❤️ for you to contribute to `AngularVersionsAction` and help make it even better than it is today!
 
+# Package versions
+
+## Angular Components
+
+These packages' versions are synced:
+
+| Package name           | Package identifier      | First stable version |
+| ---------------------- | ----------------------- | -------------------- |
+| Angular CDK            | @angular/cdk            | 6.0.0                |
+| Angular Google Maps    | @angular/google-maps    | 9.0.0                |
+| Angular Material       | @angular/material       | 6.0.0                |
+| Angular YouTube Player | @angular/youtube-player | 9.0.0                |
+
+The strategy for these packages is to resolve the latest minor version that was available when the specified
+minor Angular version was first released. For example, when Angular 8.2 was released, Angular Components were only
+at version 8.1, so consumers asking for _Angular version_ 8.2.x will get Angular CDK version 8.1.x.
+
 ## Developing
 
 Install the dependencies
