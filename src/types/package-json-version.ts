@@ -7,10 +7,12 @@ export interface PackageJsonVersion {
     '@angular/core': string;
     '@angular/elements': string;
     '@angular/forms': string;
+    '@angular/google-maps'?: string;
     '@angular/material': string;
     '@angular/platform-browser': string;
     '@angular/platform-browser-dynamic': string;
     '@angular/router': string;
+    '@angular/youtube-player'?: string;
     rxjs: string;
     'zone.js': string;
     tslib?: string;

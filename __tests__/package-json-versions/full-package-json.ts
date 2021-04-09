@@ -38,10 +38,12 @@ export const fullPackageJson = {
     '@angular/core': '~10.1.6',
     '@angular/elements': '~10.1.6',
     '@angular/forms': '~10.1.6',
+    '@angular/google-maps': '~10.1.3',
     '@angular/material': '~10.1.3',
     '@angular/platform-browser': '~10.1.6',
     '@angular/platform-browser-dynamic': '~10.1.6',
     '@angular/router': '~10.1.6',
+    '@angular/youtube-player': '~10.1.3',
     rxjs: '~6.6.3',
     tslib: '^2.0.0',
     'zone.js': '~0.10.3'
