@@ -32,11 +32,13 @@ export const fullWithTsickleJson = {
   private: true,
   dependencies: {
     '@angular/animations': '~8.2.0',
+    '@angular/cdk': '~8.1.4',
     '@angular/common': '~8.2.0',
     '@angular/compiler': '~8.2.0',
     '@angular/core': '~8.2.0',
     '@angular/elements': '~8.2.0',
     '@angular/forms': '~8.2.0',
+    '@angular/material': '~8.1.4',
     '@angular/platform-browser': '~8.2.0',
     '@angular/platform-browser-dynamic': '~8.2.0',
     '@angular/router': '~8.2.0',

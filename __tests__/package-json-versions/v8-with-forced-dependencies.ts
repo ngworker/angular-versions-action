@@ -32,11 +32,13 @@ export const packageJsonV8WithForceDependencies = {
   private: true,
   dependencies: {
     '@angular/animations': '~8.0.3',
+    '@angular/cdk': '~8.0.2',
     '@angular/common': '~8.0.3',
     '@angular/compiler': '~8.0.3',
     '@angular/core': '~8.0.3',
     '@angular/elements': '~8.0.3',
     '@angular/forms': '~8.0.3',
+    '@angular/material': '~8.0.2',
     '@angular/platform-browser': '~8.0.3',
     '@angular/platform-browser-dynamic': '~8.0.3',
     '@angular/router': '~8.0.3',
