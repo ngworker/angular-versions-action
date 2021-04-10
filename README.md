@@ -15,7 +15,7 @@ Create a workflow `.yml` file in your repositories `.github/workflows` directory
 ### Inputs
 
 - `angular-version`: The base Angular version used to match the dependency version. Ex: 8.0.x, 10.0.x. To check the full list of supported versions, see [supported versions](###Supported-Angular-versions).
-- `root-path`: The relative path to the root folder of the project where the package.json and angular.json files live (defaults to `.`).
+- `root-path`: The path to the root folder of the project where the package.json and angular.json files live (defaults to `./`).
 
 ### Example workflow - match Angular versions
 

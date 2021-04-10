@@ -1,9 +1,13 @@
-import {switchAngularBuilder} from '../src/switch-angular-builder';
+import {
+  post10_1LibraryBuilder,
+  pre10_1LibraryBuilder,
+  replaceLibrariesBuildBuilder
+} from '../src/replace-libraries-build-builder';
 import {mixedAngularJson} from './angular-json/mixed-angular-json';
-import {newBuilderAngularJson} from './angular-json/newer-builder-angular-json';
-import {oldBuilderAngularJson} from './angular-json/old-builder-angular-json';
+import {post10_1LibraryBuilderWorkspace} from './angular-json/post10_1-library-builder-workspace';
+import {pre10_1LibraryBuilderWorkspace} from './angular-json/pre10_1-library-builder-workspace';
 
-describe(switchAngularBuilder.name, () => {
+describe(replaceLibrariesBuildBuilder.name, () => {
   [
     '6.0.x',
     '6.1.x',
@@ -17,18 +21,18 @@ describe(switchAngularBuilder.name, () => {
     '9.1.x',
     '10.0.x'
   ].forEach(version => {
-    test('replace all libraries with the old builder', () => {
-      const actual = switchAngularBuilder(version, mixedAngularJson);
+    test(`when using the version ${version} it should replace all libraries build builder with ${pre10_1LibraryBuilder}`, () => {
+      const actual = replaceLibrariesBuildBuilder(version, mixedAngularJson);
 
-      expect(actual).toEqual(oldBuilderAngularJson);
+      expect(actual).toEqual(pre10_1LibraryBuilderWorkspace);
     });
   });
 
   ['10.1.x', '10.2.x', '11.0.x', '11.1.x', '11.2.x'].forEach(version => {
-    test('replace all libraries with the new builder', () => {
-      const actual = switchAngularBuilder(version, mixedAngularJson);
+    test(`when using the version ${version} it should replace all libraries build builder with ${post10_1LibraryBuilder}`, () => {
+      const actual = replaceLibrariesBuildBuilder(version, mixedAngularJson);
 
-      expect(actual).toEqual(newBuilderAngularJson);
+      expect(actual).toEqual(post10_1LibraryBuilderWorkspace);
     });
   });
 });

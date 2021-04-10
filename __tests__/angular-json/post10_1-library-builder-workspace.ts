@@ -1,6 +1,6 @@
 import {AngularJson} from '../../src/types/angular-json';
 
-export const mixedAngularJson: AngularJson = {
+export const post10_1LibraryBuilderWorkspace: AngularJson = {
   $schema: './node_modules/@angular/cli/lib/config/schema.json',
   version: 1,
   newProjectRoot: 'apps',
@@ -40,7 +40,7 @@ export const mixedAngularJson: AngularJson = {
       projectType: 'library',
       architect: {
         build: {
-          builder: '@angular-devkit/build-ng-packagr:build'
+          builder: '@angular-devkit/build-angular:ng-packagr'
         },
         test: {
           builder: '@angular-builders/jest:run'
@@ -77,6 +77,7 @@ export const mixedAngularJson: AngularJson = {
     },
     'lumberjack-schematics-app': {
       projectType: 'application',
+
       architect: {
         build: {
           builder: '@angular-devkit/build-angular:browser'
@@ -91,6 +92,7 @@ export const mixedAngularJson: AngularJson = {
     },
     'schematics-e2e': {
       projectType: 'application',
+
       architect: {
         e2e: {
           builder: '@angular-builders/jest:run'

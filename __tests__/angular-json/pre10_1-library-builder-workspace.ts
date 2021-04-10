@@ -1,6 +1,6 @@
 import {AngularJson} from '../../src/types/angular-json';
 
-export const mixedAngularJson: AngularJson = {
+export const pre10_1LibraryBuilderWorkspace: AngularJson = {
   $schema: './node_modules/@angular/cli/lib/config/schema.json',
   version: 1,
   newProjectRoot: 'apps',
@@ -54,7 +54,7 @@ export const mixedAngularJson: AngularJson = {
       projectType: 'library',
       architect: {
         build: {
-          builder: '@angular-devkit/build-angular:ng-packagr'
+          builder: '@angular-devkit/build-ng-packagr:build'
         },
         test: {
           builder: '@angular-builders/jest:run'

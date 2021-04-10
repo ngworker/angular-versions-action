@@ -6,9 +6,9 @@ inputs:
     description: 'The base Angular version used to match the dependency versions'
     required: true
   root-path:
-    description: 'Relative path to the root folder containing the package.json and angular.json'
+    description: 'Path to the root folder containing the package.json and angular.json'
     required: false
-    default: '.'
+    default: './'
 runs:
   using: 'node12'
   main: 'dist/index.js'

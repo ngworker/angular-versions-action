@@ -1,13 +1,14 @@
 import {versions} from './angular-versions';
-import {AngularJSON} from './types/angular-json';
+import {AngularJson} from './types/angular-json';
 
-const oldBuilder = '@angular-devkit/build-ng-packagr:build';
-const newBuilder = '@angular-devkit/build-angular:ng-packagr';
+export const pre10_1LibraryBuilder = '@angular-devkit/build-ng-packagr:build';
+export const post10_1LibraryBuilder =
+  '@angular-devkit/build-angular:ng-packagr';
 
-export function switchAngularBuilder(
+export function replaceLibrariesBuildBuilder(
   angularVersion: string,
-  angularJson: AngularJSON
-): AngularJSON {
+  angularJson: AngularJson
+): AngularJson {
   const modifiedAngularJson = {...angularJson};
   for (const key in angularJson.projects) {
     if (Object.prototype.hasOwnProperty.call(angularJson.projects, key)) {
@@ -15,9 +16,9 @@ export function switchAngularBuilder(
 
       if (project.projectType === 'library' && !!project.architect.build) {
         if (usingOldBuilder(angularVersion)) {
-          project.architect.build.builder = oldBuilder;
+          project.architect.build.builder = pre10_1LibraryBuilder;
         } else {
-          project.architect.build.builder = newBuilder;
+          project.architect.build.builder = post10_1LibraryBuilder;
         }
       }
     }
