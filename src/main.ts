@@ -13,7 +13,7 @@ function ensureCorrectLibraryBuildBuilder(
   angularJsonPath: string
 ): void {
   core.debug(
-    `Accessing angular.json and replacing all libraries build builder with the corresponding builder for version ${angularVersion}`
+    `Accessing angular.json and replacing all ng-packagr targets to use the builder corresponding to the specified Angular version: ${angularVersion}`
   );
   const angularJson: AngularJson = JSON.parse(
     fs.readFileSync(angularJsonPath).toString()
@@ -27,7 +27,7 @@ function ensureCorrectLibraryBuildBuilder(
     JSON.stringify(modifiedAngularJson, null, 2)
   );
   core.debug(
-    'All libraries build builder successfully modified to match the angular version'
+    'ng-packagr targets replaced to be compatible with the specified Angular version'
   );
 }
 

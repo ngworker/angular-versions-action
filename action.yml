@@ -6,7 +6,7 @@ inputs:
     description: 'The base Angular version used to match the dependency versions'
     required: true
   root-path:
-    description: 'Path to the root folder containing the package.json and angular.json'
+    description: 'Path to the root folder containing the package.json and angular.json files'
     required: false
     default: './'
 runs:
