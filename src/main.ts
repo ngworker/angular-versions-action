@@ -4,11 +4,11 @@ import path from 'path';
 
 import {getAngularVersions} from './get-angular-versions';
 import {overrideAngularVersions} from './override-angular-versions';
-import {replaceLibrariesBuildBuilder} from './replace-libraries-build-builder';
+import {replaceLibrariesNgPackagerBuilder} from './replace-libraries-ngpackagr-builder';
 import {AngularJson} from './types/angular-json';
 import {PackageJsonVersion} from './types/package-json-version';
 
-function ensureCorrectLibraryBuildBuilder(
+function ensureCorrectNgPackagrBuilder(
   angularVersion: string,
   angularJsonPath: string
 ): void {
@@ -18,7 +18,7 @@ function ensureCorrectLibraryBuildBuilder(
   const angularJson: AngularJson = JSON.parse(
     fs.readFileSync(angularJsonPath).toString()
   );
-  const modifiedAngularJson = replaceLibrariesBuildBuilder(
+  const modifiedAngularJson = replaceLibrariesNgPackagerBuilder(
     angularVersion,
     angularJson
   );
@@ -74,7 +74,7 @@ function run(): void {
       packageJsonPath
     );
 
-    ensureCorrectLibraryBuildBuilder(angularVersion, angularJsonPath);
+    ensureCorrectNgPackagrBuilder(angularVersion, angularJsonPath);
 
     core.debug(new Date().toISOString());
   } catch (error) {

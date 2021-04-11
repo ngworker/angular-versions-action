@@ -1,3 +1,5 @@
+import {ProjectConfiguration} from './project-configuration';
+
 /**
  * Angular configuration
  */
@@ -5,7 +7,7 @@ export interface AngularJson {
   /**
    * Version of the configuration format
    */
-  version: number;
+  version?: number;
   /**
    * Projects' configurations
    */
@@ -23,41 +25,6 @@ export interface AngularJson {
   cli?: {
     packageManager?: 'npm' | 'yarn' | 'pnpm';
     defaultCollection?: string;
-  };
-
-  [prop: string]: unknown;
-}
-
-/**
- * Type of project supported
- */
-export type ProjectType = 'library' | 'application';
-
-/**
- * Project configuration
- */
-export interface ProjectConfiguration {
-  /**
-   * Project's location relative to the root of the workspace
-   */
-  root?: string;
-
-  /**
-   * The location of project's sources relative to the root of the workspace
-   */
-  sourceRoot?: string;
-
-  /**
-   * Project type
-   */
-  projectType?: ProjectType;
-
-  architect: {
-    build?: {builder: string; [prop: string]: unknown};
-    test?: {builder: string; [prop: string]: unknown};
-    lint?: {builder: string; [prop: string]: unknown};
-    serve?: {builder: string; [prop: string]: unknown};
-    [prop: string]: unknown;
   };
 
   [prop: string]: unknown;

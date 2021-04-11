@@ -1,9 +1,6 @@
 import {AngularJson} from '../../src/types/angular-json';
 
-export const pre10_1LibraryBuilderWorkspace: AngularJson = {
-  $schema: './node_modules/@angular/cli/lib/config/schema.json',
-  version: 1,
-  newProjectRoot: 'apps',
+export const lumberjackPreAngular10_1NgPackagrBuilderAngularJson: AngularJson = {
   projects: {
     'lumberjack-app': {
       projectType: 'application',
@@ -16,30 +13,13 @@ export const pre10_1LibraryBuilderWorkspace: AngularJson = {
         },
         'extract-i18n': {
           builder: '@angular-devkit/build-angular:extract-i18n'
-        },
-        test: {
-          builder: '@angular-builders/jest:run'
-        },
-        lint: {
-          builder: '@angular-devkit/build-angular:tslint'
-        }
-      }
-    },
-    'lumberjack-app-e2e': {
-      projectType: 'application',
-      architect: {
-        lint: {
-          builder: '@angular-devkit/build-angular:tslint'
-        },
-        e2e: {
-          builder: '@angular-devkit/build-angular:protractor'
         }
       }
     },
     'ngworker-lumberjack': {
       projectType: 'library',
       architect: {
-        build: {
+        buildLib: {
           builder: '@angular-devkit/build-ng-packagr:build'
         },
         test: {
@@ -74,32 +54,6 @@ export const pre10_1LibraryBuilderWorkspace: AngularJson = {
           builder: '@angular-devkit/build-angular:tslint'
         }
       }
-    },
-    'lumberjack-schematics-app': {
-      projectType: 'application',
-      architect: {
-        build: {
-          builder: '@angular-devkit/build-angular:browser'
-        },
-        serve: {
-          builder: '@angular-devkit/build-angular:dev-server'
-        },
-        'extract-i18n': {
-          builder: '@angular-devkit/build-angular:extract-i18n'
-        }
-      }
-    },
-    'schematics-e2e': {
-      projectType: 'application',
-      architect: {
-        e2e: {
-          builder: '@angular-builders/jest:run'
-        },
-        lint: {
-          builder: '@angular-devkit/build-angular:tslint'
-        }
-      }
     }
-  },
-  defaultProject: 'lumberjack-app'
+  }
 };
