@@ -1,27 +1,38 @@
-import {versions} from './angular-versions';
 import {AngularJson} from './types/angular-json';
+import {cloneDeep} from 'lodash-es';
+import {AngularVersion} from './types/angular-version';
+import {angularVersionComparer} from './angular-version-comparer';
+import {ProjectConfiguration} from './types/project-configuration';
 import {ArchitectConfiguration} from './types/architect-configuration';
 
-export const pre10_1LibraryBuilder = '@angular-devkit/build-ng-packagr:build';
-export const since10_1LibraryBuilder =
+export const preAngular10_1NgPackagrBuilder =
+  '@angular-devkit/build-ng-packagr:build';
+export const angular10_1AndUpNgPackagrBuilder =
   '@angular-devkit/build-angular:ng-packagr';
+
+const angular10_1: AngularVersion = '10.1.x';
 
 /**
  * Replace all libraries builder using ng-packagr with the correct builder given the Angular version
  *
  */
-export function replaceLibrariesNgPackagerBuilder(
-  angularVersion: string,
+export function replaceLibrariesNgPackagrBuilder(
+  angularVersion: AngularVersion,
   angularJson: AngularJson
 ): AngularJson {
-  const modifiedAngularJson = {...angularJson};
+  const modifiedAngularJson = cloneDeep(angularJson);
 
-  const targetsWithNgPackagerBuilder = getTargetsWithNgPackagerBuilder(
+  const projectsAndtargetsWithNgPackagrBuilder = getNameOfProjectsAndTargetsUsingNgpackagr(
     angularJson
   );
 
-  for (const target of targetsWithNgPackagerBuilder) {
-    target.builder = getCorrectNgPackgrBuilder(angularVersion);
+  for (const [
+    projectName,
+    targetName
+  ] of projectsAndtargetsWithNgPackagrBuilder) {
+    modifiedAngularJson.projects[projectName].architect[
+      targetName
+    ].builder = getCorrectNgPackgrBuilder(angularVersion);
   }
 
   return modifiedAngularJson;
@@ -31,33 +42,40 @@ export function replaceLibrariesNgPackagerBuilder(
  * Return a list with all architect/target builders from all libraries in the workspace using a ng-packagr builder.
  *
  */
-function getTargetsWithNgPackagerBuilder(
-  angularJson: AngularJson
-): ArchitectConfiguration[] {
-  return Object.values(angularJson.projects).reduce((targets, library) => {
-    // assumes that at most a library has one architect/target with ngpackagr builder
-    const targetWithNgPackagrBuilder = Object.values(library.architect).find(
-      target =>
-        target.builder === pre10_1LibraryBuilder ||
-        target.builder === since10_1LibraryBuilder
-    );
+function getNameOfProjectsAndTargetsUsingNgpackagr(
+  workspace: AngularJson
+): [string, string][] {
+  return (
+    Object.entries(workspace.projects)
+      .filter(([, projectConfig]) => projectConfig.projectType === 'library')
+      .map(([projectName, library]) => {
+        return [
+          projectName,
+          findProjectTargetWithNgPackagrBuilder(library)
+        ] as [string, [string, ArchitectConfiguration]];
+      })
+      // eslint-disable-next-line eqeqeq
+      .filter(([, target]) => target != undefined)
+      .map(([projectName, target]) => [projectName, target[0]])
+  );
+}
 
-    if (targetWithNgPackagrBuilder) {
-      targets.push(targetWithNgPackagrBuilder);
-    }
-
-    return targets;
-  }, [] as ArchitectConfiguration[]);
+function findProjectTargetWithNgPackagrBuilder(
+  library: ProjectConfiguration
+): [string, ArchitectConfiguration] | undefined {
+  return Object.entries(library.architect).find(([, targetConfig]) =>
+    [preAngular10_1NgPackagrBuilder, angular10_1AndUpNgPackagrBuilder].includes(
+      targetConfig.builder
+    )
+  );
 }
 
 /**
  * Returns the correct ng-packagr builder for the specified Angular version.
  *
  */
-function getCorrectNgPackgrBuilder(angularVersion: string): string {
-  return versions.get(angularVersion)?.devDependencies[
-    '@angular-devkit/build-ng-packagr'
-  ]
-    ? pre10_1LibraryBuilder
-    : since10_1LibraryBuilder;
+function getCorrectNgPackgrBuilder(angularVersion: AngularVersion): string {
+  return angularVersionComparer(angularVersion, angular10_1) >= 0
+    ? angular10_1AndUpNgPackagrBuilder
+    : preAngular10_1NgPackagrBuilder;
 }

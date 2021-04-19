@@ -1,3 +1,4 @@
+import {AngularVersion} from './types/angular-version';
 import {PackageJsonVersion} from './types/package-json-version';
 
 /**
@@ -10,7 +11,7 @@ export const forcedReplacements: readonly string[] = [
   '@angular-devkit/build-ng-packagr'
 ];
 
-export const versions = new Map<string, PackageJsonVersion>([
+export const versions = new Map<AngularVersion, PackageJsonVersion>([
   [
     '6.0.x',
     {
