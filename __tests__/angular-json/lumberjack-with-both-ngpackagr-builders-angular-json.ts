@@ -1,6 +1,6 @@
 import {AngularJson} from '../../src/types/angular-json';
 
-export const lumberjackMixedAngularJson: AngularJson = {
+export const lumberjackWithBothNgPackagrBuildersAngularJson: AngularJson = {
   projects: {
     'lumberjack-app': {
       projectType: 'application',

@@ -39,7 +39,7 @@ export function replaceLibrariesNgPackagrBuilder(
 }
 
 /**
- * Return a list with all architect/target builders from all libraries in the workspace using a ng-packagr builder.
+ * Return a list with all project/target name tuples using a ng-packagr builder.
  *
  */
 function getNameOfProjectsAndTargetsUsingNgpackagr(
