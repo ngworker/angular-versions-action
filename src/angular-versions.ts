@@ -529,5 +529,35 @@ export const versions = new Map<string, PackageJsonVersion>([
         typescript: '~4.1.2'
       }
     }
+  ],
+  [
+    '12.0.x',
+    {
+      dependencies: {
+        '@angular/animations': '~12.0.0 || >=12.0.0-rc.0',
+        '@angular/common': '~12.0.0 || >=12.0.0-rc.0',
+        '@angular/compiler': '~12.0.0 || >=12.0.0-rc.0',
+        '@angular/core': '~12.0.0 || >=12.0.0-rc.0',
+        '@angular/elements': '~12.0.0 || >=12.0.0-rc.0',
+        '@angular/forms': '~12.0.0 || >=12.0.0-rc.0',
+        '@angular/platform-browser': '~12.0.0 || >=12.0.0-rc.0',
+        '@angular/platform-browser-dynamic': '~12.0.0 || >=12.0.0-rc.0',
+        '@angular/router': '~12.0.0 || >=12.0.0-rc.0',
+        rxjs: '~6.6.0',
+        tslib: '^2.0.0',
+        'zone.js': '~0.11.4'
+      },
+      devDependencies: {
+        '@angular-devkit/build-angular': '~12.0.0 || >=12.0.0-rc.0',
+        '@angular-devkit/build-ng-packagr': '~0.1002.2',
+        '@angular-devkit/schematics-cli': '~12.0.0 || >=12.0.0-rc.0',
+        '@angular/cli': '~12.0.0 || >=12.0.0-rc.1',
+        '@angular/compiler-cli': '~12.0.0 || >=12.0.0-rc.0',
+        '@types/node': '^12.11.1',
+        'ng-packagr': '^12.0.0 || >=^12.0.0-next.8',
+        'ts-node': '~9.1.1',
+        typescript: '~4.2.3'
+      }
+    }
   ]
 ]);
