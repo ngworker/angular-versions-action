@@ -50,6 +50,7 @@ jobs:
             11.0.x,
             11.1.x,
             11.2.x
+            12.0.x
           ]
 
     steps:
@@ -91,6 +92,7 @@ At the moment this actions supports a limited set of Angular versions listed bel
 - 11.0.x
 - 11.1.x
 - 11.2.x
+- 12.0.x
 
 ## Contributing
 

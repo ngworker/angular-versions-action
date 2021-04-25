@@ -21,11 +21,11 @@ export interface PackageJsonVersion {
     '@angular/cli': string;
     '@angular/compiler-cli': string;
     '@types/node': string;
-    codelyzer: string;
+    codelyzer?: string;
     'ng-packagr'?: string;
     'ts-node': string;
     tsickle?: string;
-    tslint: string;
+    tslint?: string;
     typescript: string;
   };
 }
