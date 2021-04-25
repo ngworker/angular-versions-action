@@ -551,7 +551,7 @@ export const versions = new Map<string, PackageJsonVersion>([
         '@angular-devkit/build-angular': '~12.0.0 || >=12.0.0-rc.0',
         '@angular-devkit/build-ng-packagr': '~0.1002.2',
         '@angular-devkit/schematics-cli': '~12.0.0 || >=12.0.0-rc.0',
-        '@angular/cli': '~12.0.0 || >=12.0.0-rc.1',
+        '@angular/cli': '~12.0.0 || >=12.0.0-rc.0',
         '@angular/compiler-cli': '~12.0.0 || >=12.0.0-rc.0',
         '@types/node': '^12.11.1',
         'ng-packagr': '^12.0.0 || >=^12.0.0-next.8',
