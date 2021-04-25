@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.3.1](https://github.com/ngworker/angular-versions-action/compare/v3.3.0...v3.3.1) (2021-04-25)
+
+
+### Bug Fixes
+
+* rc typo on angular cli package ([#25](https://github.com/ngworker/angular-versions-action/issues/25)) ([1fe2f04](https://github.com/ngworker/angular-versions-action/commit/1fe2f041b7afe7707fe2db0544af394381e0f709))
+
 ## [3.3.0](https://github.com/ngworker/angular-versions-action/compare/v3.2.2...v3.3.0) (2021-04-25)
 
 
