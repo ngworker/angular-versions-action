@@ -22,18 +22,20 @@ export function replaceLibrariesNgPackagrBuilder(
 ): AngularJson {
   const modifiedAngularJson = cloneDeep(angularJson);
 
-  const projectsAndtargetsWithNgPackagrBuilder = getNameOfProjectsAndTargetsUsingNgpackagr(
+  const projectsAndTargetsWithNgPackagrBuilder = getNameOfProjectsAndTargetsUsingNgpackagr(
     angularJson
   );
 
-  for (const [
-    projectName,
-    targetName
-  ] of projectsAndtargetsWithNgPackagrBuilder) {
-    modifiedAngularJson.projects[projectName].architect[
-      targetName
-    ].builder = getCorrectNgPackgrBuilder(angularVersion);
-  }
+  const correctBuilderForVersion = getCorrectNgPackgrBuilder(angularVersion);
+
+  // eslint-disable-next-line github/array-foreach
+  projectsAndTargetsWithNgPackagrBuilder.forEach(
+    ([projectName, targetName]) => {
+      modifiedAngularJson.projects[projectName].architect[
+        targetName
+      ].builder = correctBuilderForVersion;
+    }
+  );
 
   return modifiedAngularJson;
 }
@@ -45,19 +47,16 @@ export function replaceLibrariesNgPackagrBuilder(
 function getNameOfProjectsAndTargetsUsingNgpackagr(
   workspace: AngularJson
 ): [string, string][] {
-  return (
-    Object.entries(workspace.projects)
-      .filter(([, projectConfig]) => projectConfig.projectType === 'library')
-      .map(([projectName, library]) => {
-        return [
-          projectName,
-          findProjectTargetWithNgPackagrBuilder(library)
-        ] as [string, [string, ArchitectConfiguration]];
-      })
-      // eslint-disable-next-line eqeqeq
-      .filter(([, target]) => target != undefined)
-      .map(([projectName, target]) => [projectName, target[0]])
-  );
+  return Object.entries(workspace.projects)
+    .filter(([, projectConfig]) => projectConfig.projectType === 'library')
+    .map(([projectName, library]) => {
+      return [projectName, findProjectTargetWithNgPackagrBuilder(library)] as [
+        string,
+        [string, ArchitectConfiguration]
+      ];
+    })
+    .filter(([, target]) => target !== undefined)
+    .map(([projectName, target]) => [projectName, target[0]]);
 }
 
 function findProjectTargetWithNgPackagrBuilder(
