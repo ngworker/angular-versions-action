@@ -28,7 +28,6 @@ export function replaceLibrariesNgPackagrBuilder(
 
   const correctBuilderForVersion = getCorrectNgPackgrBuilder(angularVersion);
 
-  // eslint-disable-next-line github/array-foreach
   projectsAndTargetsWithNgPackagrBuilder.forEach(
     ([projectName, targetName]) => {
       modifiedAngularJson.projects[projectName].architect[
