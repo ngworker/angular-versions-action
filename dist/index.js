@@ -9,12 +9,26 @@ require('./sourcemap-register.js');module.exports =
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.angularVersionComparer = void 0;
+/**
+ *
+ * Compares two angular versions, A and B. Based on their minor and major versions.
+ *
+ *
+ * @export
+ * @param {AngularVersion} versionA
+ * @param {AngularVersion} versionB
+ * @return {number}  > 0 if A is newer, 0 if they are the same version, < 0 if A is older
+ */
 function angularVersionComparer(versionA, versionB) {
+    // Gets the major and minor versions
     const [majorA, minorA] = versionA.split('.');
     const [majorB, minorB] = versionB.split('.');
-    const majorComparison = +majorA - +majorB;
-    const minorComparison = +minorA - +minorB;
-    return majorComparison === 0 ? minorComparison : majorComparison;
+    // Obtains the major version difference between versions A and B
+    const majorDifference = Number.parseInt(majorA) - Number.parseInt(majorB);
+    // Obtains the minor version difference between versions A and B
+    const minorDifference = Number.parseInt(minorA) - Number.parseInt(minorB);
+    // If the major versions are different use the major version difference to compare, if they are equal use the minor version difference
+    return majorDifference === 0 ? minorDifference : majorDifference;
 }
 exports.angularVersionComparer = angularVersionComparer;
 
@@ -742,29 +756,27 @@ const angular10_1 = '10.1.x';
  */
 function replaceLibrariesNgPackagrBuilder(angularVersion, angularJson) {
     const modifiedAngularJson = lodash_es_1.cloneDeep(angularJson);
-    const projectsAndtargetsWithNgPackagrBuilder = getNameOfProjectsAndTargetsUsingNgpackagr(angularJson);
-    for (const [projectName, targetName] of projectsAndtargetsWithNgPackagrBuilder) {
-        modifiedAngularJson.projects[projectName].architect[targetName].builder = getCorrectNgPackgrBuilder(angularVersion);
-    }
+    const projectsAndTargetsWithNgPackagrBuilder = getNameOfProjectsAndTargetsUsingNgpackagr(angularJson);
+    const correctBuilderForVersion = getCorrectNgPackgrBuilder(angularVersion);
+    // eslint-disable-next-line github/array-foreach
+    projectsAndTargetsWithNgPackagrBuilder.forEach(([projectName, targetName]) => {
+        modifiedAngularJson.projects[projectName].architect[targetName].builder = correctBuilderForVersion;
+    });
     return modifiedAngularJson;
 }
 exports.replaceLibrariesNgPackagrBuilder = replaceLibrariesNgPackagrBuilder;
 /**
- * Return a list with all architect/target builders from all libraries in the workspace using a ng-packagr builder.
+ * Return a list with all project/target name tuples using a ng-packagr builder.
  *
  */
 function getNameOfProjectsAndTargetsUsingNgpackagr(workspace) {
-    return (Object.entries(workspace.projects)
+    return Object.entries(workspace.projects)
         .filter(([, projectConfig]) => projectConfig.projectType === 'library')
         .map(([projectName, library]) => {
-        return [
-            projectName,
-            findProjectTargetWithNgPackagrBuilder(library)
-        ];
+        return [projectName, findProjectTargetWithNgPackagrBuilder(library)];
     })
-        // eslint-disable-next-line eqeqeq
-        .filter(([, target]) => target != undefined)
-        .map(([projectName, target]) => [projectName, target[0]]));
+        .filter(([, target]) => target !== undefined)
+        .map(([projectName, target]) => [projectName, target[0]]);
 }
 function findProjectTargetWithNgPackagrBuilder(library) {
     return Object.entries(library.architect).find(([, targetConfig]) => [exports.preAngular10_1NgPackagrBuilder, exports.angular10_1AndUpNgPackagrBuilder].includes(targetConfig.builder));
