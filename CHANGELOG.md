@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.3.2](https://github.com/ngworker/angular-versions-action/compare/v3.3.1...v3.3.2) (2021-04-25)
+
+
+### Bug Fixes
+
+* ng-packagr version ([0478086](https://github.com/ngworker/angular-versions-action/commit/04780866b12328d0645316b663fd8f5ce26a8a2f))
+
 ### [3.3.1](https://github.com/ngworker/angular-versions-action/compare/v3.3.0...v3.3.1) (2021-04-25)
 
 
