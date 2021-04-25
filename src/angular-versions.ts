@@ -554,7 +554,7 @@ export const versions = new Map<string, PackageJsonVersion>([
         '@angular/cli': '~12.0.0 || >=12.0.0-rc.0',
         '@angular/compiler-cli': '~12.0.0 || >=12.0.0-rc.0',
         '@types/node': '^12.11.1',
-        'ng-packagr': '^12.0.0 || >=^12.0.0-rc.0',
+        'ng-packagr': '^12.0.0 || >=12.0.0-rc.0',
         'ts-node': '~9.1.1',
         typescript: '~4.2.3'
       }
