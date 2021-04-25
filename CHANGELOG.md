@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.3.0](https://github.com/ngworker/angular-versions-action/compare/v3.2.2...v3.3.0) (2021-04-25)
+
+
+### Features
+
+* add support for angular 12-rc and up ([#24](https://github.com/ngworker/angular-versions-action/issues/24)) ([2103e8a](https://github.com/ngworker/angular-versions-action/commit/2103e8ad1d531893d207d33c8ef022b2717020cd))
+
 ### [3.2.2](https://github.com/ngworker/angular-versions-action/compare/v3.2.1...v3.2.2) (2021-04-09)
 
 
