@@ -24,9 +24,9 @@ function angularVersionComparer(versionA, versionB) {
     const [majorA, minorA] = versionA.split('.');
     const [majorB, minorB] = versionB.split('.');
     // Obtains the major version difference between versions A and B
-    const majorDifference = Number.parseInt(majorA) - Number.parseInt(majorB);
+    const majorDifference = Number.parseInt(majorA) - Number.parseInt(majorB, 10);
     // Obtains the minor version difference between versions A and B
-    const minorDifference = Number.parseInt(minorA) - Number.parseInt(minorB);
+    const minorDifference = Number.parseInt(minorA) - Number.parseInt(minorB, 10);
     // If the major versions are different use the major version difference to compare, if they are equal use the minor version difference
     return majorDifference === 0 ? minorDifference : majorDifference;
 }
@@ -758,7 +758,6 @@ function replaceLibrariesNgPackagrBuilder(angularVersion, angularJson) {
     const modifiedAngularJson = lodash_es_1.cloneDeep(angularJson);
     const projectsAndTargetsWithNgPackagrBuilder = getNameOfProjectsAndTargetsUsingNgpackagr(angularJson);
     const correctBuilderForVersion = getCorrectNgPackgrBuilder(angularVersion);
-    // eslint-disable-next-line github/array-foreach
     projectsAndTargetsWithNgPackagrBuilder.forEach(([projectName, targetName]) => {
         modifiedAngularJson.projects[projectName].architect[targetName].builder = correctBuilderForVersion;
     });
