@@ -19,9 +19,9 @@ export function angularVersionComparer(
   const [majorB, minorB] = versionB.split('.');
 
   // Obtains the major version difference between versions A and B
-  const majorDifference = Number.parseInt(majorA) - Number.parseInt(majorB);
+  const majorDifference = Number.parseInt(majorA) - Number.parseInt(majorB, 10);
   // Obtains the minor version difference between versions A and B
-  const minorDifference = Number.parseInt(minorA) - Number.parseInt(minorB);
+  const minorDifference = Number.parseInt(minorA) - Number.parseInt(minorB, 10);
 
   // If the major versions are different use the major version difference to compare, if they are equal use the minor version difference
   return majorDifference === 0 ? minorDifference : majorDifference;
