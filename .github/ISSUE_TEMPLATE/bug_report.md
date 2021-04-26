@@ -36,7 +36,7 @@ ISSUES MISSING IMPORTANT INFORMATION MAY BE CLOSED WITHOUT INVESTIGATION.
 
 - angular-versions-action version: X.Y.Z (or vX)
 - Input variable angular-version: M.N.x
-- Input variable file-path: X.Y.Z
+- Input variable root-path: ./some/folder
 <!-- Check whether this is still an issue in the most recent Angular version -->
 
 ## Additional context

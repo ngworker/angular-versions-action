@@ -31,3 +31,4 @@ jobs:
       - uses: ./
         with:
           angular-version: 8.0.x
+          root-path: ./e2e

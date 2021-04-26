@@ -1,3 +1,4 @@
+import {AngularVersion} from './types/angular-version';
 import {PackageJsonVersion} from './types/package-json-version';
 
 /**
@@ -6,10 +7,11 @@ import {PackageJsonVersion} from './types/package-json-version';
  */
 export const forcedReplacements: readonly string[] = [
   // Required by certain older versions of ng-packagr.
-  'tsickle'
+  'tsickle',
+  '@angular-devkit/build-ng-packagr'
 ];
 
-export const versions = new Map<string, PackageJsonVersion>([
+export const versions = new Map<AngularVersion, PackageJsonVersion>([
   [
     '6.0.x',
     {
@@ -389,7 +391,6 @@ export const versions = new Map<string, PackageJsonVersion>([
       },
       devDependencies: {
         '@angular-devkit/build-angular': '~0.1001.7',
-        '@angular-devkit/build-ng-packagr': '~0.1001.7',
         '@angular-devkit/schematics-cli': '~0.1001.7',
         '@angular/cli': '~10.1.7',
         '@angular/compiler-cli': '~10.1.6',
@@ -421,7 +422,6 @@ export const versions = new Map<string, PackageJsonVersion>([
       },
       devDependencies: {
         '@angular-devkit/build-angular': '~0.1002.0',
-        '@angular-devkit/build-ng-packagr': '~0.1002.0',
         '@angular-devkit/schematics-cli': '~0.1002.0',
         '@angular/cli': '~10.2.0',
         '@angular/compiler-cli': '~10.2.0',
@@ -453,7 +453,6 @@ export const versions = new Map<string, PackageJsonVersion>([
       },
       devDependencies: {
         '@angular-devkit/build-angular': '~0.1100.0',
-        '@angular-devkit/build-ng-packagr': '~0.1002.2',
         '@angular-devkit/schematics-cli': '~0.1100.0',
         '@angular/cli': '~11.0.0',
         '@angular/compiler-cli': '~11.0.0',
@@ -485,7 +484,6 @@ export const versions = new Map<string, PackageJsonVersion>([
       },
       devDependencies: {
         '@angular-devkit/build-angular': '~0.1101.0',
-        '@angular-devkit/build-ng-packagr': '~0.1002.2',
         '@angular-devkit/schematics-cli': '~0.1101.0',
         '@angular/cli': '~11.1.0',
         '@angular/compiler-cli': '~11.1.0',
@@ -517,7 +515,6 @@ export const versions = new Map<string, PackageJsonVersion>([
       },
       devDependencies: {
         '@angular-devkit/build-angular': '~0.1102.0 || >=0.1102.0-rc.1',
-        '@angular-devkit/build-ng-packagr': '~0.1002.2',
         '@angular-devkit/schematics-cli': '~0.1102.0 || >=0.1102.0-rc.1',
         '@angular/cli': '~11.2.0 || >=11.2.0-rc.1',
         '@angular/compiler-cli': '~11.2.0 || >=11.2.0-rc.0',

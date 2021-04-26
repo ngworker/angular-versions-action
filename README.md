@@ -2,6 +2,8 @@
 
 This GitHub Action (written in JavaScript) modifies the root `package.json` of a project and replaces the version of all **Angular** related dependencies for given base version.
 
+When necessary it updates the angular.json to use the correct builder.
+
 [![ngworker](https://img.shields.io/badge/ngworker-%40-red)](https://github.com/ngworker/)
 
 ## Usage
@@ -13,6 +15,7 @@ Create a workflow `.yml` file in your repositories `.github/workflows` directory
 ### Inputs
 
 - `angular-version`: The base Angular version used to match the dependency version. Ex: 8.0.x, 10.0.x. To check the full list of supported versions, see [supported versions](###Supported-Angular-versions).
+- `root-path`: The path to the root folder of the project where the `package.json` and `angular.json` files are located. Defaults to `./`.
 
 ### Example workflow - match Angular versions
 

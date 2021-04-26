@@ -47,7 +47,6 @@ export const packageJsonWithV11_1Dependencies = {
   },
   devDependencies: {
     '@angular-devkit/build-angular': '~0.1001.7',
-    '@angular-devkit/build-ng-packagr': '~0.1001.7',
     '@angular-devkit/schematics-cli': '~0.1001.7',
     '@angular/cli': '~10.1.7',
     '@angular/compiler-cli': '~10.1.6',

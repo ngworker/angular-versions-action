@@ -5,10 +5,10 @@ inputs:
   angular-version:
     description: 'The base Angular version used to match the dependency versions'
     required: true
-  file-path:
-    description: 'Path of the package.json file to modify'
+  root-path:
+    description: 'Path to the root folder containing the package.json and angular.json files'
     required: false
-    default: './package.json'
+    default: './'
 runs:
   using: 'node12'
   main: 'dist/index.js'
