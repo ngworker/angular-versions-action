@@ -2,56 +2,61 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [3.3.3](https://github.com/ngworker/angular-versions-action/compare/v3.3.2...v3.3.3) (2021-04-25)
-
-
-### Bug Fixes
-
-* ng-packagr version AGAIN ([e649ced](https://github.com/ngworker/angular-versions-action/commit/e649ced60a74d17b289e894e32d1eb086876dc47))
-
-### [3.3.2](https://github.com/ngworker/angular-versions-action/compare/v3.3.1...v3.3.2) (2021-04-25)
-
-
-### Bug Fixes
-
-* ng-packagr version ([0478086](https://github.com/ngworker/angular-versions-action/commit/04780866b12328d0645316b663fd8f5ce26a8a2f))
-
-### [3.3.1](https://github.com/ngworker/angular-versions-action/compare/v3.3.0...v3.3.1) (2021-04-25)
-
-
-### Bug Fixes
-
-* rc typo on angular cli package ([#25](https://github.com/ngworker/angular-versions-action/issues/25)) ([1fe2f04](https://github.com/ngworker/angular-versions-action/commit/1fe2f041b7afe7707fe2db0544af394381e0f709))
-
-## [3.3.0](https://github.com/ngworker/angular-versions-action/compare/v3.2.2...v3.3.0) (2021-04-25)
-
+## [4.0.0](https://github.com/ngworker/angular-versions-action/compare/v3.3.3...v4.0.0) (2021-04-26)
 
 ### Features
 
-* add support for angular 12-rc and up ([#24](https://github.com/ngworker/angular-versions-action/issues/24)) ([2103e8a](https://github.com/ngworker/angular-versions-action/commit/2103e8ad1d531893d207d33c8ef022b2717020cd))
+- **builder:** swap angular builder based on the angular version ([#22](https://github.com/ngworker/angular-versions-action/issues/22)) ([51246c5](https://github.com/ngworker/angular-versions-action/commit/51246c554f30b0a044e689cd5bb56cab518f8e83))
 
-### [3.2.2](https://github.com/ngworker/angular-versions-action/compare/v3.2.1...v3.2.2) (2021-04-09)
+### ⚠ BREAKING CHANGES
 
+- Libraries angular builder is change on the angular.json based on the provided version.
+- The `file-path` input was removed
+- The `root-path` input was added
+
+### [3.3.3](https://github.com/ngworker/angular-versions-action/compare/v3.3.2...v3.3.3) (2021-04-25)
 
 ### Bug Fixes
 
-* correct Angular 11.0.x versions ([#23](https://github.com/ngworker/angular-versions-action/issues/23)) ([61117e4](https://github.com/ngworker/angular-versions-action/commit/61117e48960a75669fa63e6468855880d63349be))
+- ng-packagr version AGAIN ([e649ced](https://github.com/ngworker/angular-versions-action/commit/e649ced60a74d17b289e894e32d1eb086876dc47))
+
+### [3.3.2](https://github.com/ngworker/angular-versions-action/compare/v3.3.1...v3.3.2) (2021-04-25)
+
+### Bug Fixes
+
+- ng-packagr version ([0478086](https://github.com/ngworker/angular-versions-action/commit/04780866b12328d0645316b663fd8f5ce26a8a2f))
+
+### [3.3.1](https://github.com/ngworker/angular-versions-action/compare/v3.3.0...v3.3.1) (2021-04-25)
+
+### Bug Fixes
+
+- rc typo on angular cli package ([#25](https://github.com/ngworker/angular-versions-action/issues/25)) ([1fe2f04](https://github.com/ngworker/angular-versions-action/commit/1fe2f041b7afe7707fe2db0544af394381e0f709))
+
+## [3.3.0](https://github.com/ngworker/angular-versions-action/compare/v3.2.2...v3.3.0) (2021-04-25)
+
+### Features
+
+- add support for angular 12-rc and up ([#24](https://github.com/ngworker/angular-versions-action/issues/24)) ([2103e8a](https://github.com/ngworker/angular-versions-action/commit/2103e8ad1d531893d207d33c8ef022b2717020cd))
+
+### [3.2.2](https://github.com/ngworker/angular-versions-action/compare/v3.2.1...v3.2.2) (2021-04-09)
+
+### Bug Fixes
+
+- correct Angular 11.0.x versions ([#23](https://github.com/ngworker/angular-versions-action/issues/23)) ([61117e4](https://github.com/ngworker/angular-versions-action/commit/61117e48960a75669fa63e6468855880d63349be))
 
 ### [3.2.1](https://github.com/ngworker/angular-versions-action/compare/v3.2.0...v3.2.1) (2021-04-09)
 
 ## [3.2.0](https://github.com/ngworker/angular-versions-action/compare/v3.1.0...v3.2.0) (2021-03-31)
 
-
 ### Features
 
-* support Angular Elements ([#18](https://github.com/ngworker/angular-versions-action/issues/18)) ([26ede9e](https://github.com/ngworker/angular-versions-action/commit/26ede9e3b43f467b983decba5eefb5ea9b0b6087))
+- support Angular Elements ([#18](https://github.com/ngworker/angular-versions-action/issues/18)) ([26ede9e](https://github.com/ngworker/angular-versions-action/commit/26ede9e3b43f467b983decba5eefb5ea9b0b6087))
 
 ## [3.1.0](https://github.com/ngworker/angular-versions-action/compare/v3.0.1...v3.1.0) (2021-03-26)
 
-
 ### Features
 
-* 🎸 add Angular v6.x-7.x support ([#17](https://github.com/ngworker/angular-versions-action/issues/17)) ([a46a5d5](https://github.com/ngworker/angular-versions-action/commit/a46a5d541f02e571cd1cd5636d9a15fa747985cb))
+- 🎸 add Angular v6.x-7.x support ([#17](https://github.com/ngworker/angular-versions-action/issues/17)) ([a46a5d5](https://github.com/ngworker/angular-versions-action/commit/a46a5d541f02e571cd1cd5636d9a15fa747985cb))
 
 ### [3.0.1](https://github.com/ngworker/angular-versions-action/compare/v3.0.0...v3.0.1) (2021-02-16)
 
