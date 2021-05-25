@@ -3,7 +3,7 @@ export * from './full-with-tsickle';
 export * from './v11_1-dep-overrided';
 export * from './v11_1-devdep-override';
 export * from './v11_1-all-override';
+export * from './v11_1-all-override-with-unmatching';
 export * from './package-unmatching';
 export * from './package-without-ng-packagr';
-export * from './v11_1-all-override-without-ng-packagr';
 export * from './v8-with-forced-dependencies';

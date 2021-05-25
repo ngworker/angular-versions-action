@@ -3,10 +3,10 @@ import {
   packageJsonWithV11_1Dependencies,
   packageJsonWithV11_1DevDependencies,
   packageJsonWithV11_1All,
+  packageJsonWithV11_1AllWithUnmatching,
   fullPackageJson,
   packageUnmatching,
   packageJsonWithoutNgPackagr,
-  packageJsonWith11_1AllWithoutNgPackagr,
   packageJsonV8WithForceDependencies
 } from './package-json-versions';
 import {overrideAngularVersions} from '../src/override-angular-versions';
@@ -19,7 +19,7 @@ describe(overrideAngularVersions.name, () => {
       (v11_1.devDependencies as any) = {};
 
       const actualPackageJson = overrideAngularVersions({
-        projectVersions: fullPackageJson,
+        projectVersions: fullPackageJson as any,
         angularVersions: v11_1
       });
 
@@ -31,7 +31,7 @@ describe(overrideAngularVersions.name, () => {
       (v11_1.dependencies as any) = {};
 
       const actualPackageJson = overrideAngularVersions({
-        projectVersions: fullPackageJson,
+        projectVersions: fullPackageJson as any,
         angularVersions: v11_1
       });
 
@@ -42,7 +42,7 @@ describe(overrideAngularVersions.name, () => {
       const v11_1 = getAngularVersions('11.1.x');
 
       const actualPackageJson = overrideAngularVersions({
-        projectVersions: fullPackageJson,
+        projectVersions: fullPackageJson as any,
         angularVersions: v11_1
       });
 
@@ -57,10 +57,10 @@ describe(overrideAngularVersions.name, () => {
         angularVersions: v11_1
       });
 
-      expect(actualPackageJson).toEqual(packageUnmatching);
+      expect(actualPackageJson).toEqual(packageJsonWithV11_1AllWithUnmatching);
     });
 
-    test('no add ng-packagr dependency when it is not present in the package', () => {
+    test('add ng-packagr dependency when it is not present in the package', () => {
       const v11_1 = getAngularVersions('11.1.x');
 
       const actualPackageJson = overrideAngularVersions({
@@ -68,7 +68,7 @@ describe(overrideAngularVersions.name, () => {
         angularVersions: v11_1
       });
 
-      expect(actualPackageJson).toEqual(packageJsonWith11_1AllWithoutNgPackagr);
+      expect(actualPackageJson).toEqual(packageJsonWithV11_1All);
     });
 
     test('add forced dependencies when not present in the package', () => {

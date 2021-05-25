@@ -1,17 +1,7 @@
 import {AngularVersion} from './types/angular-version';
-import {PackageJsonVersion} from './types/package-json-version';
+import {PackageJson} from './types/package-json';
 
-/**
- * Packages that will be added regardless of whether they are currently
- * installed.
- */
-export const forcedReplacements: readonly string[] = [
-  // Required by certain older versions of ng-packagr.
-  'tsickle',
-  '@angular-devkit/build-ng-packagr'
-];
-
-export const versions = new Map<AngularVersion, PackageJsonVersion>([
+export const versions = new Map<AngularVersion, PackageJson>([
   [
     '6.0.x',
     {
@@ -23,10 +13,12 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
         '@angular/core': '~6.0.9',
         '@angular/elements': '~6.0.9',
         '@angular/forms': '~6.0.9',
+        '@angular/google-maps': null,
         '@angular/material': '~6.0.2',
         '@angular/platform-browser': '~6.0.9',
         '@angular/platform-browser-dynamic': '~6.0.9',
         '@angular/router': '~6.0.9',
+        '@angular/youtube-player': null,
         rxjs: '~6.0.0',
         tslib: '^1.7.1',
         'zone.js': '~0.8.26'
@@ -58,10 +50,12 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
         '@angular/core': '~6.1.10',
         '@angular/elements': '~6.1.10',
         '@angular/forms': '~6.1.10',
+        '@angular/google-maps': null,
         '@angular/material': '~6.4.7',
         '@angular/platform-browser': '~6.1.10',
         '@angular/platform-browser-dynamic': '~6.1.10',
         '@angular/router': '~6.1.10',
+        '@angular/youtube-player': null,
         rxjs: '~6.2.0',
         tslib: '^1.9.0',
         'zone.js': '~0.8.26'
@@ -93,10 +87,12 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
         '@angular/core': '~7.0.4',
         '@angular/elements': '~7.0.4',
         '@angular/forms': '~7.0.4',
+        '@angular/google-maps': null,
         '@angular/material': '~7.0.4',
         '@angular/platform-browser': '~7.0.4',
         '@angular/platform-browser-dynamic': '~7.0.4',
         '@angular/router': '~7.0.4',
+        '@angular/youtube-player': null,
         rxjs: '~6.3.3',
         tslib: '^1.9.0',
         'zone.js': '~0.8.26'
@@ -128,10 +124,12 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
         '@angular/core': '~7.1.4',
         '@angular/elements': '~7.1.4',
         '@angular/forms': '~7.1.4',
+        '@angular/google-maps': null,
         '@angular/material': '~7.1.1',
         '@angular/platform-browser': '~7.1.4',
         '@angular/platform-browser-dynamic': '~7.1.4',
         '@angular/router': '~7.1.4',
+        '@angular/youtube-player': null,
         rxjs: '~6.3.3',
         tslib: '^1.9.0',
         'zone.js': '~0.8.26'
@@ -163,10 +161,12 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
         '@angular/core': '~7.2.16',
         '@angular/elements': '~7.2.16',
         '@angular/forms': '~7.2.16',
+        '@angular/google-maps': null,
         '@angular/material': '~7.2.2',
         '@angular/platform-browser': '~7.2.16',
         '@angular/platform-browser-dynamic': '~7.2.16',
         '@angular/router': '~7.2.16',
+        '@angular/youtube-player': null,
         rxjs: '~6.3.3',
         tslib: '^1.9.0',
         'zone.js': '~0.8.26'
@@ -198,10 +198,12 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
         '@angular/core': '~8.0.3',
         '@angular/elements': '~8.0.3',
         '@angular/forms': '~8.0.3',
+        '@angular/google-maps': null,
         '@angular/material': '~8.0.2',
         '@angular/platform-browser': '~8.0.3',
         '@angular/platform-browser-dynamic': '~8.0.3',
         '@angular/router': '~8.0.3',
+        '@angular/youtube-player': null,
         rxjs: '~6.4.0',
         tslib: '^1.9.0',
         'zone.js': '~0.9.1'
@@ -233,10 +235,12 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
         '@angular/core': '~8.1.0',
         '@angular/elements': '~8.1.0',
         '@angular/forms': '~8.1.0',
+        '@angular/google-maps': null,
         '@angular/material': '~8.0.2',
         '@angular/platform-browser': '~8.1.0',
         '@angular/platform-browser-dynamic': '~8.1.0',
         '@angular/router': '~8.1.0',
+        '@angular/youtube-player': null,
         rxjs: '~6.4.0',
         tslib: '^1.9.0',
         'zone.js': '~0.9.1'
@@ -268,10 +272,12 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
         '@angular/core': '~8.2.0',
         '@angular/elements': '~8.2.0',
         '@angular/forms': '~8.2.0',
+        '@angular/google-maps': null,
         '@angular/material': '~8.1.4',
         '@angular/platform-browser': '~8.2.0',
         '@angular/platform-browser-dynamic': '~8.2.0',
         '@angular/router': '~8.2.0',
+        '@angular/youtube-player': null,
         rxjs: '~6.4.0',
         tslib: '^1.10.0',
         'zone.js': '~0.9.1'
@@ -323,6 +329,7 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
         codelyzer: '^5.1.2',
         'ng-packagr': '^9.0.0',
         'ts-node': '~8.3.0',
+        tsickle: null,
         tslint: '~5.18.0',
         typescript: '~3.7.5'
       }
@@ -359,6 +366,7 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
         codelyzer: '^5.1.2',
         'ng-packagr': '^9.0.0',
         'ts-node': '~8.3.0',
+        tsickle: null,
         tslint: '~6.1.0',
         typescript: '~3.8.3'
       }
@@ -395,6 +403,7 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
         codelyzer: '^6.0.0',
         'ng-packagr': '^10.0.0',
         'ts-node': '~8.3.0',
+        tsickle: null,
         tslint: '~6.1.0',
         typescript: '~3.9.5'
       }
@@ -423,6 +432,7 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
       },
       devDependencies: {
         '@angular-devkit/build-angular': '~0.1001.7',
+        '@angular-devkit/build-ng-packagr': null,
         '@angular-devkit/schematics-cli': '~0.1001.7',
         '@angular/cli': '~10.1.7',
         '@angular/compiler-cli': '~10.1.6',
@@ -430,6 +440,7 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
         codelyzer: '^6.0.0',
         'ng-packagr': '^10.1.0',
         'ts-node': '~8.3.0',
+        tsickle: null,
         tslint: '~6.1.0',
         typescript: '~3.9.7'
       }
@@ -458,6 +469,7 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
       },
       devDependencies: {
         '@angular-devkit/build-angular': '~0.1002.0',
+        '@angular-devkit/build-ng-packagr': null,
         '@angular-devkit/schematics-cli': '~0.1002.0',
         '@angular/cli': '~10.2.0',
         '@angular/compiler-cli': '~10.2.0',
@@ -465,6 +477,7 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
         codelyzer: '^6.0.0',
         'ng-packagr': '^10.1.0',
         'ts-node': '~8.3.0',
+        tsickle: null,
         tslint: '~6.1.0',
         typescript: '~4.0.2'
       }
@@ -493,6 +506,7 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
       },
       devDependencies: {
         '@angular-devkit/build-angular': '~0.1100.0',
+        '@angular-devkit/build-ng-packagr': null,
         '@angular-devkit/schematics-cli': '~0.1100.0',
         '@angular/cli': '~11.0.0',
         '@angular/compiler-cli': '~11.0.0',
@@ -500,6 +514,7 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
         codelyzer: '^6.0.0',
         'ng-packagr': '^11.0.0',
         'ts-node': '~8.3.0',
+        tsickle: null,
         tslint: '~6.1.0',
         typescript: '~4.0.2'
       }
@@ -528,6 +543,7 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
       },
       devDependencies: {
         '@angular-devkit/build-angular': '~0.1101.0',
+        '@angular-devkit/build-ng-packagr': null,
         '@angular-devkit/schematics-cli': '~0.1101.0',
         '@angular/cli': '~11.1.0',
         '@angular/compiler-cli': '~11.1.0',
@@ -535,6 +551,7 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
         codelyzer: '^6.0.0',
         'ng-packagr': '^11.1.0',
         'ts-node': '~8.3.0',
+        tsickle: null,
         tslint: '~6.1.0',
         typescript: '~4.1.2'
       }
@@ -563,6 +580,7 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
       },
       devDependencies: {
         '@angular-devkit/build-angular': '~0.1102.0',
+        '@angular-devkit/build-ng-packagr': null,
         '@angular-devkit/schematics-cli': '~0.1102.0',
         '@angular/cli': '~11.2.0',
         '@angular/compiler-cli': '~11.2.0',
@@ -570,6 +588,7 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
         codelyzer: '^6.0.0',
         'ng-packagr': '^11.1.0',
         'ts-node': '~8.3.0',
+        tsickle: null,
         tslint: '~6.1.0',
         typescript: '~4.1.2'
       }
@@ -586,22 +605,28 @@ export const versions = new Map<AngularVersion, PackageJsonVersion>([
         '@angular/core': '~12.0.0',
         '@angular/elements': '~12.0.0',
         '@angular/forms': '~12.0.0',
+        '@angular/google-maps': '~12.0.0',
         '@angular/material': '~12.0.0',
         '@angular/platform-browser': '~12.0.0',
         '@angular/platform-browser-dynamic': '~12.0.0',
         '@angular/router': '~12.0.0',
+        '@angular/youtube-player': '~12.0.0',
         rxjs: '~6.6.0',
         tslib: '^2.0.0',
         'zone.js': '~0.11.4'
       },
       devDependencies: {
         '@angular-devkit/build-angular': '~12.0.0',
+        '@angular-devkit/build-ng-packagr': null,
         '@angular-devkit/schematics-cli': '~12.0.0',
         '@angular/cli': '~12.0.0',
         '@angular/compiler-cli': '~12.0.0',
         '@types/node': '^12.11.1',
+        codelyzer: null,
         'ng-packagr': '^12.0.0',
         'ts-node': '~9.1.1',
+        tsickle: null,
+        tslint: null,
         typescript: '~4.2.3'
       }
     }

@@ -1,67 +1,35 @@
-import {intersection} from 'lodash-es';
-import {forcedReplacements} from './angular-versions';
+import {
+  PackageJson,
+  PackageJsonDependencies,
+  PackageJsonDevDependencies
+} from './types/package-json';
 
-import {PackageJsonVersion} from './types/package-json-version';
+function removeNullDependencies<
+  TDependencies extends PackageJsonDependencies | PackageJsonDevDependencies
+>(dependencies: TDependencies): TDependencies {
+  return Object.fromEntries(
+    Object.entries(dependencies).filter(
+      ([, maybeVersion]) => maybeVersion !== null
+    )
+  );
+}
 
 export function overrideAngularVersions({
   angularVersions,
   projectVersions
 }: {
-  angularVersions: PackageJsonVersion;
-  projectVersions: PackageJsonVersion;
-}): PackageJsonVersion {
-  const dependenciesReplacements = Object.fromEntries(
-    intersection(
-      Object.keys(projectVersions.dependencies),
-      Object.keys(angularVersions.dependencies)
-    ).map(dependency => [
-      dependency,
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (angularVersions.dependencies as any)[dependency]
-    ])
-  );
-  const forcedDependencies = Object.fromEntries(
-    intersection(
-      forcedReplacements,
-      Object.keys(angularVersions.dependencies)
-    ).map(dependency => [
-      dependency,
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (angularVersions.dependencies as any)[dependency]
-    ])
-  );
-  const devDependenciesReplacements = Object.fromEntries(
-    intersection(
-      Object.keys(projectVersions.devDependencies),
-      Object.keys(angularVersions.devDependencies)
-    ).map(devDependency => [
-      devDependency,
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (angularVersions.devDependencies as any)[devDependency]
-    ])
-  );
-  const forcedDevDependencies = Object.fromEntries(
-    intersection(
-      forcedReplacements,
-      Object.keys(angularVersions.devDependencies)
-    ).map(dependency => [
-      dependency,
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (angularVersions.devDependencies as any)[dependency]
-    ])
-  );
-
+  angularVersions: PackageJson;
+  projectVersions: PackageJson;
+}): PackageJson {
   return {
     ...projectVersions,
-    dependencies: {
+    dependencies: removeNullDependencies({
       ...projectVersions.dependencies,
-      ...dependenciesReplacements,
-      ...forcedDependencies
-    },
-    devDependencies: {
+      ...angularVersions.dependencies
+    }),
+    devDependencies: removeNullDependencies({
       ...projectVersions.devDependencies,
-      ...devDependenciesReplacements,
-      ...forcedDevDependencies
-    }
+      ...angularVersions.devDependencies
+    })
   };
 }
