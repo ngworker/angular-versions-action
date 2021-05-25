@@ -1,5 +1,8 @@
 name: '@ngworker/angular-versions-action CI'
 
+env:
+  node-version: 12.x
+
 on:
   pull_request:
   push:
@@ -11,6 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Use Node.js ${{ env.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.node-version }}
       - run: yarn install
 
       - run: yarn build
@@ -19,6 +26,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Use Node.js ${{ env.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.node-version }}
       - run: yarn install
 
       - run: yarn test
