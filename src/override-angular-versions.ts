@@ -1,5 +1,4 @@
 import {intersection} from 'lodash-es';
-import fromEntries from 'object.fromentries';
 import {forcedReplacements} from './angular-versions';
 
 import {PackageJsonVersion} from './types/package-json-version';
@@ -11,7 +10,7 @@ export function overrideAngularVersions({
   angularVersions: PackageJsonVersion;
   projectVersions: PackageJsonVersion;
 }): PackageJsonVersion {
-  const dependenciesReplacements = fromEntries<string | undefined>(
+  const dependenciesReplacements = Object.fromEntries(
     intersection(
       Object.keys(projectVersions.dependencies),
       Object.keys(angularVersions.dependencies)
@@ -21,7 +20,7 @@ export function overrideAngularVersions({
       (angularVersions.dependencies as any)[dependency]
     ])
   );
-  const forcedDependencies = fromEntries<string | undefined>(
+  const forcedDependencies = Object.fromEntries(
     intersection(
       forcedReplacements,
       Object.keys(angularVersions.dependencies)
@@ -31,7 +30,7 @@ export function overrideAngularVersions({
       (angularVersions.dependencies as any)[dependency]
     ])
   );
-  const devDependenciesReplacements = fromEntries<string | undefined>(
+  const devDependenciesReplacements = Object.fromEntries(
     intersection(
       Object.keys(projectVersions.devDependencies),
       Object.keys(angularVersions.devDependencies)
@@ -41,7 +40,7 @@ export function overrideAngularVersions({
       (angularVersions.devDependencies as any)[devDependency]
     ])
   );
-  const forcedDevDependencies = fromEntries<string | undefined>(
+  const forcedDevDependencies = Object.fromEntries(
     intersection(
       forcedReplacements,
       Object.keys(angularVersions.devDependencies)
