@@ -39,30 +39,25 @@ exports.angularVersionComparer = angularVersionComparer;
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.versions = exports.forcedReplacements = void 0;
-/**
- * Packages that will be added regardless of whether they are currently
- * installed.
- */
-exports.forcedReplacements = [
-    // Required by certain older versions of ng-packagr.
-    'tsickle',
-    '@angular-devkit/build-ng-packagr'
-];
+exports.versions = void 0;
 exports.versions = new Map([
     [
         '6.0.x',
         {
             dependencies: {
                 '@angular/animations': '~6.0.9',
+                '@angular/cdk': '~6.0.2',
                 '@angular/common': '~6.0.9',
                 '@angular/compiler': '~6.0.9',
                 '@angular/core': '~6.0.9',
                 '@angular/elements': '~6.0.9',
                 '@angular/forms': '~6.0.9',
+                '@angular/google-maps': null,
+                '@angular/material': '~6.0.2',
                 '@angular/platform-browser': '~6.0.9',
                 '@angular/platform-browser-dynamic': '~6.0.9',
                 '@angular/router': '~6.0.9',
+                '@angular/youtube-player': null,
                 rxjs: '~6.0.0',
                 tslib: '^1.7.1',
                 'zone.js': '~0.8.26'
@@ -88,14 +83,18 @@ exports.versions = new Map([
         {
             dependencies: {
                 '@angular/animations': '~6.1.10',
+                '@angular/cdk': '~6.4.7',
                 '@angular/common': '~6.1.10',
                 '@angular/compiler': '~6.1.10',
                 '@angular/core': '~6.1.10',
                 '@angular/elements': '~6.1.10',
                 '@angular/forms': '~6.1.10',
+                '@angular/google-maps': null,
+                '@angular/material': '~6.4.7',
                 '@angular/platform-browser': '~6.1.10',
                 '@angular/platform-browser-dynamic': '~6.1.10',
                 '@angular/router': '~6.1.10',
+                '@angular/youtube-player': null,
                 rxjs: '~6.2.0',
                 tslib: '^1.9.0',
                 'zone.js': '~0.8.26'
@@ -121,14 +120,18 @@ exports.versions = new Map([
         {
             dependencies: {
                 '@angular/animations': '~7.0.4',
+                '@angular/cdk': '~7.0.4',
                 '@angular/common': '~7.0.4',
                 '@angular/compiler': '~7.0.4',
                 '@angular/core': '~7.0.4',
                 '@angular/elements': '~7.0.4',
                 '@angular/forms': '~7.0.4',
+                '@angular/google-maps': null,
+                '@angular/material': '~7.0.4',
                 '@angular/platform-browser': '~7.0.4',
                 '@angular/platform-browser-dynamic': '~7.0.4',
                 '@angular/router': '~7.0.4',
+                '@angular/youtube-player': null,
                 rxjs: '~6.3.3',
                 tslib: '^1.9.0',
                 'zone.js': '~0.8.26'
@@ -154,14 +157,18 @@ exports.versions = new Map([
         {
             dependencies: {
                 '@angular/animations': '~7.1.4',
+                '@angular/cdk': '~7.1.1',
                 '@angular/common': '~7.1.4',
                 '@angular/compiler': '~7.1.4',
                 '@angular/core': '~7.1.4',
                 '@angular/elements': '~7.1.4',
                 '@angular/forms': '~7.1.4',
+                '@angular/google-maps': null,
+                '@angular/material': '~7.1.1',
                 '@angular/platform-browser': '~7.1.4',
                 '@angular/platform-browser-dynamic': '~7.1.4',
                 '@angular/router': '~7.1.4',
+                '@angular/youtube-player': null,
                 rxjs: '~6.3.3',
                 tslib: '^1.9.0',
                 'zone.js': '~0.8.26'
@@ -187,14 +194,18 @@ exports.versions = new Map([
         {
             dependencies: {
                 '@angular/animations': '~7.2.16',
+                '@angular/cdk': '~7.2.2',
                 '@angular/common': '~7.2.16',
                 '@angular/compiler': '~7.2.16',
                 '@angular/core': '~7.2.16',
                 '@angular/elements': '~7.2.16',
                 '@angular/forms': '~7.2.16',
+                '@angular/google-maps': null,
+                '@angular/material': '~7.2.2',
                 '@angular/platform-browser': '~7.2.16',
                 '@angular/platform-browser-dynamic': '~7.2.16',
                 '@angular/router': '~7.2.16',
+                '@angular/youtube-player': null,
                 rxjs: '~6.3.3',
                 tslib: '^1.9.0',
                 'zone.js': '~0.8.26'
@@ -220,14 +231,18 @@ exports.versions = new Map([
         {
             dependencies: {
                 '@angular/animations': '~8.0.3',
+                '@angular/cdk': '~8.0.2',
                 '@angular/common': '~8.0.3',
                 '@angular/compiler': '~8.0.3',
                 '@angular/core': '~8.0.3',
                 '@angular/elements': '~8.0.3',
                 '@angular/forms': '~8.0.3',
+                '@angular/google-maps': null,
+                '@angular/material': '~8.0.2',
                 '@angular/platform-browser': '~8.0.3',
                 '@angular/platform-browser-dynamic': '~8.0.3',
                 '@angular/router': '~8.0.3',
+                '@angular/youtube-player': null,
                 rxjs: '~6.4.0',
                 tslib: '^1.9.0',
                 'zone.js': '~0.9.1'
@@ -253,14 +268,18 @@ exports.versions = new Map([
         {
             dependencies: {
                 '@angular/animations': '~8.1.0',
+                '@angular/cdk': '~8.0.2',
                 '@angular/common': '~8.1.0',
                 '@angular/compiler': '~8.1.0',
                 '@angular/core': '~8.1.0',
                 '@angular/elements': '~8.1.0',
                 '@angular/forms': '~8.1.0',
+                '@angular/google-maps': null,
+                '@angular/material': '~8.0.2',
                 '@angular/platform-browser': '~8.1.0',
                 '@angular/platform-browser-dynamic': '~8.1.0',
                 '@angular/router': '~8.1.0',
+                '@angular/youtube-player': null,
                 rxjs: '~6.4.0',
                 tslib: '^1.9.0',
                 'zone.js': '~0.9.1'
@@ -286,14 +305,18 @@ exports.versions = new Map([
         {
             dependencies: {
                 '@angular/animations': '~8.2.0',
+                '@angular/cdk': '~8.1.4',
                 '@angular/common': '~8.2.0',
                 '@angular/compiler': '~8.2.0',
                 '@angular/core': '~8.2.0',
                 '@angular/elements': '~8.2.0',
                 '@angular/forms': '~8.2.0',
+                '@angular/google-maps': null,
+                '@angular/material': '~8.1.4',
                 '@angular/platform-browser': '~8.2.0',
                 '@angular/platform-browser-dynamic': '~8.2.0',
                 '@angular/router': '~8.2.0',
+                '@angular/youtube-player': null,
                 rxjs: '~6.4.0',
                 tslib: '^1.10.0',
                 'zone.js': '~0.9.1'
@@ -319,14 +342,18 @@ exports.versions = new Map([
         {
             dependencies: {
                 '@angular/animations': '~9.0.7',
+                '@angular/cdk': '~9.0.1',
                 '@angular/common': '~9.0.7',
                 '@angular/compiler': '~9.0.7',
                 '@angular/core': '~9.0.7',
                 '@angular/elements': '~9.0.7',
                 '@angular/forms': '~9.0.7',
+                '@angular/google-maps': '~9.0.1',
+                '@angular/material': '~9.0.1',
                 '@angular/platform-browser': '~9.0.7',
                 '@angular/platform-browser-dynamic': '~9.0.7',
                 '@angular/router': '~9.0.7',
+                '@angular/youtube-player': '~9.0.1',
                 rxjs: '~6.5.4',
                 tslib: '^1.10.0',
                 'zone.js': '~0.10.2'
@@ -341,6 +368,7 @@ exports.versions = new Map([
                 codelyzer: '^5.1.2',
                 'ng-packagr': '^9.0.0',
                 'ts-node': '~8.3.0',
+                tsickle: null,
                 tslint: '~5.18.0',
                 typescript: '~3.7.5'
             }
@@ -351,14 +379,18 @@ exports.versions = new Map([
         {
             dependencies: {
                 '@angular/animations': '~9.1.0',
+                '@angular/cdk': '~9.1.3',
                 '@angular/common': '~9.1.0',
                 '@angular/compiler': '~9.1.0',
                 '@angular/core': '~9.1.0',
                 '@angular/elements': '~9.1.0',
                 '@angular/forms': '~9.1.0',
+                '@angular/google-maps': '~9.1.3',
+                '@angular/material': '~9.1.3',
                 '@angular/platform-browser': '~9.1.0',
                 '@angular/platform-browser-dynamic': '~9.1.0',
                 '@angular/router': '~9.1.0',
+                '@angular/youtube-player': '~9.1.3',
                 rxjs: '~6.5.4',
                 tslib: '^1.10.0',
                 'zone.js': '~0.10.2'
@@ -373,6 +405,7 @@ exports.versions = new Map([
                 codelyzer: '^5.1.2',
                 'ng-packagr': '^9.0.0',
                 'ts-node': '~8.3.0',
+                tsickle: null,
                 tslint: '~6.1.0',
                 typescript: '~3.8.3'
             }
@@ -383,14 +416,18 @@ exports.versions = new Map([
         {
             dependencies: {
                 '@angular/animations': '~10.0.14',
+                '@angular/cdk': '~10.0.2',
                 '@angular/common': '~10.0.14',
                 '@angular/compiler': '~10.0.14',
                 '@angular/core': '~10.0.14',
                 '@angular/elements': '~10.0.14',
                 '@angular/forms': '~10.0.14',
+                '@angular/google-maps': '~10.0.2',
+                '@angular/material': '~10.0.2',
                 '@angular/platform-browser': '~10.0.14',
                 '@angular/platform-browser-dynamic': '~10.0.14',
                 '@angular/router': '~10.0.14',
+                '@angular/youtube-player': '~10.0.2',
                 rxjs: '~6.5.5',
                 tslib: '^2.0.0',
                 'zone.js': '~0.10.3'
@@ -405,6 +442,7 @@ exports.versions = new Map([
                 codelyzer: '^6.0.0',
                 'ng-packagr': '^10.0.0',
                 'ts-node': '~8.3.0',
+                tsickle: null,
                 tslint: '~6.1.0',
                 typescript: '~3.9.5'
             }
@@ -415,20 +453,25 @@ exports.versions = new Map([
         {
             dependencies: {
                 '@angular/animations': '~10.1.6',
+                '@angular/cdk': '~10.1.3',
                 '@angular/common': '~10.1.6',
                 '@angular/compiler': '~10.1.6',
                 '@angular/core': '~10.1.6',
                 '@angular/elements': '~10.1.6',
                 '@angular/forms': '~10.1.6',
+                '@angular/google-maps': '~10.1.3',
+                '@angular/material': '~10.1.3',
                 '@angular/platform-browser': '~10.1.6',
                 '@angular/platform-browser-dynamic': '~10.1.6',
                 '@angular/router': '~10.1.6',
+                '@angular/youtube-player': '~10.1.3',
                 rxjs: '~6.6.3',
                 tslib: '^2.0.0',
                 'zone.js': '~0.10.3'
             },
             devDependencies: {
                 '@angular-devkit/build-angular': '~0.1001.7',
+                '@angular-devkit/build-ng-packagr': null,
                 '@angular-devkit/schematics-cli': '~0.1001.7',
                 '@angular/cli': '~10.1.7',
                 '@angular/compiler-cli': '~10.1.6',
@@ -436,6 +479,7 @@ exports.versions = new Map([
                 codelyzer: '^6.0.0',
                 'ng-packagr': '^10.1.0',
                 'ts-node': '~8.3.0',
+                tsickle: null,
                 tslint: '~6.1.0',
                 typescript: '~3.9.7'
             }
@@ -446,20 +490,25 @@ exports.versions = new Map([
         {
             dependencies: {
                 '@angular/animations': '~10.2.0',
+                '@angular/cdk': '~10.2.7',
                 '@angular/common': '~10.2.0',
                 '@angular/compiler': '~10.2.0',
                 '@angular/core': '~10.2.0',
                 '@angular/elements': '~10.2.0',
                 '@angular/forms': '~10.2.0',
+                '@angular/google-maps': '~10.2.7',
+                '@angular/material': '~10.2.7',
                 '@angular/platform-browser': '~10.2.0',
                 '@angular/platform-browser-dynamic': '~10.2.0',
                 '@angular/router': '~10.2.0',
+                '@angular/youtube-player': '~10.2.7',
                 rxjs: '~6.6.0',
                 tslib: '^2.0.0',
                 'zone.js': '~0.10.2'
             },
             devDependencies: {
                 '@angular-devkit/build-angular': '~0.1002.0',
+                '@angular-devkit/build-ng-packagr': null,
                 '@angular-devkit/schematics-cli': '~0.1002.0',
                 '@angular/cli': '~10.2.0',
                 '@angular/compiler-cli': '~10.2.0',
@@ -467,6 +516,7 @@ exports.versions = new Map([
                 codelyzer: '^6.0.0',
                 'ng-packagr': '^10.1.0',
                 'ts-node': '~8.3.0',
+                tsickle: null,
                 tslint: '~6.1.0',
                 typescript: '~4.0.2'
             }
@@ -477,20 +527,25 @@ exports.versions = new Map([
         {
             dependencies: {
                 '@angular/animations': '~11.0.0',
+                '@angular/cdk': '~11.0.0',
                 '@angular/common': '~11.0.0',
                 '@angular/compiler': '~11.0.0',
                 '@angular/core': '~11.0.0',
                 '@angular/elements': '~11.0.0',
                 '@angular/forms': '~11.0.0',
+                '@angular/google-maps': '~11.0.0',
+                '@angular/material': '~11.0.0',
                 '@angular/platform-browser': '~11.0.0',
                 '@angular/platform-browser-dynamic': '~11.0.0',
                 '@angular/router': '~11.0.0',
+                '@angular/youtube-player': '~11.0.0',
                 rxjs: '~6.6.0',
                 tslib: '^2.0.0',
                 'zone.js': '~0.10.2'
             },
             devDependencies: {
                 '@angular-devkit/build-angular': '~0.1100.0',
+                '@angular-devkit/build-ng-packagr': null,
                 '@angular-devkit/schematics-cli': '~0.1100.0',
                 '@angular/cli': '~11.0.0',
                 '@angular/compiler-cli': '~11.0.0',
@@ -498,6 +553,7 @@ exports.versions = new Map([
                 codelyzer: '^6.0.0',
                 'ng-packagr': '^11.0.0',
                 'ts-node': '~8.3.0',
+                tsickle: null,
                 tslint: '~6.1.0',
                 typescript: '~4.0.2'
             }
@@ -508,20 +564,25 @@ exports.versions = new Map([
         {
             dependencies: {
                 '@angular/animations': '~11.1.0',
+                '@angular/cdk': '~11.1.0',
                 '@angular/common': '~11.1.0',
                 '@angular/compiler': '~11.1.0',
                 '@angular/core': '~11.1.0',
                 '@angular/elements': '~11.1.0',
                 '@angular/forms': '~11.1.0',
+                '@angular/google-maps': '~11.1.0',
+                '@angular/material': '~11.1.0',
                 '@angular/platform-browser': '~11.1.0',
                 '@angular/platform-browser-dynamic': '~11.1.0',
                 '@angular/router': '~11.1.0',
+                '@angular/youtube-player': '~11.1.0',
                 rxjs: '~6.6.0',
                 tslib: '^2.0.0',
                 'zone.js': '~0.11.3'
             },
             devDependencies: {
                 '@angular-devkit/build-angular': '~0.1101.0',
+                '@angular-devkit/build-ng-packagr': null,
                 '@angular-devkit/schematics-cli': '~0.1101.0',
                 '@angular/cli': '~11.1.0',
                 '@angular/compiler-cli': '~11.1.0',
@@ -529,6 +590,7 @@ exports.versions = new Map([
                 codelyzer: '^6.0.0',
                 'ng-packagr': '^11.1.0',
                 'ts-node': '~8.3.0',
+                tsickle: null,
                 tslint: '~6.1.0',
                 typescript: '~4.1.2'
             }
@@ -538,28 +600,34 @@ exports.versions = new Map([
         '11.2.x',
         {
             dependencies: {
-                '@angular/animations': '~11.2.0 || >=11.2.0-rc.0',
-                '@angular/common': '~11.2.0 || >=11.2.0-rc.0',
-                '@angular/compiler': '~11.2.0 || >=11.2.0-rc.0',
-                '@angular/core': '~11.2.0 || >=11.2.0-rc.0',
-                '@angular/elements': '~11.2.0 || >=11.2.0-rc.0',
-                '@angular/forms': '~11.2.0 || >=11.2.0-rc.0',
-                '@angular/platform-browser': '~11.2.0 || >=11.2.0-rc.0',
-                '@angular/platform-browser-dynamic': '~11.2.0 || >=11.2.0-rc.0',
-                '@angular/router': '~11.2.0 || >=11.2.0-rc.0',
+                '@angular/animations': '~11.2.0',
+                '@angular/cdk': '~11.2.0',
+                '@angular/common': '~11.2.0',
+                '@angular/compiler': '~11.2.0',
+                '@angular/core': '~11.2.0',
+                '@angular/elements': '~11.2.0',
+                '@angular/forms': '~11.2.0',
+                '@angular/google-maps': '~11.2.0',
+                '@angular/material': '~11.2.0',
+                '@angular/platform-browser': '~11.2.0',
+                '@angular/platform-browser-dynamic': '~11.2.0',
+                '@angular/router': '~11.2.0',
+                '@angular/youtube-player': '~11.2.0',
                 rxjs: '~6.6.0',
                 tslib: '^2.0.0',
                 'zone.js': '~0.11.3'
             },
             devDependencies: {
-                '@angular-devkit/build-angular': '~0.1102.0 || >=0.1102.0-rc.1',
-                '@angular-devkit/schematics-cli': '~0.1102.0 || >=0.1102.0-rc.1',
-                '@angular/cli': '~11.2.0 || >=11.2.0-rc.1',
-                '@angular/compiler-cli': '~11.2.0 || >=11.2.0-rc.0',
+                '@angular-devkit/build-angular': '~0.1102.0',
+                '@angular-devkit/build-ng-packagr': null,
+                '@angular-devkit/schematics-cli': '~0.1102.0',
+                '@angular/cli': '~11.2.0',
+                '@angular/compiler-cli': '~11.2.0',
                 '@types/node': '^12.11.1',
                 codelyzer: '^6.0.0',
                 'ng-packagr': '^11.1.0',
                 'ts-node': '~8.3.0',
+                tsickle: null,
                 tslint: '~6.1.0',
                 typescript: '~4.1.2'
             }
@@ -569,28 +637,35 @@ exports.versions = new Map([
         '12.0.x',
         {
             dependencies: {
-                '@angular/animations': '~12.0.0 || >=12.0.0-rc.0',
-                '@angular/common': '~12.0.0 || >=12.0.0-rc.0',
-                '@angular/compiler': '~12.0.0 || >=12.0.0-rc.0',
-                '@angular/core': '~12.0.0 || >=12.0.0-rc.0',
-                '@angular/elements': '~12.0.0 || >=12.0.0-rc.0',
-                '@angular/forms': '~12.0.0 || >=12.0.0-rc.0',
-                '@angular/platform-browser': '~12.0.0 || >=12.0.0-rc.0',
-                '@angular/platform-browser-dynamic': '~12.0.0 || >=12.0.0-rc.0',
-                '@angular/router': '~12.0.0 || >=12.0.0-rc.0',
+                '@angular/animations': '~12.0.0',
+                '@angular/cdk': '~12.0.0',
+                '@angular/common': '~12.0.0',
+                '@angular/compiler': '~12.0.0',
+                '@angular/core': '~12.0.0',
+                '@angular/elements': '~12.0.0',
+                '@angular/forms': '~12.0.0',
+                '@angular/google-maps': '~12.0.0',
+                '@angular/material': '~12.0.0',
+                '@angular/platform-browser': '~12.0.0',
+                '@angular/platform-browser-dynamic': '~12.0.0',
+                '@angular/router': '~12.0.0',
+                '@angular/youtube-player': '~12.0.0',
                 rxjs: '~6.6.0',
                 tslib: '^2.0.0',
                 'zone.js': '~0.11.4'
             },
             devDependencies: {
-                '@angular-devkit/build-angular': '~12.0.0 || >=12.0.0-rc.0',
-                '@angular-devkit/build-ng-packagr': '~0.1002.2',
-                '@angular-devkit/schematics-cli': '~12.0.0 || >=12.0.0-rc.0',
-                '@angular/cli': '~12.0.0 || >=12.0.0-rc.0',
-                '@angular/compiler-cli': '~12.0.0 || >=12.0.0-rc.0',
+                '@angular-devkit/build-angular': '~12.0.0',
+                '@angular-devkit/build-ng-packagr': null,
+                '@angular-devkit/schematics-cli': '~12.0.0',
+                '@angular/cli': '~12.0.0',
+                '@angular/compiler-cli': '~12.0.0',
                 '@types/node': '^12.11.1',
-                'ng-packagr': '^12.0.0 || >=12.0.0-rc.0',
+                codelyzer: null,
+                'ng-packagr': '^12.0.0',
                 'ts-node': '~9.1.1',
+                tsickle: null,
+                tslint: null,
                 typescript: '~4.2.3'
             }
         }
@@ -699,42 +774,12 @@ run();
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.overrideAngularVersions = void 0;
-const lodash_es_1 = __nccwpck_require__(895);
-const angular_versions_1 = __nccwpck_require__(267);
+const object_fromentries_1 = __importDefault(__nccwpck_require__(7050));
+function removeNullDependencies(dependencies) {
+    return object_fromentries_1.default(Object.entries(dependencies).filter(([, maybeVersion]) => maybeVersion !== null));
+}
 function overrideAngularVersions({ angularVersions, projectVersions }) {
-    const dependenciesReplacements = Object.fromEntries(lodash_es_1.intersection(Object.keys(projectVersions.dependencies), Object.keys(angularVersions.dependencies)).map(dependency => [
-        dependency,
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        angularVersions.dependencies[dependency]
-    ]));
-    const forcedDependencies = Object.fromEntries(lodash_es_1.intersection(angular_versions_1.forcedReplacements, Object.keys(angularVersions.dependencies)).map(dependency => [
-        dependency,
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        angularVersions.dependencies[dependency]
-    ]));
-    const devDependenciesReplacements = Object.fromEntries(lodash_es_1.intersection(Object.keys(projectVersions.devDependencies), Object.keys(angularVersions.devDependencies)).map(devDependency => [
-        devDependency,
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        angularVersions.devDependencies[devDependency]
-    ]));
-    const forcedDevDependencies = Object.fromEntries(lodash_es_1.intersection(angular_versions_1.forcedReplacements, Object.keys(angularVersions.devDependencies)).map(dependency => [
-        dependency,
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        angularVersions.devDependencies[dependency]
-    ]));
-    return {
-        ...projectVersions,
-        dependencies: {
-            ...projectVersions.dependencies,
-            ...dependenciesReplacements,
-            ...forcedDependencies
-        },
-        devDependencies: {
-            ...projectVersions.devDependencies,
-            ...devDependenciesReplacements,
-            ...forcedDevDependencies
-        }
-    };
+    return Object.assign(Object.assign({}, projectVersions), { dependencies: removeNullDependencies(Object.assign(Object.assign({}, projectVersions.dependencies), angularVersions.dependencies)), devDependencies: removeNullDependencies(Object.assign(Object.assign({}, projectVersions.devDependencies), angularVersions.devDependencies)) });
 }
 exports.overrideAngularVersions = overrideAngularVersions;
 
@@ -23931,7 +23976,7 @@ module.exports = require("path");;
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
-/******/ 	
+/******/
 /******/ 	// The require function
 /******/ 	function __nccwpck_require__(moduleId) {
 /******/ 		// Check if module is in cache
@@ -23945,7 +23990,7 @@ module.exports = require("path");;
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
-/******/ 	
+/******/
 /******/ 		// Execute the module function
 /******/ 		var threw = true;
 /******/ 		try {
@@ -23954,11 +23999,11 @@ module.exports = require("path");;
 /******/ 		} finally {
 /******/ 			if(threw) delete __webpack_module_cache__[moduleId];
 /******/ 		}
-/******/ 	
+/******/
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/ 	
+/******/
 /************************************************************************/
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
@@ -23971,12 +24016,12 @@ module.exports = require("path");;
 /******/ 			}
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__nccwpck_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -23987,17 +24032,17 @@ module.exports = require("path");;
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/compat */
-/******/ 	
+/******/
 /******/ 	if (typeof __nccwpck_require__ !== 'undefined') __nccwpck_require__.ab = __dirname + "/";/************************************************************************/
-/******/ 	
+/******/
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
 /******/ 	var __webpack_exports__ = __nccwpck_require__(109);
 /******/ 	module.exports = __webpack_exports__;
-/******/ 	
+/******/
 /******/ })()
 ;
 //# sourceMappingURL=index.js.map
