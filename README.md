@@ -35,8 +35,7 @@ jobs:
     strategy:
       matrix:
         node-version: [10.x, 12.x]
-        angular-version:
-          [
+        angular-version: [
             6.0.x,
             6.1.x,
             7.0.x,
@@ -96,6 +95,39 @@ At the moment this actions supports a limited set of Angular versions listed bel
 - 11.1.x
 - 11.2.x
 - 12.0.x
+
+### Managed packages
+
+The following packages are managed by this action:
+
+- `@angular/animations`
+- `@angular/cdk`
+- `@angular/cli`
+- `@angular/common`
+- `@angular/compiler`
+- `@angular/compiler-cli`
+- `@angular/core`
+- `@angular-devkit/build-angular`
+- `@angular-devkit/build-ng-packagr`
+- `@angular-devkit/schematics-cli`
+- `@angular/elements`
+- `@angular/forms`
+- `@angular/google-maps`
+- `@angular/material`
+- `@angular/platform-browser`
+- `@angular/platform-browser-dynamic`
+- `@angular/router`
+- `@angular/youtube-player`
+- `@types/node`
+- `codelyzer`
+- `ng-packagr`
+- `rxjs`
+- `tsickle `
+- `tslib`
+- `tslint`
+- `ts-node`
+- `typescript`
+- `zone.js`
 
 ## Contributing
 
