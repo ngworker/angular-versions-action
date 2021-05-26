@@ -769,17 +769,29 @@ run();
 /***/ }),
 
 /***/ 480:
-/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+/***/ ((__unused_webpack_module, exports) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.overrideAngularVersions = void 0;
-const object_fromentries_1 = __importDefault(__nccwpck_require__(7050));
 function removeNullDependencies(dependencies) {
-    return object_fromentries_1.default(Object.entries(dependencies).filter(([, maybeVersion]) => maybeVersion !== null));
+    return Object.fromEntries(Object.entries(dependencies).filter(([, maybeVersion]) => maybeVersion !== null)
+    // Issues with generic typing of Object methods
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    );
 }
 function overrideAngularVersions({ angularVersions, projectVersions }) {
-    return Object.assign(Object.assign({}, projectVersions), { dependencies: removeNullDependencies(Object.assign(Object.assign({}, projectVersions.dependencies), angularVersions.dependencies)), devDependencies: removeNullDependencies(Object.assign(Object.assign({}, projectVersions.devDependencies), angularVersions.devDependencies)) });
+    return {
+        ...projectVersions,
+        dependencies: removeNullDependencies({
+            ...projectVersions.dependencies,
+            ...angularVersions.dependencies
+        }),
+        devDependencies: removeNullDependencies({
+            ...projectVersions.devDependencies,
+            ...angularVersions.devDependencies
+        })
+    };
 }
 exports.overrideAngularVersions = overrideAngularVersions;
 
@@ -23976,7 +23988,7 @@ module.exports = require("path");;
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
-/******/
+/******/ 	
 /******/ 	// The require function
 /******/ 	function __nccwpck_require__(moduleId) {
 /******/ 		// Check if module is in cache
@@ -23990,7 +24002,7 @@ module.exports = require("path");;
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
-/******/
+/******/ 	
 /******/ 		// Execute the module function
 /******/ 		var threw = true;
 /******/ 		try {
@@ -23999,11 +24011,11 @@ module.exports = require("path");;
 /******/ 		} finally {
 /******/ 			if(threw) delete __webpack_module_cache__[moduleId];
 /******/ 		}
-/******/
+/******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
@@ -24016,12 +24028,12 @@ module.exports = require("path");;
 /******/ 			}
 /******/ 		};
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__nccwpck_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -24032,17 +24044,17 @@ module.exports = require("path");;
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/compat */
-/******/
+/******/ 	
 /******/ 	if (typeof __nccwpck_require__ !== 'undefined') __nccwpck_require__.ab = __dirname + "/";/************************************************************************/
-/******/
+/******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
 /******/ 	var __webpack_exports__ = __nccwpck_require__(109);
 /******/ 	module.exports = __webpack_exports__;
-/******/
+/******/ 	
 /******/ })()
 ;
 //# sourceMappingURL=index.js.map

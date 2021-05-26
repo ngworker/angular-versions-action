@@ -11,7 +11,9 @@ function removeNullDependencies<
     Object.entries(dependencies).filter(
       ([, maybeVersion]) => maybeVersion !== null
     )
-  );
+    // Issues with generic typing of Object methods
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  ) as any;
 }
 
 export function overrideAngularVersions({
