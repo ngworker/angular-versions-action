@@ -22,17 +22,15 @@ export function replaceLibrariesNgPackagrBuilder(
 ): AngularJson {
   const modifiedAngularJson = cloneDeep(angularJson);
 
-  const projectsAndTargetsWithNgPackagrBuilder = getNameOfProjectsAndTargetsUsingNgpackagr(
-    angularJson
-  );
+  const projectsAndTargetsWithNgPackagrBuilder =
+    getNameOfProjectsAndTargetsUsingNgpackagr(angularJson);
 
   const correctBuilderForVersion = getCorrectNgPackgrBuilder(angularVersion);
 
   projectsAndTargetsWithNgPackagrBuilder.forEach(
     ([projectName, targetName]) => {
-      modifiedAngularJson.projects[projectName].architect[
-        targetName
-      ].builder = correctBuilderForVersion;
+      modifiedAngularJson.projects[projectName].architect[targetName].builder =
+        correctBuilderForVersion;
     }
   );
 

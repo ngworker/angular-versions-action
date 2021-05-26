@@ -24,8 +24,7 @@ export const packageJsonV8WithForceDependencies = {
     release:
       'cd libs/ngworker/lumberjack && standard-version --infile ../../../CHANGELOG.md',
     publish: 'cd dist/ngworker/lumberjack && npm publish',
-    ci:
-      'yarn install && yarn lint && yarn build:lib && yarn test:internal:ci && yarn test:lib:ci && yarn build && yarn test:ci && yarn e2e',
+    ci: 'yarn install && yarn lint && yarn build:lib && yarn test:internal:ci && yarn test:lib:ci && yarn build && yarn test:ci && yarn e2e',
     format:
       'npx prettier --config prettier.config.js --write "**/*.*" "!dist/**" "!yarn.lock"',
     'delete-path-alias': 'node tools/delete-path-alias.js'
