@@ -7,7 +7,7 @@ import {overrideAngularVersions} from './override-angular-versions';
 import {replaceLibrariesNgPackagrBuilder} from './replace-libraries-ngpackagr-builder';
 import {AngularJson} from './types/angular-json';
 import {AngularVersion} from './types/angular-version';
-import {PackageJsonVersion} from './types/package-json-version';
+import {PackageJson} from './types/package-json';
 
 function ensureCorrectNgPackagrBuilder(
   angularVersion: AngularVersion,
@@ -45,7 +45,7 @@ function replaceAngularRelatedDependenciesInPackageJson(
 
   core.debug(`Merging found dependencies with file ${packageJsonPath}`);
 
-  const projectVersions: PackageJsonVersion = JSON.parse(
+  const projectVersions: PackageJson = JSON.parse(
     fs.readFileSync(packageJsonPath).toString()
   );
   const mergedVersions = overrideAngularVersions({

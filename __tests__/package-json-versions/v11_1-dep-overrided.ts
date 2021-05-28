@@ -32,14 +32,18 @@ export const packageJsonWithV11_1Dependencies = {
   private: true,
   dependencies: {
     '@angular/animations': '~11.1.0',
+    '@angular/cdk': '~11.1.0',
     '@angular/common': '~11.1.0',
     '@angular/compiler': '~11.1.0',
     '@angular/core': '~11.1.0',
     '@angular/elements': '~11.1.0',
     '@angular/forms': '~11.1.0',
+    '@angular/google-maps': '~11.1.0',
+    '@angular/material': '~11.1.0',
     '@angular/platform-browser': '~11.1.0',
     '@angular/platform-browser-dynamic': '~11.1.0',
     '@angular/router': '~11.1.0',
+    '@angular/youtube-player': '~11.1.0',
     rxjs: '~6.6.0',
     tslib: '^2.0.0',
     'zone.js': '~0.11.3'

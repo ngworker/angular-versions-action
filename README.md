@@ -20,13 +20,15 @@ Create a workflow `.yml` file in your repositories `.github/workflows` directory
 ### Example workflow - match Angular versions
 
 ```yaml
-name: Node.js CI
+name: CI workflow
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
   build:
@@ -34,36 +36,33 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x]
         angular-version:
-          [
-            6.0.x,
-            6.1.x,
-            7.0.x,
-            7.1.x,
-            7.2.x,
-            8.0.x,
-            8.1.x,
-            8.2.x,
-            9.0.x,
-            9.1.x,
-            10.0.x,
-            10.1.x,
-            10.2.x,
-            11.0.x,
-            11.1.x,
-            11.2.x
-            12.0.x
-          ]
+          - 6.0.x,
+          - 6.1.x,
+          - 7.0.x,
+          - 7.1.x,
+          - 7.2.x,
+          - 8.0.x,
+          - 8.1.x,
+          - 8.2.x,
+          - 9.0.x,
+          - 9.1.x,
+          - 10.0.x,
+          - 10.1.x,
+          - 10.2.x,
+          - 11.0.x,
+          - 11.1.x,
+          - 11.2.x
+          - 12.0.x
 
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 12.x
       - name: Use Angular ${{ matrix.angular-version }}
-        uses: ngworker/angular-versions-action@v1
+        uses: ngworker/angular-versions-action@v4
         with:
           angular-version: ${{ matrix.angular-version }}
 
@@ -96,6 +95,39 @@ At the moment this actions supports a limited set of Angular versions listed bel
 - 11.1.x
 - 11.2.x
 - 12.0.x
+
+### Managed packages
+
+The following packages are managed by this action:
+
+- `@angular/animations`
+- `@angular/cdk`
+- `@angular/cli`
+- `@angular/common`
+- `@angular/compiler`
+- `@angular/compiler-cli`
+- `@angular/core`
+- `@angular-devkit/build-angular`
+- `@angular-devkit/build-ng-packagr`
+- `@angular-devkit/schematics-cli`
+- `@angular/elements`
+- `@angular/forms`
+- `@angular/google-maps`
+- `@angular/material`
+- `@angular/platform-browser`
+- `@angular/platform-browser-dynamic`
+- `@angular/router`
+- `@angular/youtube-player`
+- `@types/node`
+- `codelyzer`
+- `ng-packagr`
+- `rxjs`
+- `tsickle `
+- `tslib`
+- `tslint`
+- `ts-node`
+- `typescript`
+- `zone.js`
 
 ## Contributing
 

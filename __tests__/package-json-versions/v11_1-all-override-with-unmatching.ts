@@ -1,4 +1,4 @@
-export const packageJsonWith11_1AllWithoutNgPackagr = {
+export const packageJsonWithV11_1AllWithUnmatching = {
   name: 'lumberjack',
   version: '0.0.0',
   scripts: {
@@ -31,20 +31,26 @@ export const packageJsonWith11_1AllWithoutNgPackagr = {
   },
   private: true,
   dependencies: {
+    unmatching: 'unmatching',
     '@angular/animations': '~11.1.0',
+    '@angular/cdk': '~11.1.0',
     '@angular/common': '~11.1.0',
     '@angular/compiler': '~11.1.0',
     '@angular/core': '~11.1.0',
     '@angular/elements': '~11.1.0',
     '@angular/forms': '~11.1.0',
+    '@angular/google-maps': '~11.1.0',
+    '@angular/material': '~11.1.0',
     '@angular/platform-browser': '~11.1.0',
     '@angular/platform-browser-dynamic': '~11.1.0',
     '@angular/router': '~11.1.0',
+    '@angular/youtube-player': '~11.1.0',
     rxjs: '~6.6.0',
     tslib: '^2.0.0',
     'zone.js': '~0.11.3'
   },
   devDependencies: {
+    'unmatching-dev': 'unmatching-dev',
     '@angular-devkit/build-angular': '~0.1101.0',
     '@angular-devkit/schematics-cli': '~0.1101.0',
     '@angular/cli': '~11.1.0',
@@ -70,6 +76,7 @@ export const packageJsonWith11_1AllWithoutNgPackagr = {
     'karma-jasmine': '~3.3.1',
     'karma-jasmine-html-reporter': '^1.5.0',
     'lint-staged': '^9.5.0',
+    'ng-packagr': '^11.1.0',
     prettier: '^2.0.5',
     protractor: '~7.0.0',
     'standard-version': '^6.0.1',
