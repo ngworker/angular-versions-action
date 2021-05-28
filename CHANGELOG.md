@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.1.0](https://github.com/ngworker/angular-versions-action/compare/v4.0.0...v4.1.0) (2021-05-28)
+
+
+### Features
+
+* support Angular Components ([#31](https://github.com/ngworker/angular-versions-action/issues/31)) ([0bcbe20](https://github.com/ngworker/angular-versions-action/commit/0bcbe20b6221ecde48485141b60b378da60ff69e))
+
+
+### Bug Fixes
+
+* security patch ([#32](https://github.com/ngworker/angular-versions-action/issues/32)) ([7298df2](https://github.com/ngworker/angular-versions-action/commit/7298df2867115e64479c8a84236dc7d13cbba969)), closes [#28](https://github.com/ngworker/angular-versions-action/issues/28) [#29](https://github.com/ngworker/angular-versions-action/issues/29) [#30](https://github.com/ngworker/angular-versions-action/issues/30)
+
 ## [4.0.0](https://github.com/ngworker/angular-versions-action/compare/v3.3.3...v4.0.0) (2021-04-26)
 
 ### Features
