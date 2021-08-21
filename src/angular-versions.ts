@@ -647,5 +647,42 @@ export const versions = new Map<AngularVersion, PackageJson>([
         typescript: '~4.2.3'
       }
     }
+  ],
+  [
+    '12.1.x',
+    {
+      dependencies: {
+        '@angular/animations': '~12.1.0',
+        '@angular/cdk': '~12.1.0',
+        '@angular/common': '~12.1.0',
+        '@angular/compiler': '~12.1.0',
+        '@angular/core': '~12.1.0',
+        '@angular/elements': '~12.1.0',
+        '@angular/forms': '~12.1.0',
+        '@angular/google-maps': '~12.1.0',
+        '@angular/material': '~12.1.0',
+        '@angular/platform-browser': '~12.1.0',
+        '@angular/platform-browser-dynamic': '~12.1.0',
+        '@angular/router': '~12.1.0',
+        '@angular/youtube-player': '~12.1.0',
+        rxjs: '~6.6.0',
+        tslib: '^2.2.0',
+        'zone.js': '~0.11.4'
+      },
+      devDependencies: {
+        '@angular-devkit/build-angular': '~12.1.4',
+        '@angular-devkit/build-ng-packagr': null,
+        '@angular-devkit/schematics-cli': '~12.1.4',
+        '@angular/cli': '~12.1.4',
+        '@angular/compiler-cli': '~12.1.5',
+        '@types/node': '^12.11.1',
+        codelyzer: null,
+        'ng-packagr': '^12.1.0',
+        'ts-node': '~9.1.1',
+        tsickle: null,
+        tslint: null,
+        typescript: '~4.3.2'
+      }
+    }
   ]
 ]);
