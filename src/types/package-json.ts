@@ -19,6 +19,7 @@ export interface PackageJsonDependencies {
 
 export interface PackageJsonDevDependencies {
   '@angular-devkit/build-angular': string;
+  '@angular-builders/jest': string;
   '@angular-devkit/build-ng-packagr': string | null;
   '@angular-devkit/schematics-cli': string | null;
   '@angular/cli': string;
