@@ -134,6 +134,11 @@ The following packages are managed by this action:
 - `typescript`
 - `zone.js`
 
+### Additional features
+
+- Replace libraries Angular ngpackagr builder based on the version.
+- Remove `allowedCommonJsDependencies` options on Angular versions under 10
+
 ## Contributing
 
 We would love you to contribute to `@ngworker/angular-versions-action`, pull requests are welcome! Please see the [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
