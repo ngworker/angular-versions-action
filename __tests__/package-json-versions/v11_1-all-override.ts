@@ -24,7 +24,8 @@ export const packageJsonWithV11_1All = {
     release:
       'cd libs/ngworker/lumberjack && standard-version --infile ../../../CHANGELOG.md',
     publish: 'cd dist/ngworker/lumberjack && npm publish',
-    ci: 'yarn install && yarn lint && yarn build:lib && yarn test:internal:ci && yarn test:lib:ci && yarn build && yarn test:ci && yarn e2e',
+    ci:
+      'yarn install && yarn lint && yarn build:lib && yarn test:internal:ci && yarn test:lib:ci && yarn build && yarn test:ci && yarn e2e',
     format:
       'npx prettier --config prettier.config.js --write "**/*.*" "!dist/**" "!yarn.lock"',
     'delete-path-alias': 'node tools/delete-path-alias.js'
@@ -49,6 +50,7 @@ export const packageJsonWithV11_1All = {
     'zone.js': '~0.11.3'
   },
   devDependencies: {
+    '@angular-builders/jest': '~11.1.1',
     '@angular-devkit/build-angular': '~0.1101.0',
     '@angular-devkit/schematics-cli': '~0.1101.0',
     '@angular/cli': '~11.1.0',
