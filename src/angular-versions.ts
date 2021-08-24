@@ -24,6 +24,7 @@ export const versions = new Map<AngularVersion, PackageJson>([
         'zone.js': '~0.8.26'
       },
       devDependencies: {
+        '@angular-builders/jest': '~6.0.0',
         '@angular-devkit/build-angular': '~0.6.8',
         '@angular-devkit/build-ng-packagr': '~0.6.8',
         '@angular-devkit/schematics-cli': '~0.6.8',
@@ -61,6 +62,7 @@ export const versions = new Map<AngularVersion, PackageJson>([
         'zone.js': '~0.8.26'
       },
       devDependencies: {
+        '@angular-builders/jest': '~6.0.0',
         '@angular-devkit/build-angular': '~0.8.9',
         '@angular-devkit/build-ng-packagr': '~0.8.9',
         '@angular-devkit/schematics-cli': '~0.8.9',
@@ -98,6 +100,7 @@ export const versions = new Map<AngularVersion, PackageJson>([
         'zone.js': '~0.8.26'
       },
       devDependencies: {
+        '@angular-builders/jest': '~7.4.2',
         '@angular-devkit/build-angular': '~0.10.7',
         '@angular-devkit/build-ng-packagr': '~0.10.7',
         '@angular-devkit/schematics-cli': '~0.10.7',
@@ -135,6 +138,7 @@ export const versions = new Map<AngularVersion, PackageJson>([
         'zone.js': '~0.8.26'
       },
       devDependencies: {
+        '@angular-builders/jest': '~7.4.2',
         '@angular-devkit/build-angular': '~0.11.4',
         '@angular-devkit/build-ng-packagr': '~0.11.4',
         '@angular-devkit/schematics-cli': '~0.11.4',
@@ -172,6 +176,7 @@ export const versions = new Map<AngularVersion, PackageJson>([
         'zone.js': '~0.8.26'
       },
       devDependencies: {
+        '@angular-builders/jest': '~7.4.2',
         '@angular-devkit/build-angular': '~0.13.10',
         '@angular-devkit/build-ng-packagr': '~0.13.10',
         '@angular-devkit/schematics-cli': '~0.13.10',
@@ -209,6 +214,7 @@ export const versions = new Map<AngularVersion, PackageJson>([
         'zone.js': '~0.9.1'
       },
       devDependencies: {
+        '@angular-builders/jest': '~8.3.2',
         '@angular-devkit/build-angular': '~0.800.6',
         '@angular-devkit/build-ng-packagr': '~0.800.6',
         '@angular-devkit/schematics-cli': '~0.800.6',
@@ -246,6 +252,7 @@ export const versions = new Map<AngularVersion, PackageJson>([
         'zone.js': '~0.9.1'
       },
       devDependencies: {
+        '@angular-builders/jest': '~8.3.2',
         '@angular-devkit/build-angular': '~0.801.0',
         '@angular-devkit/build-ng-packagr': '~0.801.0',
         '@angular-devkit/schematics-cli': '~0.801.0',
@@ -283,6 +290,7 @@ export const versions = new Map<AngularVersion, PackageJson>([
         'zone.js': '~0.9.1'
       },
       devDependencies: {
+        '@angular-builders/jest': '~8.3.2',
         '@angular-devkit/build-angular': '~0.803.0',
         '@angular-devkit/build-ng-packagr': '~0.803.0',
         '@angular-devkit/schematics-cli': '~0.803.0',
@@ -320,6 +328,7 @@ export const versions = new Map<AngularVersion, PackageJson>([
         'zone.js': '~0.10.2'
       },
       devDependencies: {
+        '@angular-builders/jest': '~9.0.1',
         '@angular-devkit/build-angular': '~0.900.7',
         '@angular-devkit/build-ng-packagr': '~0.900.7',
         '@angular-devkit/schematics-cli': '~0.900.7',
@@ -357,6 +366,7 @@ export const versions = new Map<AngularVersion, PackageJson>([
         'zone.js': '~0.10.2'
       },
       devDependencies: {
+        '@angular-builders/jest': '~9.0.1',
         '@angular-devkit/build-angular': '~0.901.0',
         '@angular-devkit/build-ng-packagr': '~0.901.0',
         '@angular-devkit/schematics-cli': '~0.901.0',
@@ -394,6 +404,7 @@ export const versions = new Map<AngularVersion, PackageJson>([
         'zone.js': '~0.10.3'
       },
       devDependencies: {
+        '@angular-builders/jest': '~10.0.1',
         '@angular-devkit/build-angular': '~0.1000.8',
         '@angular-devkit/build-ng-packagr': '~0.1000.8',
         '@angular-devkit/schematics-cli': '~0.1000.8',
@@ -431,6 +442,7 @@ export const versions = new Map<AngularVersion, PackageJson>([
         'zone.js': '~0.10.3'
       },
       devDependencies: {
+        '@angular-builders/jest': '~10.0.1',
         '@angular-devkit/build-angular': '~0.1001.7',
         '@angular-devkit/build-ng-packagr': null,
         '@angular-devkit/schematics-cli': '~0.1001.7',
@@ -468,6 +480,7 @@ export const versions = new Map<AngularVersion, PackageJson>([
         'zone.js': '~0.10.2'
       },
       devDependencies: {
+        '@angular-builders/jest': '~10.0.1',
         '@angular-devkit/build-angular': '~0.1002.0',
         '@angular-devkit/build-ng-packagr': null,
         '@angular-devkit/schematics-cli': '~0.1002.0',
@@ -505,6 +518,7 @@ export const versions = new Map<AngularVersion, PackageJson>([
         'zone.js': '~0.10.2'
       },
       devDependencies: {
+        '@angular-builders/jest': '~11.0.0',
         '@angular-devkit/build-angular': '~0.1100.0',
         '@angular-devkit/build-ng-packagr': null,
         '@angular-devkit/schematics-cli': '~0.1100.0',
@@ -542,6 +556,7 @@ export const versions = new Map<AngularVersion, PackageJson>([
         'zone.js': '~0.11.3'
       },
       devDependencies: {
+        '@angular-builders/jest': '~11.1.1',
         '@angular-devkit/build-angular': '~0.1101.0',
         '@angular-devkit/build-ng-packagr': null,
         '@angular-devkit/schematics-cli': '~0.1101.0',
@@ -579,6 +594,7 @@ export const versions = new Map<AngularVersion, PackageJson>([
         'zone.js': '~0.11.3'
       },
       devDependencies: {
+        '@angular-builders/jest': '~11.2.0',
         '@angular-devkit/build-angular': '~0.1102.0',
         '@angular-devkit/build-ng-packagr': null,
         '@angular-devkit/schematics-cli': '~0.1102.0',
@@ -616,6 +632,7 @@ export const versions = new Map<AngularVersion, PackageJson>([
         'zone.js': '~0.11.4'
       },
       devDependencies: {
+        '@angular-builders/jest': '~12.0.0',
         '@angular-devkit/build-angular': '~12.0.0',
         '@angular-devkit/build-ng-packagr': null,
         '@angular-devkit/schematics-cli': '~12.0.0',

@@ -107,6 +107,7 @@ The following packages are managed by this action:
 - `@angular/compiler`
 - `@angular/compiler-cli`
 - `@angular/core`
+- `@angular-builders/jest`
 - `@angular-devkit/build-angular`
 - `@angular-devkit/build-ng-packagr`
 - `@angular-devkit/schematics-cli`
