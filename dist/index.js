@@ -672,7 +672,7 @@ exports.versions = new Map([
                 'zone.js': '~0.11.4'
             },
             devDependencies: {
-                '@angular-builders/jest': '~12.0.0',
+                '@angular-builders/jest': '~12.1.1',
                 '@angular-devkit/build-angular': '~12.0.0',
                 '@angular-devkit/build-ng-packagr': null,
                 '@angular-devkit/schematics-cli': '~12.0.0',
@@ -710,6 +710,7 @@ exports.versions = new Map([
                 'zone.js': '~0.11.4'
             },
             devDependencies: {
+                '@angular-builders/jest': '~12.1.1',
                 '@angular-devkit/build-angular': '~12.1.4',
                 '@angular-devkit/build-ng-packagr': null,
                 '@angular-devkit/schematics-cli': '~12.1.4',
@@ -747,6 +748,7 @@ exports.versions = new Map([
                 'zone.js': '~0.11.4'
             },
             devDependencies: {
+                '@angular-builders/jest': '~12.1.1',
                 '@angular-devkit/build-angular': '~12.2.2',
                 '@angular-devkit/build-ng-packagr': null,
                 '@angular-devkit/schematics-cli': '~12.2.2',
