@@ -6,7 +6,7 @@ import {angularVersionComparer} from './angular-version-comparer';
 import {ProjectConfiguration} from './types/project-configuration';
 import {ArchitectConfiguration} from './types/architect-configuration';
 
-const ExclusiveAngularVersion = '10.0.x';
+const exclusiveAngularVersion = '10.0.x';
 
 export function removeCommonJsAllowList(
   angularVersion: AngularVersion,
@@ -55,5 +55,5 @@ function findProjectTargetWithAllowedCommonJSDependencies(
 }
 
 function isRemovable(angularVersion: AngularVersion): boolean {
-  return angularVersionComparer(angularVersion, ExclusiveAngularVersion) < 0;
+  return angularVersionComparer(angularVersion, exclusiveAngularVersion) < 0;
 }

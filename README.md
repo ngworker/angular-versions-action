@@ -136,7 +136,9 @@ The following packages are managed by this action:
 
 ### Additional features
 
-- Replace libraries Angular ngpackagr builder based on the version.
+- Replace the `angular.json` library builder (ng-packagr) based on the angular version.
+  - Use `@angular-devkit/build-ng-packagr:build` for version prior (<) Angular 10.1
+  - Use `@angular-devkit/build-angular:ng-packagr` for version post (>=) Angular 10.1
 - Remove `allowedCommonJsDependencies` options on Angular versions under 10
 
 ## Contributing
