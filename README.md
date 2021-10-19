@@ -14,7 +14,7 @@ Create a workflow `.yml` file in your repositories `.github/workflows` directory
 
 ### Inputs
 
-- `angular-version`: The base Angular version used to match the dependency version. Ex: 8.0.x, 10.0.x. To check the full list of supported versions, see [supported versions](###Supported-Angular-versions).
+- `angular-version`: The base Angular version used to match the dependency version. Ex: 8.0.x, 10.0.x. To check the full list of supported versions, see [supported versions](#Supported-Angular-versions).
 - `root-path`: The path to the root folder of the project where the `package.json` and `angular.json` files are located. Defaults to `./`.
 
 ### Example workflow - match Angular versions
@@ -37,21 +37,21 @@ jobs:
     strategy:
       matrix:
         angular-version:
-          - 6.0.x,
-          - 6.1.x,
-          - 7.0.x,
-          - 7.1.x,
-          - 7.2.x,
-          - 8.0.x,
-          - 8.1.x,
-          - 8.2.x,
-          - 9.0.x,
-          - 9.1.x,
-          - 10.0.x,
-          - 10.1.x,
-          - 10.2.x,
-          - 11.0.x,
-          - 11.1.x,
+          - 6.0.x
+          - 6.1.x
+          - 7.0.x
+          - 7.1.x
+          - 7.2.x
+          - 8.0.x
+          - 8.1.x
+          - 8.2.x
+          - 9.0.x
+          - 9.1.x
+          - 10.0.x
+          - 10.1.x
+          - 10.2.x
+          - 11.0.x
+          - 11.1.x
           - 11.2.x
           - 12.0.x
           - 12.1.x
@@ -80,8 +80,8 @@ This example use the github matrix to build, lint and test your code against dif
 
 At the moment this actions supports a limited set of Angular versions listed below.
 
-- 6.0.x,
-- 6.1.x,
+- 6.0.x
+- 6.1.x
 - 7.0.x
 - 7.1.x
 - 7.2.x
