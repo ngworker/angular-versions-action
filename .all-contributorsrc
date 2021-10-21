@@ -61,6 +61,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "profanis",
+      "name": "profanis",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7045092?v=4",
+      "profile": "https://blog.profanis.me/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
