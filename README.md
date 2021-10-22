@@ -134,6 +134,13 @@ The following packages are managed by this action:
 - `typescript`
 - `zone.js`
 
+### Additional features
+
+- Replace the `angular.json` library builder (ng-packagr) based on the angular version.
+  - Use `@angular-devkit/build-ng-packagr:build` for version prior (<) Angular 10.1
+  - Use `@angular-devkit/build-angular:ng-packagr` for version post (>=) Angular 10.1
+- Remove `allowedCommonJsDependencies` options on Angular versions under 10
+
 ## Contributing
 
 We would love you to contribute to `@ngworker/angular-versions-action`, pull requests are welcome! Please see the [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
