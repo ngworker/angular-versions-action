@@ -723,5 +723,43 @@ export const versions = new Map<AngularVersion, PackageJson>([
         typescript: '~4.3.5'
       }
     }
+  ],
+  [
+    '13.0.x',
+    {
+      dependencies: {
+        '@angular/animations': '~13.0.2',
+        '@angular/cdk': '~13.0.2',
+        '@angular/common': '~13.0.2',
+        '@angular/compiler': '~13.0.2',
+        '@angular/core': '~13.0.2',
+        '@angular/elements': '~13.0.2',
+        '@angular/forms': '~13.0.2',
+        '@angular/google-maps': '~13.0.2',
+        '@angular/material': '~13.0.2',
+        '@angular/platform-browser': '~13.0.2',
+        '@angular/platform-browser-dynamic': '~13.0.2',
+        '@angular/router': '~13.0.2',
+        '@angular/youtube-player': '~13.0.2',
+        rxjs: '~7.4.0',
+        tslib: '^2.3.0',
+        'zone.js': '~0.11.4'
+      },
+      devDependencies: {
+        '@angular-builders/jest': '~13.0.0',
+        '@angular-devkit/build-angular': '~13.0.3',
+        '@angular-devkit/build-ng-packagr': null,
+        '@angular-devkit/schematics-cli': '~13.0.3',
+        '@angular/cli': '~13.0.3',
+        '@angular/compiler-cli': '~13.0.2',
+        '@types/node': '^12.11.1',
+        codelyzer: null,
+        'ng-packagr': '^13.0.8',
+        'ts-node': 'null',
+        tsickle: null,
+        tslint: null,
+        typescript: '~4.4.3'
+      }
+    }
   ]
 ]);
