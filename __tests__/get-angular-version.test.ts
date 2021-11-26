@@ -21,7 +21,7 @@ describe(getAngularVersions.name, () => {
   test('throws error when the version is not supported', () => {
     try {
       getAngularVersions('3.0.x');
-    } catch (error) {
+    } catch (error: any) {
       expect(error.message).toBe('Angular version 3.0.x is not supported');
     }
   });

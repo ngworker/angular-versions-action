@@ -1,0 +1,14 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+
+branch="$(git rev-parse --abbrev-ref HEAD)"
+remote_branch="$(git for-each-ref --format='%(upstream:short)' "$(git symbolic-ref -q HEAD)")"
+
+
+if [ "$branch" = "main" ] || [ "$remote_branch" = "origin/main" ]; then
+  echo "You can't commit directly to main branch"
+  exit 1
+else
+  yarn test
+fi
