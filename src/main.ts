@@ -1,13 +1,12 @@
 import * as core from '@actions/core';
 import * as fs from 'fs';
-import path from 'path';
-
+import {AngularJson} from './types/angular-json';
+import {AngularVersion} from './types/angular-version';
 import {getAngularVersions} from './get-angular-versions';
 import {overrideAngularVersions} from './override-angular-versions';
 import {replaceLibrariesNgPackagrBuilder} from './replace-libraries-ngpackagr-builder';
-import {AngularJson} from './types/angular-json';
-import {AngularVersion} from './types/angular-version';
 import {PackageJson} from './types/package-json';
+import path from 'path';
 
 function ensureCorrectNgPackagrBuilder(
   angularVersion: AngularVersion,
@@ -78,7 +77,8 @@ function run(): void {
     ensureCorrectNgPackagrBuilder(angularVersion, angularJsonPath);
 
     core.debug(new Date().toISOString());
-  } catch (error) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  } catch (error: any) {
     core.setFailed(error.message);
   }
 }
