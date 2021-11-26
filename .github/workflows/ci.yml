@@ -41,5 +41,5 @@ jobs:
 
       - uses: ./
         with:
-          angular-version: 12.2.x
+          angular-version: 13.0.x
           root-path: ./e2e

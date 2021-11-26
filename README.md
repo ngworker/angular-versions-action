@@ -56,6 +56,7 @@ jobs:
           - 12.0.x
           - 12.1.x
           - 12.2.x
+          - 13.0.x
 
     steps:
       - uses: actions/checkout@v2
@@ -99,6 +100,7 @@ At the moment this actions supports a limited set of Angular versions listed bel
 - 12.0.x
 - 12.1.x
 - 12.2.x
+- 13.0.x
 
 ### Managed packages
 
